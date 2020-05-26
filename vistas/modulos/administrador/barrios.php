@@ -154,7 +154,7 @@ MODAL AGREGAR Barrios
 
                 <select class="form-control input-lg " id="nuevaEstaca" name="nuevaEstaca" required>
                   
-                  <option value="">Selecionar Estaca</option>
+                  <option value="">Selecionar Estaca/Distrito</option>
 
                   <?php
 

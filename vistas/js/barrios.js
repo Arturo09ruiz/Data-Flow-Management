@@ -67,7 +67,7 @@ $(".tablaBarrios tbody").on("click", "button.btnEliminarBarrios", function(){
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
         cancelButtonText: 'Cancelar',
-        confirmButtonText: 'Si, borrar Barrios!'
+        confirmButtonText: 'Si, borrar Barrio/Rama!'
         }).then(function(result) {
         if (result.value) {
 

@@ -42,7 +42,7 @@ class ControladorBarrios{
 
 						swal({
 							  type: "success",
-							  title: "El Barrio ha sido guardado correctamente",
+							  title: "El Barrio/Rama ha sido guardado correctamente",
 							  showConfirmButton: true,
 							  confirmButtonText: "Cerrar"
 							  }).then(function(result){
@@ -81,7 +81,7 @@ class ControladorBarrios{
 
 				swal({
 					  type: "success",
-					  title: "El Barrio ha sido borrado correctamente",
+					  title: "El Barrio/Rama ha sido borrado correctamente",
 					  showConfirmButton: true,
 					  confirmButtonText: "Cerrar"
 					  }).then(function(result){
