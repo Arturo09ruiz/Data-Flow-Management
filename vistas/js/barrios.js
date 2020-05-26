@@ -1,10 +1,10 @@
 /*=============================================
-CARGAR LA TABLA DINÁMICA DE ESTACA
+CARGAR LA TABLA DINÁMICA DE Barrios
 =============================================*/
 
 $.ajax({
 
-	url: "ajax/datatable-estaca.ajax.php",
+	url: "ajax/datatable-barrios.ajax.php",
 	success:function(respuesta){
 		
 		console.log("respuesta", respuesta);
@@ -15,8 +15,8 @@ $.ajax({
 
 var perfilOculto = $("#perfilOculto").val();
 
-$('.tablaEstaca').DataTable( {
-    "ajax": "ajax/datatable-estaca.ajax.php?perfilOculto="+perfilOculto,
+$('.tablaBarrios').DataTable( {
+    "ajax": "ajax/datatable-barrios.ajax.php?perfilOculto="+perfilOculto,
     "deferRender": true,
 	"retrieve": true,
 	"processing": true,
@@ -49,28 +49,29 @@ $('.tablaEstaca').DataTable( {
 
 } );
 
+
 /*=============================================
-ELIMINAR Estaca
+ELIMINAR Barrios
 =============================================*/
 
-$(".tablaEstaca tbody").on("click", "button.btnEliminarEstaca", function(){
+$(".tablaBarrios tbody").on("click", "button.btnEliminarBarrios", function(){
 
-	var idEstaca = $(this).attr("idEstaca");
+	var idBarrios = $(this).attr("idBarrios");
 
 	swal({
 
-		title: '¿Está seguro de borrar la Estaca/Rama?',
+		title: '¿Está seguro de borrar el Barrio/Rama?',
 		text: "¡Si no lo está puede cancelar la accíón!",
 		type: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
         cancelButtonText: 'Cancelar',
-        confirmButtonText: 'Si, borrar Estaca/Rama!'
+        confirmButtonText: 'Si, borrar Barrios!'
         }).then(function(result) {
         if (result.value) {
 
-        	window.location = "index.php?ruta=estacas&idEstaca="+idEstaca;
+        	window.location = "index.php?ruta=barrios&idBarrios="+idBarrios;
 
         }
 

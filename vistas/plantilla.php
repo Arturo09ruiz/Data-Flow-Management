@@ -21,9 +21,14 @@ session_start();
    <!--=====================================
   PLUGINS DE CSS
   ======================================-->
+  <script src="vistas/bower_components/bootstrap/dist/css/jquery.min.js"></script>
+ 
+  <link href="vistas/bower_components/bootstrap/dist/css/select2.min.css" rel="stylesheet" />
+  <script src="vistas/bower_components/bootstrap/dist/css/select2.min.js"></script>
 
   <!-- Bootstrap 3.3.7 -->
   <link rel="stylesheet" href="vistas/bower_components/bootstrap/dist/css/bootstrap.min.css">
+
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="vistas/bower_components/font-awesome/css/font-awesome.min.css">
@@ -57,7 +62,7 @@ session_start();
   ======================================-->
 
   <!-- jQuery 3 -->
-  <script src="vistas/bower_components/jquery/dist/jquery.min.js"></script>
+  <!-- <script src="vistas/bower_components/jquery/dist/jquery.min.js"></script> -->
   
   <!-- Bootstrap 3.3.7 -->
   <script src="vistas/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -146,6 +151,7 @@ CUERPO DOCUMENTO
          $_GET["ruta"] == "paises-del-area" ||
          $_GET["ruta"] == "consejos-de-coordinacion" ||
          $_GET["ruta"] == "estacas" ||
+         $_GET["ruta"] == "barrios" ||
          $_GET["ruta"] == "ventas" ||
          $_GET["ruta"] == "crear-venta" ||
          $_GET["ruta"] == "editar-venta" ||
@@ -192,6 +198,7 @@ CUERPO DOCUMENTO
 <script src="vistas/js/pais.js"></script>
 <script src="vistas/js/consejo.js"></script>
 <script src="vistas/js/estaca.js"></script>
+<script src="vistas/js/barrios.js"></script>
 
 
 
@@ -200,6 +207,9 @@ CUERPO DOCUMENTO
 
 
 
+<script>
+    $('.js-example-basic-single').select2();
+</script>
 
 
 <script src="vistas/js/plantilla.js"></script>

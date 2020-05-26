@@ -76,6 +76,19 @@ if ($_SESSION["perfil"] == "Administrador") {
 
 
 
+		
+	<li>
+
+	<a href="barrios">
+
+		<i class="fa fa-square"></i>
+		<span>Barrios/Ramas</span>
+
+	</a>
+
+</li>
+
+
 
 
 	 
