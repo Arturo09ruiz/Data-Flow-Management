@@ -145,6 +145,7 @@ CUERPO DOCUMENTO
          $_GET["ruta"] == "clientes" ||
          $_GET["ruta"] == "paises-del-area" ||
          $_GET["ruta"] == "consejos-de-coordinacion" ||
+         $_GET["ruta"] == "estacas" ||
          $_GET["ruta"] == "ventas" ||
          $_GET["ruta"] == "crear-venta" ||
          $_GET["ruta"] == "editar-venta" ||
@@ -190,6 +191,8 @@ CUERPO DOCUMENTO
 <!-- MIS JS NUEVOS -->
 <script src="vistas/js/pais.js"></script>
 <script src="vistas/js/consejo.js"></script>
+<script src="vistas/js/estaca.js"></script>
+
 
 
 
