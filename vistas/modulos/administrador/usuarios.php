@@ -211,6 +211,146 @@ MODAL AGREGAR USUARIO
 
             </div>
 
+            
+                
+            <div class="form-group">
+              
+              <div class="input-group">
+              
+                <span class="input-group-addon"><i class="fa fa-th"></i></span> 
+
+                <select class="form-control input-lg " id="nuevaBarrio" name="nuevaBarrio" required>
+                  
+                  <option value="">Selecionar Barrio</option>
+
+                  <?php
+
+                  $item = null;
+                  $valor = null;
+                  $orden = "id";
+
+
+                  $barrio = ControladorBarrios::ctrMostrarBarrios($item, $valor, $orden);
+
+                  foreach ($barrio as $key => $value) {
+                    
+                    echo '<option value="'.$value["id"].'">'.$value["nombre"].'</option>';
+                  }
+
+                  ?>
+  
+                </select>
+
+              </div>
+
+            </div>
+
+
+
+
+            <div class="form-group">
+              
+              <div class="input-group">
+              
+                <span class="input-group-addon"><i class="fa fa-th"></i></span> 
+
+                <select class="form-control input-lg " id="nuevaEstaca" name="nuevaEstaca" required>
+                  
+                  <option value="">Selecionar Estaca/Distrito</option>
+
+                  <?php
+
+                  $item = null;
+                  $valor = null;
+                  $orden = "id";
+
+
+                  $estaca = ControladorEstaca::ctrMostrarEstaca($item, $valor, $orden);
+
+                  foreach ($estaca as $key => $value) {
+                    
+                    echo '<option value="'.$value["id"].'">'.$value["nombre"].'</option>';
+                  }
+
+                  ?>
+  
+                </select>
+
+              </div>
+
+            </div>
+
+
+
+
+
+            <div class="form-group">
+              
+              <div class="input-group">
+              
+                <span class="input-group-addon"><i class="fa fa-th"></i></span> 
+
+                <select class="form-control input-lg" id="nuevaConsejo" name="nuevaConsejo" required>
+                  
+                  <option value="">Selecionar Consejo</option>
+
+                  <?php
+
+                  $item = null;
+                  $valor = null;
+                  $orden = "id";
+
+
+                  $consejo = ControladorConsejo::ctrMostrarConsejo($item, $valor, $orden);
+
+                  foreach ($consejo as $key => $value) {
+                    
+                    echo '<option value="'.$value["id"].'">'.$value["nombre"].'</option>';
+                  }
+
+                  ?>
+  
+                </select>
+
+              </div>
+
+            </div>
+
+
+            <div class="form-group">
+              
+              <div class="input-group">
+              
+                <span class="input-group-addon"><i class="fa fa-th"></i></span> 
+
+                <select class="form-control input-lg" id="nuevaPais" name="nuevaPais" required>
+                  
+                  <option value="">Selecionar Pais</option>
+
+                  <?php
+
+                  $item = null;
+                  $valor = null;
+                  $orden = "id";
+
+
+                  $pais = ControladorPais::ctrMostrarPais($item, $valor, $orden);
+
+                  foreach ($pais as $key => $value) {
+                    
+                    echo '<option value="'.$value["id"].'">'.$value["nombre"].'</option>';
+                  }
+
+                  ?>
+  
+                </select>
+
+              </div>
+
+            </div>
+
+
+
             <!-- ENTRADA PARA SELECCIONAR SU PERFIL -->
 
             <div class="form-group">
@@ -224,6 +364,9 @@ MODAL AGREGAR USUARIO
                   <option value="">Selecionar perfil</option>
 
                   <option value="Administrador">Administrador</option>
+
+                  <option value="Obispo">Obispo</option>
+
 
                   <option value="Especial">Especial</option>
 
