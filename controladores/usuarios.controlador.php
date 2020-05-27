@@ -29,6 +29,10 @@ class ControladorUsuarios{
 						$_SESSION["id"] = $respuesta["id"];
 						$_SESSION["nombre"] = $respuesta["nombre"];
 						$_SESSION["usuario"] = $respuesta["usuario"];
+						$_SESSION["idbarrio"] = $respuesta["idbarrio"];
+						$_SESSION["idestaca"] = $respuesta["idestaca"];
+						$_SESSION["idconsejo"] = $respuesta["idconsejo"];
+						$_SESSION["idpais"] = $respuesta["idpais"];
 						$_SESSION["foto"] = $respuesta["foto"];
 						$_SESSION["perfil"] = $respuesta["perfil"];
 
@@ -165,7 +169,11 @@ class ControladorUsuarios{
 
 				$datos = array("nombre" => $_POST["nuevoNombre"],
 					           "usuario" => $_POST["nuevoUsuario"],
-					           "password" => $encriptar,
+							   "password" => $encriptar,
+							   "idbarrio" => $_POST["nuevaBarrio"],
+							   "idestaca" => $_POST["nuevaEstaca"],
+							   "idconsejo" => $_POST["nuevaConsejo"],
+					           "idpais" => $_POST["nuevaPais"],		   
 					           "perfil" => $_POST["nuevoPerfil"],
 					           "foto"=>$ruta);
 
