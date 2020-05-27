@@ -3,9 +3,9 @@
 	<!--=====================================
 	LOGOTIPO
 	======================================-->
-    <a href="escritorio.php" class="logo">
+    <a href="inicio" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>F</b>U</span>
+      <span class="logo-mini"><b>DFM</b></span>
       <!-- logo for regular state and mobile devices -->
       <span class="logo-lg"><b>Flow</b> Up</span>
     </a>

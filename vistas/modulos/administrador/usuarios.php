@@ -13,6 +13,15 @@ if($_SESSION["perfil"] == "Especial" || $_SESSION["perfil"] == "Vendedor"){
 }
 
 ?>
+
+
+<script>
+  $(document).ready(function() {
+    
+    $('.js-example-basic-single').select2({
+});})
+</script>
+
 <div class="content-wrapper">
 
   <section class="content-header">
@@ -219,7 +228,7 @@ MODAL AGREGAR USUARIO
               
                 <span class="input-group-addon"><i class="fa fa-th"></i></span> 
 
-                <select class="form-control input-lg " id="nuevaBarrio" name="nuevaBarrio" required>
+                <select class=" js-example-basic-single form-control input-lg " id="nuevaBarrio" name="nuevaBarrio" required>
                   
                   <option value="">Selecionar Barrio</option>
 
@@ -254,7 +263,7 @@ MODAL AGREGAR USUARIO
               
                 <span class="input-group-addon"><i class="fa fa-th"></i></span> 
 
-                <select class="form-control input-lg " id="nuevaEstaca" name="nuevaEstaca" required>
+                <select class="js-example-basic-single form-control input-lg " id="nuevaEstaca" name="nuevaEstaca" required>
                   
                   <option value="">Selecionar Estaca/Distrito</option>
 
@@ -290,7 +299,7 @@ MODAL AGREGAR USUARIO
               
                 <span class="input-group-addon"><i class="fa fa-th"></i></span> 
 
-                <select class="form-control input-lg" id="nuevaConsejo" name="nuevaConsejo" required>
+                <select class="js-example-basic-single form-control input-lg" id="nuevaConsejo" name="nuevaConsejo" required>
                   
                   <option value="">Selecionar Consejo</option>
 
@@ -323,7 +332,7 @@ MODAL AGREGAR USUARIO
               
                 <span class="input-group-addon"><i class="fa fa-th"></i></span> 
 
-                <select class="form-control input-lg" id="nuevaPais" name="nuevaPais" required>
+                <select class="js-example-basic-single form-control input-lg" id="nuevaPais" name="nuevaPais" required>
                   
                   <option value="">Selecionar Pais</option>
 
@@ -359,7 +368,7 @@ MODAL AGREGAR USUARIO
               
                 <span class="input-group-addon"><i class="fa fa-users"></i></span> 
 
-                <select class="form-control input-lg" name="nuevoPerfil">
+                <select class="js-example-basic-single form-control input-lg" name="nuevoPerfil">
                   
                   <option value="">Selecionar perfil</option>
 
