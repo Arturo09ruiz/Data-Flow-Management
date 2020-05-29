@@ -1,6 +1,6 @@
 <?php
 
-if($_SESSION["perfil"] == "Vendedor"){
+if ($_SESSION["perfil"] == "Vendedor") {
 
   echo '<script>
 
@@ -9,26 +9,25 @@ if($_SESSION["perfil"] == "Vendedor"){
   </script>';
 
   return;
-
 }
 
 ?>
 <div class="content-wrapper">
 
   <section class="content-header">
-    
+
     <h1>
-      
-      Administrar Cabezas de Famiia 
-    
+
+      Administrar Cabezas de Famiia
+
     </h1>
 
     <ol class="breadcrumb">
-      
+
       <li><a href="inicio"><i class="fa fa-dashboard"></i> Inicio</a></li>
-      
+
       <li class="active">Administrar Cabezas de Famiia </li>
-    
+
     </ol>
 
   </section>
@@ -38,47 +37,47 @@ if($_SESSION["perfil"] == "Vendedor"){
     <div class="box">
 
       <div class="box-header with-border">
-  
+
         <button class="btn btn-primary" data-toggle="modal" data-target="#modalAgregarCabeza">
-          
-          Agregar Cabeza de Famiia 
+
+          Agregar Cabeza de Famiia
 
         </button>
 
       </div>
 
       <div class="box-body">
-        
-       <table class="table table-bordered table-striped dt-responsive tablaCabeza" width="100%">
-         
-        <thead>
-         
-         <tr>
-           
-           <th style="width:10px">#</th>
-           <th>NCM</th>
-           <th>Nombre del Cabeza de Familia</th>
-           <th>Fecha de Nacimiento</th>
-           <th>Numero de Miembros de la Familia (FLRS)</th>
-           <th>Acciones</th>
+
+        <table class="table table-bordered table-striped dt-responsive tablaCabeza" width="100%">
+
+          <thead>
+
+            <tr>
+
+              <th style="width:10px">#</th>
+              <th>NCM</th>
+              <th>Nombre del Cabeza de Familia</th>
+              <th>Fecha de Nacimiento</th>
+              <th>Numero de Miembros de la Familia (FLRS)</th>
+              <th>Acciones</th>
 
 
 
-         </tr> 
+            </tr>
 
-        </thead>      
+          </thead>
 
-       </table>
+        </table>
 
-       <input type="hidden" value="<?php echo $_SESSION['perfil']; ?>" id="perfilOculto">
-       <input type="hidden" id="idbarrio" name="idbarrio" value="<?php echo $_SESSION['idbarrio']; ?>" type="text">
-          <input type="hidden" name="idestaca" value="<?php echo $_SESSION['idestaca']; ?>" type="text">
-          <input type="hidden" name="idconsejo" value="<?php echo $_SESSION['idconsejo']; ?>" type="text">
-          <input type="hidden" name="idpais" value="<?php echo $_SESSION['idpais']; ?>" type="text">
+        <input type="hidden" value="<?php echo $_SESSION['perfil']; ?>" id="perfilOculto">
+        <input type="hidden" id="idbarrio" name="idbarrio" value="<?php echo $_SESSION['idbarrio']; ?>" type="text">
+        <input type="hidden" name="idestaca" value="<?php echo $_SESSION['idestaca']; ?>" type="text">
+        <input type="hidden" name="idconsejo" value="<?php echo $_SESSION['idconsejo']; ?>" type="text">
+        <input type="hidden" name="idpais" value="<?php echo $_SESSION['idpais']; ?>" type="text">
 
 
 
-   
+
 
       </div>
 
@@ -93,7 +92,7 @@ MODAL AGREGAR CABEZA
 ======================================-->
 
 <div id="modalAgregarCabeza" class="modal fade" role="dialog">
-  
+
   <div class="modal-dialog">
 
     <div class="modal-content">
@@ -119,84 +118,84 @@ MODAL AGREGAR CABEZA
         <div class="modal-body">
 
           <div class="box-body">
-              
-         
 
 
 
 
 
-          <div class="form-group">
-            
-            <div class="input-group">
-            
-              <span class="input-group-addon"><i class="fa fa-code"></i></span> 
 
-              <input type="number" class="form-control input-lg" id="nuevoNCM" name="nuevoNCM" placeholder="Ingresar Numero de Cedula de Miembro" required>
 
-            </div>
+            <div class="form-group">
 
-          </div>
+              <div class="input-group">
 
-          <!-- ENTRADA PARA LA NOMBRE -->
+                <span class="input-group-addon"><i class="fa fa-code"></i></span>
 
-           <div class="form-group">
-            
-            <div class="input-group">
-            
-              <span class="input-group-addon"><i class="fa fa-product-hunt"></i></span> 
+                <input type="number" class="form-control input-lg" id="nuevoNCM" name="nuevoNCM" placeholder="Ingresar Numero de Cedula de Miembro" required>
 
-              <input type="text" class="form-control input-lg" name="nuevaNombre" placeholder="Ingresar Nombre Completo" required>
+              </div>
 
             </div>
 
-          </div>
+            <!-- ENTRADA PARA LA NOMBRE -->
 
+            <div class="form-group">
 
-          <div class="form-group">
-            
-            <div class="input-group">
-            
-              <span class="input-group-addon"><i class="fa fa-calendar"></i></span> 
+              <div class="input-group">
 
-              <input type="date" class="form-control input-lg" name="nuevaFechaNacimiento"  required>
+                <span class="input-group-addon"><i class="fa fa-product-hunt"></i></span>
 
-            </div>
+                <input type="text" class="form-control input-lg" name="nuevaNombre" placeholder="Ingresar Nombre Completo" required>
 
-          </div>
-
-
-             <!-- ENTRADA PARA LA NOMBRE -->
-
-             <div class="form-group">
-            
-            <div class="input-group">
-            
-              <span class="input-group-addon"><i class="fa fa-info"></i></span> 
-
-              <input type="text" class="form-control input-lg" name="nuevaMiembros" placeholder="Ingresar Numero de Miembros de la Familia FLRS" required>
+              </div>
 
             </div>
 
+
+            <div class="form-group">
+
+              <div class="input-group">
+
+                <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+
+                <input type="date" class="form-control input-lg" name="nuevaFechaNacimiento" required>
+
+              </div>
+
+            </div>
+
+
+            <!-- ENTRADA PARA LA NOMBRE -->
+
+            <div class="form-group">
+
+              <div class="input-group">
+
+                <span class="input-group-addon"><i class="fa fa-info"></i></span>
+
+                <input type="text" class="form-control input-lg" name="nuevaMiembros" placeholder="Ingresar Numero de Miembros de la Familia FLRS" required>
+
+              </div>
+
+            </div>
+
+
+            <input name="idbarrio" value="<?php echo $_SESSION['idbarrio']; ?>" type="text">
+            <input name="idestaca" value="<?php echo $_SESSION['idestaca']; ?>" type="text">
+            <input name="idconsejo" value="<?php echo $_SESSION['idconsejo']; ?>" type="text">
+            <input name="idpais" value="<?php echo $_SESSION['idpais']; ?>" type="text">
+
+
+
+
+
+
+
+
+
+
+
           </div>
-
-     
-          <input name="idbarrio" value="<?php echo $_SESSION['idbarrio']; ?>" type="text">
-          <input name="idestaca" value="<?php echo $_SESSION['idestaca']; ?>" type="text">
-          <input name="idconsejo" value="<?php echo $_SESSION['idconsejo']; ?>" type="text">
-          <input name="idpais" value="<?php echo $_SESSION['idpais']; ?>" type="text">
-
-
-
-   
-          
-
-
-
-
-
-
-        </div>
         </div>
 
 
@@ -214,12 +213,12 @@ MODAL AGREGAR CABEZA
 
       </form>
 
-        <?php
+      <?php
 
-          $crearCabeza = new ControladorCabeza();
-          $crearCabeza -> ctrCrearCabeza();
+      $crearCabeza = new ControladorCabeza();
+      $crearCabeza->ctrCrearCabeza();
 
-        ?>  
+      ?>
 
     </div>
 
@@ -232,7 +231,7 @@ MODAL EDITAR PRODUCTO
 ======================================-->
 
 <div id="modalEditarCabeza" class="modal fade" role="dialog">
-  
+
   <div class="modal-dialog">
 
     <div class="modal-content">
@@ -265,7 +264,7 @@ MODAL EDITAR PRODUCTO
 
 
 
-          <H1>AQUI VA EL CONTENIDOO RECORDAR HACER VARIABLES</H1>
+            <H1>AQUI VA EL CONTENIDOO RECORDAR HACER VARIABLES</H1>
 
 
 
@@ -273,28 +272,28 @@ MODAL EDITAR PRODUCTO
 
 
 
-        </div>
+          </div>
 
-        <!--=====================================
+          <!--=====================================
         PIE DEL MODAL
         ======================================-->
 
-        <div class="modal-footer">
+          <div class="modal-footer">
 
-          <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Salir</button>
+            <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Salir</button>
 
-          <button type="submit" class="btn btn-primary">Guardar cambios</button>
+            <button type="submit" class="btn btn-primary">Guardar cambios</button>
 
-        </div>
+          </div>
 
       </form>
 
-        <?php
+      <?php
 
-          $editarCabeza = new ControladorCabeza();
-          $editarCabeza -> ctrEditarCabeza();
+      $editarCabeza = new ControladorCabeza();
+      $editarCabeza->ctrEditarCabeza();
 
-        ?>      
+      ?>
 
     </div>
 
@@ -304,10 +303,7 @@ MODAL EDITAR PRODUCTO
 
 <?php
 
-  $eliminarCabeza = new ControladorCabeza();
-  $eliminarCabeza -> ctrEliminarCabeza();
+$eliminarCabeza = new ControladorCabeza();
+$eliminarCabeza->ctrEliminarCabeza();
 
-?>      
-
-
-
+?>
