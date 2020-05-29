@@ -261,7 +261,7 @@ MODAL EDITAR PRODUCTO
 
 
 
-
+          <input type="" name="id" class="id" id="id">
 
 
             <div class="form-group">

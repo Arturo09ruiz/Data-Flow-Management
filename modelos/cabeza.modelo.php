@@ -97,7 +97,7 @@ class ModeloCabeza{
 	}
 
 	/*=============================================
-	EDITAR CABEZA
+	EDITAR Cabeza
 	=============================================*/
 	static public function mdlEditarCabeza($tabla, $datos){
 

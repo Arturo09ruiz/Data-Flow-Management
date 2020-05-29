@@ -71,6 +71,9 @@ $(".tablaCabeza tbody").on("click", "button.btnEditarCabeza", function () {
         success: function (respuesta) {
 
 
+            $("#id").val(respuesta["id"]);
+
+
 
             $("#editarNCM").val(respuesta["ncm"]);
             $("#editarNombre").val(respuesta["nombre"]);
