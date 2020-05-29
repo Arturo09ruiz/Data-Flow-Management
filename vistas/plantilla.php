@@ -5,7 +5,7 @@ session_start();
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
 
   <meta charset="utf-8">
@@ -140,6 +140,7 @@ CUERPO DOCUMENTO
     CONTENIDO
     =============================================*/
 
+ 
 
     if(isset($_GET["ruta"])){
 
@@ -175,6 +176,88 @@ CUERPO DOCUMENTO
 
   
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  if ($_SESSION["perfil"] == "Obispo") {
+
+    include "modulos/obispo/cabezote.php";
+
+    /*=============================================
+    MENU
+    =============================================*/
+
+    include "modulos/obispo/menu.php";
+
+
+    /*=============================================
+    CONTENIDO
+    =============================================*/
+
+
+    if(isset($_GET["ruta"])){
+
+      if($_GET["ruta"] == "inicio" ||
+         $_GET["ruta"] == "cabezas-de-familia" ||
+         $_GET["ruta"] == "salir"){
+
+        include "modulos/obispo/".$_GET["ruta"].".php";
+
+      }else{
+
+        include "modulos/obispo/404.php";
+
+      }
+
+    }else{
+
+      include "modulos/obispo/inicio.php";
+
+    }
+
+
+  
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     /*=============================================
     FOOTER
     =============================================*/
@@ -199,7 +282,7 @@ CUERPO DOCUMENTO
 <script src="vistas/js/consejo.js"></script>
 <script src="vistas/js/estaca.js"></script>
 <script src="vistas/js/barrios.js"></script>
-
+<script src="vistas/js/cabeza.js"></script>
 
 
 

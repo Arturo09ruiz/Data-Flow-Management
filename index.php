@@ -19,7 +19,8 @@ require_once "controladores/barrios.controlador.php";
 
 
 
-
+//OBISPO CONTROLADORES
+require_once "controladores/cabeza.controlador.php";
 
 
 
@@ -45,6 +46,10 @@ require_once "modelos/pais.modelo.php";
 require_once "modelos/estaca.modelo.php";
 require_once "modelos/barrios.modelo.php";
 require_once "modelos/consejo.modelo.php";
+
+
+//Obispo Controladores
+require_once "modelos/cabeza.modelo.php";
 
 
 

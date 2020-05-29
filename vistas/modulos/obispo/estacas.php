@@ -1,29 +1,11 @@
 
-
-<?php
-
-if($_SESSION["perfil"] == "Vendedor"){
-
-  echo '<script>
-
-    window.location = "inicio";
-
-  </script>';
-
-  return;
-
-}
-
-?>
- 
-
 <div class="content-wrapper">
 
   <section class="content-header">
     
     <h1>
       
-      Administrar Barrios/Ramas
+      Administrar Estacas/Distritos
     
     </h1>
 
@@ -31,7 +13,7 @@ if($_SESSION["perfil"] == "Vendedor"){
       
       <li><a href="inicio"><i class="fa fa-dashboard"></i> Inicio</a></li>
       
-      <li class="active">Administrar Barrios/Ramas</li>
+      <li class="active">Administrar Estacas/Distritos</li>
     
     </ol>
 
@@ -43,9 +25,9 @@ if($_SESSION["perfil"] == "Vendedor"){
 
       <div class="box-header with-border">
   
-        <button class="btn btn-primary" data-toggle="modal" data-target="#modalAgregarBarrios">
+        <button class="btn btn-primary" data-toggle="modal" data-target="#modalAgregarEstaca">
           
-          Agregar Barrio
+          Agregar Estacas/Distritos
 
         </button>
 
@@ -53,7 +35,7 @@ if($_SESSION["perfil"] == "Vendedor"){
 
       <div class="box-body">
         
-       <table class="table table-bordered table-striped dt-responsive tablaBarrios" width="100%">
+       <table class="table table-bordered table-striped dt-responsive tablaEstaca" width="100%">
          
         <thead>
          
@@ -62,7 +44,6 @@ if($_SESSION["perfil"] == "Vendedor"){
            <th style="width:10px">#</th>
            <th>Código</th>
            <th>Nombre</th>
-           <th>Estaca/Distrito</th>
            <th>Consejo</th>
            <th>Pais</th>
            <th>Agregado</th>
@@ -85,10 +66,10 @@ if($_SESSION["perfil"] == "Vendedor"){
 </div>
 
 <!--=====================================
-MODAL AGREGAR Barrios
+MODAL AGREGAR Estaca
 ======================================-->
 
-<div id="modalAgregarBarrios" class="modal fade" role="dialog">
+<div id="modalAgregarEstaca" class="modal fade" role="dialog">
   
   <div class="modal-dialog">
 
@@ -104,7 +85,7 @@ MODAL AGREGAR Barrios
 
           <button type="button" class="close" data-dismiss="modal">&times;</button>
 
-          <h4 class="modal-title">Agregar Barrio</h4>
+          <h4 class="modal-title">Agregar Estaca/Distrito</h4>
 
         </div>
 
@@ -115,7 +96,6 @@ MODAL AGREGAR Barrios
         <div class="modal-body">
 
           <div class="box-body">
-
 
 
             <!-- ENTRADA PARA EL CÓDIGO -->
@@ -145,43 +125,6 @@ MODAL AGREGAR Barrios
               </div>
 
             </div>
-
-
-
-            <div class="form-group">
-              
-              <div class="input-group">
-              
-                <span class="input-group-addon"><i class="fa fa-th"></i></span> 
-
-                <select class="form-control input-lg " id="nuevaEstaca" name="nuevaEstaca" required>
-                  
-                  <option value="">Selecionar Estaca/Distrito</option>
-
-                  <?php
-
-                  $item = null;
-                  $valor = null;
-                  $orden = "id";
-
-
-                  $estaca = ControladorEstaca::ctrMostrarEstaca($item, $valor, $orden);
-
-                  foreach ($estaca as $key => $value) {
-                    
-                    echo '<option value="'.$value["id"].'">'.$value["nombre"].'</option>';
-                  }
-
-                  ?>
-  
-                </select>
-
-              </div>
-
-            </div>
-
-
-
 
 
             <div class="form-group">
@@ -253,12 +196,9 @@ MODAL AGREGAR Barrios
 
 
 
+          </div>
 
-            </div>
-
-            </div>
-
-
+        </div>
 
         <!--=====================================
         PIE DEL MODAL
@@ -268,7 +208,7 @@ MODAL AGREGAR Barrios
 
           <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Salir</button>
 
-          <button type="submit" class="btn btn-primary">Guardar Barrio</button>
+          <button type="submit" class="btn btn-primary">Guardar Estaca</button>
 
         </div>
 
@@ -276,8 +216,8 @@ MODAL AGREGAR Barrios
 
         <?php
 
-          $crearBarrios = new ControladorBarrios();
-          $crearBarrios -> ctrCrearBarrios();
+          $crearEstaca = new ControladorEstaca();
+          $crearEstaca -> ctrCrearEstaca();
 
         ?>  
 
@@ -290,8 +230,8 @@ MODAL AGREGAR Barrios
 
 <?php
 
-  $eliminarBarrios = new ControladorBarrios();
-  $eliminarBarrios -> ctrEliminarBarrios();
+  $eliminarEstaca = new ControladorEstaca();
+  $eliminarEstaca -> ctrEliminarEstaca();
 
 ?>      
 
