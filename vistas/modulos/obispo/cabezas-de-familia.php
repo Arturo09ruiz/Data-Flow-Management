@@ -264,7 +264,67 @@ MODAL EDITAR PRODUCTO
 
 
 
-            <H1>AQUI VA EL CONTENIDOO RECORDAR HACER VARIABLES</H1>
+            <div class="form-group">
+
+              <div class="input-group">
+
+                <span class="input-group-addon"><i class="fa fa-code"></i></span>
+
+                <input type="number" class="form-control input-lg" id="editarNCM" name="editarNCM" placeholder="Ingresar Numero de Cedula de Miembro" required>
+
+              </div>
+
+            </div>
+
+            <!-- ENTRADA PARA LA NOMBRE -->
+
+            <div class="form-group">
+
+              <div class="input-group">
+
+                <span class="input-group-addon"><i class="fa fa-product-hunt"></i></span>
+
+                <input type="text" class="form-control input-lg editarNombre" id="editarNombre" name="editarNombre" placeholder="Ingresar Nombre Completo" required>
+
+              </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+              <div class="input-group">
+
+                <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+
+                <input type="date" class="form-control input-lg editarFechaNacimiento" id="editarFechaNacimiento" name="editarFechaNacimiento" required>
+
+              </div>
+
+            </div>
+
+
+            <!-- ENTRADA PARA LA NOMBRE -->
+
+            <div class="form-group">
+
+              <div class="input-group">
+
+                <span class="input-group-addon"><i class="fa fa-info"></i></span>
+
+                <input type="text" class="form-control input-lg editarMiembros" id="editarMiembros" name="editarMiembros" placeholder="Ingresar Numero de Miembros de la Familia FLRS" required>
+
+              </div>
+
+            </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -285,6 +345,8 @@ MODAL EDITAR PRODUCTO
             <button type="submit" class="btn btn-primary">Guardar cambios</button>
 
           </div>
+        </div>
+
 
       </form>
 
