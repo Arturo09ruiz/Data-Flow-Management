@@ -86,7 +86,7 @@ class ControladorCabeza
 
         if (isset($_POST["editarNombre"])) {
 
-            $tabla = "cabezas";
+            $tabla = "cabeza";
 
             $datos = array(
                 "id" => $_POST["id"],
