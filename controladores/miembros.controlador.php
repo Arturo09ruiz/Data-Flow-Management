@@ -20,7 +20,7 @@ class ControladorMiembros{
 
 		$tabla = "miembros";
 
-		$respuesta = ModeloMiembros::mdlMostrarMiembros($tabla, $item, $valor, $orden, $idbarrio);
+		$respuesta = ModeloMiembros::mdlMostrarMiembrosConformeBarrioObispo($tabla, $item, $valor, $orden, $idbarrio);
 
 		return $respuesta;
 
