@@ -1,6 +1,6 @@
 <?php
 
-if ($_SESSION["perfil"] == "Obispo") {
+if ($_SESSION["perfil"] == "Presidente-de-Estaca") {
 
 	echo '
 <aside class="main-sidebar">
@@ -29,7 +29,7 @@ if ($_SESSION["perfil"] == "Obispo") {
 			<a href="miembros">
 				
 				<i class="fa fa-circle-o"></i>
-				<span>Registrar Miembro</span>
+				<span>Visualizar Miembros</span>
 
 			</a>
 

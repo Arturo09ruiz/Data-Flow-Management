@@ -244,6 +244,98 @@ CUERPO DOCUMENTO
 
 
 
+  if ($_SESSION["perfil"] == "Presidente-de-Estaca") {
+
+    include "modulos/Presidente-de-Estaca/cabezote.php";
+
+    /*=============================================
+    MENU
+    =============================================*/
+
+    include "modulos/Presidente-de-Estaca/menu.php";
+
+
+    /*=============================================
+    CONTENIDO
+    =============================================*/
+
+
+    if(isset($_GET["ruta"])){
+
+      if($_GET["ruta"] == "inicio" ||
+         $_GET["ruta"] == "miembros" ||
+         $_GET["ruta"] == "salir"){
+
+        include "modulos/Presidente-de-Estaca/".$_GET["ruta"].".php";
+
+      }else{
+
+        include "modulos/Presidente-de-Estaca/404.php";
+
+      }
+
+    }else{
+
+      include "modulos/Presidente-de-Estaca/inicio.php";
+
+    }
+
+
+  
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
