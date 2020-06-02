@@ -15,6 +15,7 @@ $.ajax({
 
 var idbarrio = $("#idbarrio").val();
 
+
 $('.tablaMiembros').DataTable( {
     "ajax": "ajax/datatable-miembros.ajax.php?idbarrio="+idbarrio,
     "deferRender": true,
