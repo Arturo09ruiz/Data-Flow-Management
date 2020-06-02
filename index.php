@@ -20,7 +20,7 @@ require_once "controladores/barrios.controlador.php";
 
 
 //OBISPO CONTROLADORES
-require_once "controladores/cabeza.controlador.php";
+require_once "controladores/miembros.controlador.php";
 
 
 
@@ -49,7 +49,7 @@ require_once "modelos/consejo.modelo.php";
 
 
 //Obispo Controladores
-require_once "modelos/cabeza.modelo.php";
+require_once "modelos/miembros.modelo.php";
 
 
 
