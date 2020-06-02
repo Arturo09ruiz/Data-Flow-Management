@@ -27,15 +27,6 @@ class ControladorMiembros{
 	}
 
 
-	static public function ctrMostrarMiembrosConformeEstacaPdt($item, $valor, $orden , $estaca){
-
-		$tabla = "miembros";
-
-		$respuesta = ModeloMiembros::ctrMostrarMiembrosConformeEstacaPdt($tabla, $item, $valor, $orden, $estaca);
-
-		return $respuesta;
-
-	}
 
 
 	

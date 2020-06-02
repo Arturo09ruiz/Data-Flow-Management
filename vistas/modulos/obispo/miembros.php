@@ -240,7 +240,7 @@ MODAL EDITAR Miembros
               
                 <span class="input-group-addon"><i class="fa fa-code"></i></span> 
 
-                <input type="text" class="form-control input-lg editarNCM" id="editarNCM" name="editarNCM" placeholder="Ingresar Numero de Cedula de Miembro" required>
+                <input  type="text" class="form-control input-lg editarNCM" id="editarNCM" name="editarNCM" placeholder="Ingresar Numero de Cedula de Miembro" readonly required>
 
               </div>
 
