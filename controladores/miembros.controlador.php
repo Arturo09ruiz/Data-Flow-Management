@@ -16,6 +16,18 @@ class ControladorMiembros{
 
 	}
 
+	static public function ctrMostrarMiembrosConformeBarrioObispo($item, $valor, $orden , $idbarrio){
+
+		$tabla = "miembros";
+
+		$respuesta = ModeloMiembros::mdlMostrarMiembros($tabla, $item, $valor, $orden, $idbarrio);
+
+		return $respuesta;
+
+	}
+
+
+
 	/*=============================================
 	CREAR Miembro 
 	=============================================*/
