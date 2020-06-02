@@ -1,28 +1,28 @@
 <?php
 
-require_once "../controladores/miembros-pdt-estaca.controlador.php";
-require_once "../modelos/miembros-pdt-estaca.modelo.php";
+require_once "../controladores/miembros-gerente.controlador.php";
+require_once "../modelos/miembros-gerente.modelo.php";
 
 
 require_once "../controladores/barrios.controlador.php";
 require_once "../modelos/barrios.modelo.php";
 
-class TablaMiembrosPdtEstaca{
+class TablaMiembrosGerente{
 
  	/*=============================================
  	 MOSTRAR LA TABLA DE MIEMBROS
   	=============================================*/ 
 
-	public function mostrarTablaMiembrosPdtEstaca(){
+	public function mostrarTablaMiembrosGerente(){
 
 		$item = null;
     	$valor = null;
 		$orden = "id";
-        $estaca = $_GET["estaca"];
+        $consejo = $_GET["consejo"];
 
-  		$miembrosestaca = ControladorMiembrosPdtEstaca::ctrMostrarMiembrosConformeEstaca($item, $valor, $orden, $estaca);	
+  		$miembrosconsejo = ControladorMiembrosPdtEstaca::ctrMostrarMiembrosConformeEstaca($item, $valor, $orden, $estaca);	
 
-  		if(count($miembrosestaca) == 0){
+  		if(count($miembrosconsejo) == 0){
 
   			echo '{"data": []}';
 
@@ -32,22 +32,22 @@ class TablaMiembrosPdtEstaca{
   		$datosJson = '{
 		  "data": [';
 
-		  for($i = 0; $i < count($miembrosestaca); $i++){
+		  for($i = 0; $i < count($miembrosconsejo); $i++){
 
 		 
 		
             $item = "id";
             $orden = "id";
-            $valor = $miembrosestaca[$i]["idbarrio"];
+            $valor = $miembrosconsejo[$i]["idbarrio"];
 
             $barrios = ControladorBarrios::ctrMostrarBarrios($item, $valor, $orden);
 		 
 		  	$datosJson .='[
 			      "'.($i+1).'",
-			      "'.$miembrosestaca[$i]["ncm"].'",
-			      "'.$miembrosestaca[$i]["nombre"].'",
-			      "'.$miembrosestaca[$i]["email"].'",
-                  "'.$miembrosestaca[$i]["telefono"].'",
+			      "'.$miembrosconsejo[$i]["ncm"].'",
+			      "'.$miembrosconsejo[$i]["nombre"].'",
+			      "'.$miembrosconsejo[$i]["email"].'",
+                  "'.$miembrosconsejo[$i]["telefono"].'",
                   "'.$barrios["nombre"].'"
 			    ],';
 
