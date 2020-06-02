@@ -373,11 +373,6 @@ MODAL AGREGAR USUARIO
                   <option value="">Selecionar perfil</option>
 
                   <option value="Administrador">Administrador</option>
-                  
-                  <option value="Gerente">Gerente de Autosuficiencia</option>
-
-                  <option value="Presidente-de-Estaca">Presidente De Estaca</option>
-
 
                   <option value="Obispo">Obispo</option>
 
