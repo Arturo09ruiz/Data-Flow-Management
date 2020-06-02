@@ -26,7 +26,7 @@
 
     <div class="box-body">
       
-     <table class="table table-bordered table-striped dt-responsive tablaMiembrosPdtEstaca" width="100%">
+     <table class="table table-bordered table-striped dt-responsive tablaMiembrosGerente" width="100%">
        
       <thead>
        
@@ -38,6 +38,8 @@
          <th>Email</th>
          <th>N° De Telf</th>
          <th>Barrio</th>
+         <th>Estaca</th>
+
 
 
          
@@ -50,7 +52,7 @@
      <input type="hidden" value="<?php echo $_SESSION['perfil']; ?>" id="perfilOculto">
      <input class="idbarrio" type="hidden" value="<?php echo $_SESSION['idbarrio']; ?>" id="idbarrio">
      <input class="idestaca" type="hidden" value="<?php echo $_SESSION['idestaca']; ?>" id="idestaca">
-     <input type="hidden" value="<?php echo $_SESSION['idconsejo']; ?>" id="idconsejo">
+     <input class="idconsejo" type="hidden" value="<?php echo $_SESSION['idconsejo']; ?>" id="idconsejo">
      <input type="hidden" value="<?php echo $_SESSION['idpais']; ?>" id="idpais">
 
 
