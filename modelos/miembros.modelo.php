@@ -96,10 +96,10 @@ class ModeloMiembros{
 	}
 
 	/*=============================================
-	BORRAR PRODUCTO
+	BORRAR Miembros
 	=============================================*/
 
-	static public function mdlEliminarProducto($tabla, $datos){
+	static public function mdlEliminarMiembros($tabla, $datos){
 
 		$stmt = Conexion::conectar()->prepare("DELETE FROM $tabla WHERE id = :id");
 
