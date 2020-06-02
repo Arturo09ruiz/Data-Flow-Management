@@ -129,7 +129,7 @@ MODAL AGREGAR PRODUCTO
               
                 <span class="input-group-addon"><i class="fa fa-product-hunt"></i></span> 
 
-                <input type="text" class="form-control input-lg" name="nuevaNombre" placeholder="Ingresar Nombre Completo" required>
+                <input type="text" class="form-control input-lg nuevaNombre" id="nuevaNombre" name="nuevaNombre" placeholder="Ingresar Nombre Completo" required>
 
               </div>
 
