@@ -374,6 +374,8 @@ MODAL AGREGAR USUARIO
 
                   <option value="Administrador">Administrador</option>
                   
+                  <option value="Setenta-Pais">Setenta-Pais</option>
+
                   <option value="Gerente">Gerente de Autosuficiencia</option>
 
                   <option value="Presidente-de-Estaca">Presidente De Estaca</option>
