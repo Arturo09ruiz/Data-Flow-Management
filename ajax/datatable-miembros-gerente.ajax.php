@@ -7,6 +7,10 @@ require_once "../modelos/miembros-gerente.modelo.php";
 require_once "../controladores/barrios.controlador.php";
 require_once "../modelos/barrios.modelo.php";
 
+
+require_once "../controladores/estaca.controlador.php";
+require_once "../modelos/estaca.modelo.php";
+
 class TablaMiembrosGerente{
 
  	/*=============================================
@@ -41,14 +45,31 @@ class TablaMiembrosGerente{
             $valor = $miembrosconsejo[$i]["idbarrio"];
 
             $barrios = ControladorBarrios::ctrMostrarBarrios($item, $valor, $orden);
+         
+
+
+
+
+            $item = "id";
+            $orden = "id";
+            $valor = $miembrosconsejo[$i]["idestaca"];
+
+            $estacas = ControladorEstaca::ctrMostrarEstaca($item, $valor, $orden);
 		 
+
+
+
+
+            
+
 		  	$datosJson .='[
 			      "'.($i+1).'",
 			      "'.$miembrosconsejo[$i]["ncm"].'",
 			      "'.$miembrosconsejo[$i]["nombre"].'",
 			      "'.$miembrosconsejo[$i]["email"].'",
                   "'.$miembrosconsejo[$i]["telefono"].'",
-                  "'.$barrios["nombre"].'"
+                  "'.$barrios["nombre"].'",
+                  "'.$estacas["nombre"].'"
 			    ],';
 
 		  }
