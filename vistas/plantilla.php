@@ -290,6 +290,47 @@ CUERPO DOCUMENTO
 
 
 
+  if ($_SESSION["perfil"] == "Gerente") {
+
+    include "modulos/Gerente/cabezote.php";
+
+    /*=============================================
+    MENU
+    =============================================*/
+
+    include "modulos/Gerente/menu.php";
+
+
+    /*=============================================
+    CONTENIDO
+    =============================================*/
+
+
+    if(isset($_GET["ruta"])){
+
+      if($_GET["ruta"] == "inicio" ||
+         $_GET["ruta"] == "miembros" ||
+         $_GET["ruta"] == "salir"){
+
+        include "modulos/Gerente/".$_GET["ruta"].".php";
+
+      }else{
+
+        include "modulos/Gerente/404.php";
+
+      }
+
+    }else{
+
+      include "modulos/Gerente/inicio.php";
+
+    }
+
+
+  
+  }
+
+
 
 
 
