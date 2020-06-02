@@ -250,7 +250,7 @@ MODAL EDITAR Miembros
               
                 <span class="input-group-addon"><i class="fa fa-product-hunt"></i></span> 
 
-                <input type="text" class="form-control input-lg" id="editarNombre" name="editarNombre" placeholder="Ingresar Nombre Completo" required>
+                <input type="text" class="form-control input-lg editarNombre" id="editarNombre" name="editarNombre" placeholder="Ingresar Nombre Completo" required>
 
               </div>
 
@@ -262,7 +262,7 @@ MODAL EDITAR Miembros
               
                 <span class="input-group-addon"><i class="fa fa-envelope"></i></span> 
 
-                <input type="email" class="form-control input-lg" id="editarEmail" name="editarEmail" placeholder="Ingresar email" >
+                <input type="email" class="form-control input-lg editarEmail" id="editarEmail" name="editarEmail" placeholder="Ingresar email" >
 
               </div>
 
@@ -275,7 +275,7 @@ MODAL EDITAR Miembros
               
                 <span class="input-group-addon"><i class="fa fa-phone"></i></span> 
 
-                <input type="text" class="form-control input-lg" id="editarTelefono" name="editarTelefono" placeholder="Ingresar N° de Telf" data-inputmask="'mask':'(999) 999-9999'" data-mask required>
+                <input type="text" class="form-control input-lg editarTelefono" id="editarTelefono" name="editarTelefono" placeholder="Ingresar N° de Telf" data-inputmask="'mask':'(999) 999-9999'" data-mask required>
 
               </div>
 

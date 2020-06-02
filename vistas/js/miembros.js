@@ -73,21 +73,13 @@ $(".tablaMiembros tbody").on("click", "button.btnEditarMiembros", function(){
          
            $("#editarNCM").val(respuesta["ncm"]);
 
-           $("#editarDescripcion").val(respuesta["descripcion"]);
+           $("#editarNombre").val(respuesta["nombre"]);
 
-           $("#editarStock").val(respuesta["stock"]);
+           $("#editarEmail").val(respuesta["email"]);
 
-           $("#editarPrecioCompra").val(respuesta["precio_compra"]);
+           $("#editarTelefono").val(respuesta["telefono"]);
 
-           $("#editarPrecioVenta").val(respuesta["precio_venta"]);
-
-           if(respuesta["imagen"] != ""){
-
-           	$("#imagenActual").val(respuesta["imagen"]);
-
-           	$(".previsualizar").attr("src",  respuesta["imagen"]);
-
-           }
+         
 
       }
 
