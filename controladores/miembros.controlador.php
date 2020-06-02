@@ -107,23 +107,18 @@ class ControladorMiembros{
 	}
 
 	/*=============================================
-	BORRAR PRODUCTO
+	BORRAR Miembro
 	=============================================*/
-	static public function ctrEliminarProducto(){
+	static public function ctrEliminarMiembros(){
 
-		if(isset($_GET["idProducto"])){
+		if(isset($_GET["idMiembros"])){
 
-			$tabla ="productos";
-			$datos = $_GET["idProducto"];
+			$tabla ="miembros";
+			$datos = $_GET["idMiembros"];
 
-			if($_GET["imagen"] != "" && $_GET["imagen"] != "vistas/img/productos/default/anonymous.png"){
+		
 
-				unlink($_GET["imagen"]);
-				rmdir('vistas/img/productos/'.$_GET["codigo"]);
-
-			}
-
-			$respuesta = ModeloProductos::mdlEliminarProducto($tabla, $datos);
+			$respuesta = ModeloMiembros::mdlEliminarMiembros($tabla, $datos);
 
 			if($respuesta == "ok"){
 
@@ -131,13 +126,13 @@ class ControladorMiembros{
 
 				swal({
 					  type: "success",
-					  title: "El producto ha sido borrado correctamente",
+					  title: "El Miembro ha sido borrado correctamente",
 					  showConfirmButton: true,
 					  confirmButtonText: "Cerrar"
 					  }).then(function(result){
 								if (result.value) {
 
-								window.location = "productos";
+								window.location = "miembros";
 
 								}
 							})
@@ -150,19 +145,7 @@ class ControladorMiembros{
 
 	}
 
-	/*=============================================
-	MOSTRAR SUMA VENTAS
-	=============================================*/
 
-	static public function ctrMostrarSumaVentas(){
-
-		$tabla = "productos";
-
-		$respuesta = ModeloProductos::mdlMostrarSumaVentas($tabla);
-
-		return $respuesta;
-
-	}
 
 
 }
