@@ -23,6 +23,19 @@ if ($_SESSION["perfil"] == "Obispo") {
 			</li>
 
 
+
+			<li>
+
+			<a href="miembros">
+				
+				<i class="fa fa-circle-o"></i>
+				<span>Registrar Miembro</span>
+
+			</a>
+
+		</li>
+
+
 	<li class="treeview">
 
 				<a href="#">
@@ -41,17 +54,7 @@ if ($_SESSION["perfil"] == "Obispo") {
 
 				<ul class="treeview-menu">
 					
-					<li>
-
-						<a href="miembros">
-							
-							<i class="fa fa-circle-o"></i>
-							<span>Registrar Miembro</span>
-
-						</a>
-
-					</li>
-
+				
 					<li>
 
 						<a href="realizar-solicitud">
