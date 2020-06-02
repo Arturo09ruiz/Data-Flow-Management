@@ -75,8 +75,8 @@ class TablaMiembros{
 }
 
 /*=============================================
-ACTIVAR TABLA DE PRODUCTOS
+ACTIVAR TABLA DE MIEMBROS
 =============================================*/ 
-$activarProductos = new TablaProductos();
-$activarProductos -> mostrarTablaProductos();
+$activarMiembros = new TablaMiembros();
+$activarMiembros -> mostrarTablaMiembros();
 
