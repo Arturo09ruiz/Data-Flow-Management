@@ -20,7 +20,7 @@ class ControladorMiembros{
 	CREAR Miembro 
 	=============================================*/
 
-	static public function ctrCrearMiembro(){
+	static public function ctrCrearMiembros(){
 
 		if(isset($_POST["nuevaNombre"])){
 
@@ -59,7 +59,7 @@ class ControladorMiembros{
 				}
 
 
-			}
+			
 		}
 
 	}
