@@ -31,9 +31,6 @@ require_once "controladores/miembros-pdt-estaca.controlador.php";
 
 //GERENTECONTROLADORES
 
-
-
-
 require_once "controladores/miembros-gerente.controlador.php";
 
 
@@ -65,7 +62,7 @@ require_once "modelos/miembros-pdt-estaca.modelo.php";
 
 
 //gerentemodelo
-require_once "modelos/miembros-gerente.modelo.php.modelo.php";
+require_once "modelos/miembros-gerente.modelo.php";
 
 
 $plantilla = new ControladorPlantilla();
