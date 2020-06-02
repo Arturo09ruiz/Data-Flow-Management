@@ -161,7 +161,11 @@ MODAL AGREGAR PRODUCTO
             </div>
 
 
-
+            <input type="hidden" name="idbarrio" value="<?php echo $_SESSION['idbarrio']; ?>" type="text">
+            <input type="hidden" name="idestaca" value="<?php echo $_SESSION['idestaca']; ?>" type="text">
+            <input type="hidden" name="idconsejo" value="<?php echo $_SESSION['idconsejo']; ?>" type="text">
+            <input type="hidden" name="idpais" value="<?php echo $_SESSION['idpais']; ?>" type="text">
+            
           </div>
 
         </div>
