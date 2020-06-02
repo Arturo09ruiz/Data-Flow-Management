@@ -29,12 +29,13 @@ class ControladorMiembros{
 				$datos = array("ncm" => $_POST["nuevoNCM"],
 							   "nombre" => $_POST["nuevaNombre"],
 							   "email" => $_POST["nuevoEmail"],
-							   "telefono" => $_POST["nuevoTelefono"],
-							   "precio_compra" => $_POST["nuevoPrecioCompra"],
-							   "precio_venta" => $_POST["nuevoPrecioVenta"],
-							   "imagen" => $ruta);
+                               "telefono" => $_POST["nuevoTelefono"],
+                               "idbarrio" => $_POST["idbarrio"],
+							   "idestaca" => $_POST["idestaca"],
+							   "idconsejo" => $_POST["idconsejo"],
+							   "idpais" => $_POST["idpais"]);
 
-				$respuesta = ModeloProductos::mdlIngresarProducto($tabla, $datos);
+				$respuesta = ModeloMiembros::mdlIngresarMiembros($tabla, $datos);
 
 				if($respuesta == "ok"){
 
@@ -42,13 +43,13 @@ class ControladorMiembros{
 
 						swal({
 							  type: "success",
-							  title: "El producto ha sido guardado correctamente",
+							  title: "El Miembro ha sido guardado correctamente",
 							  showConfirmButton: true,
 							  confirmButtonText: "Cerrar"
 							  }).then(function(result){
 										if (result.value) {
 
-										window.location = "productos";
+										window.location = "miembros";
 
 										}
 									})
