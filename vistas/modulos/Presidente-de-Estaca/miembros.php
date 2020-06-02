@@ -47,7 +47,7 @@
 
      <input type="hidden" value="<?php echo $_SESSION['perfil']; ?>" id="perfilOculto">
      <input class="idbarrio" type="hidden" value="<?php echo $_SESSION['idbarrio']; ?>" id="idbarrio">
-     <input type="hidden" value="<?php echo $_SESSION['idestaca']; ?>" id="idestaca">
+     <input class="idestaca" type="hidden" value="<?php echo $_SESSION['idestaca']; ?>" id="idestaca">
      <input type="hidden" value="<?php echo $_SESSION['idconsejo']; ?>" id="idconsejo">
      <input type="hidden" value="<?php echo $_SESSION['idpais']; ?>" id="idpais">
 

@@ -5,7 +5,7 @@ CARGAR LA TABLA DINÁMICA DE MIEMBROS
 $.ajax({
 
 
-	url: 'ajax/datatable-miembros.ajax.php?barrio="+barrio',
+	url: 'ajax/datatable-miembros.ajax.php',
 	success:function(respuesta){
 		
 		console.log("respuesta", respuesta);
