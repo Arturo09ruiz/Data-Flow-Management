@@ -101,25 +101,7 @@ class ControladorMiembros{
 				}
 
 
-			}else{
-
-				echo'<script>
-
-					swal({
-						  type: "error",
-						  title: "¡El producto no puede ir con los campos vacíos o llevar caracteres especiales!",
-						  showConfirmButton: true,
-						  confirmButtonText: "Cerrar"
-						  }).then(function(result){
-							if (result.value) {
-
-							window.location = "productos";
-
-							}
-						})
-
-			  	</script>';
-			}
+			
 		}
 
 	}
