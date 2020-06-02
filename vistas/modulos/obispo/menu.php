@@ -29,7 +29,7 @@ if ($_SESSION["perfil"] == "Obispo") {
 
 					<i class="fa fa-list-ul"></i>
 					
-					<span>Solicitud del AO</span>
+					<span>Solicitud Medicinas </span>
 					
 					<span class="pull-right-container">
 					
@@ -43,10 +43,10 @@ if ($_SESSION["perfil"] == "Obispo") {
 					
 					<li>
 
-						<a href="cabezas-de-familia">
+						<a href="miembros">
 							
 							<i class="fa fa-circle-o"></i>
-							<span>Registrar CF</span>
+							<span>Registrar Miembro</span>
 
 						</a>
 

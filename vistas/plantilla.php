@@ -211,7 +211,7 @@ CUERPO DOCUMENTO
     if(isset($_GET["ruta"])){
 
       if($_GET["ruta"] == "inicio" ||
-         $_GET["ruta"] == "cabezas-de-familia" ||
+         $_GET["ruta"] == "miembros" ||
          $_GET["ruta"] == "salir"){
 
         include "modulos/obispo/".$_GET["ruta"].".php";
@@ -282,7 +282,7 @@ CUERPO DOCUMENTO
 <script src="vistas/js/consejo.js"></script>
 <script src="vistas/js/estaca.js"></script>
 <script src="vistas/js/barrios.js"></script>
-<script src="vistas/js/cabeza.js"></script>
+
 
 
 
