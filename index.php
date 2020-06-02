@@ -26,6 +26,11 @@ require_once "controladores/miembros.controlador.php";
 
 
 
+//pdtestacacontroladores
+require_once "../controladores/miembros-pdt-estaca.controlador.php";
+
+
+
 
 
 
@@ -51,6 +56,9 @@ require_once "modelos/consejo.modelo.php";
 //Obispo Controladores
 require_once "modelos/miembros.modelo.php";
 
+
+//pdtestacamodelo
+require_once "../modelos/miembros-pdt-estaca.modelo.php";
 
 
 $plantilla = new ControladorPlantilla();
