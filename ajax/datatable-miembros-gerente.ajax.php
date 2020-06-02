@@ -20,7 +20,7 @@ class TablaMiembrosGerente{
 		$orden = "id";
         $consejo = $_GET["consejo"];
 
-  		$miembrosconsejo = ControladorMiembrosPdtEstaca::ctrMostrarMiembrosConformeEstaca($item, $valor, $orden, $estaca);	
+  		$miembrosconsejo = ControladorMiembrosGerente::ctrMostrarMiembrosGerente($item, $valor, $orden, $consejo);	
 
   		if(count($miembrosconsejo) == 0){
 
@@ -71,6 +71,6 @@ class TablaMiembrosGerente{
 /*=============================================
 ACTIVAR TABLA DE MIEMBROS
 =============================================*/ 
-$activarMiembrosEstaca = new TablaMiembrosPdtEstaca();
-$activarMiembrosEstaca -> mostrarTablaMiembrosPdtEstaca();
+$activarMiembrosConsejo = new TablaMiembrosGerente();
+$activarMiembrosConsejo -> mostrarTablaMiembrosGerente();
 
