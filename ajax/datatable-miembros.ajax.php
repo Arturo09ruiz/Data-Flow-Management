@@ -51,12 +51,9 @@ class TablaMiembros{
 		  	$datosJson .='[
 			      "'.($i+1).'",
 			      "'.$miembros[$i]["ncm"].'",
-			      "'.$productos[$i]["descripcion"].'",
-			      "'.$categorias["categoria"].'",
-			      "'.$stock.'",
-			      "'.$productos[$i]["precio_compra"].'",
-			      "'.$productos[$i]["precio_venta"].'",
-			      "'.$productos[$i]["fecha"].'",
+			      "'.$miembros[$i]["nombre"].'",
+			      "'.$miembros[$i]["email"].'",
+			      "'.$miembros[$i]["telefono"].'",
 			      "'.$botones.'"
 			    ],';
 
