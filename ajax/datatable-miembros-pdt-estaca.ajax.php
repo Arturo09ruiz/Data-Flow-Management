@@ -17,7 +17,7 @@ class TablaMiembrosPdtEstaca{
 		$orden = "id";
         $estaca = $_GET["estaca"];
 
-  		$miembros = ControladorMiembros::ctrMostrarMiembrosConformeBarrioObispo($item, $valor, $orden, $estaca);	
+  		$miembros = ControladorMiembros::ctrMostrarMiembrosConformeEstacaPdt($item, $valor, $orden, $estaca);	
 
   		if(count($miembros) == 0){
 
