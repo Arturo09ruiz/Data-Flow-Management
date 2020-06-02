@@ -37,19 +37,20 @@ class ModeloMiembros{
 	}
 
 	/*=============================================
-	REGISTRO DE PRODUCTO
+	REGISTRO DE Miembros
 	=============================================*/
-	static public function mdlIngresarProducto($tabla, $datos){
+	static public function mdlIngresarMiembros($tabla, $datos){
 
-		$stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(id_categoria, codigo, descripcion, imagen, stock, precio_compra, precio_venta) VALUES (:id_categoria, :codigo, :descripcion, :imagen, :stock, :precio_compra, :precio_venta)");
+		$stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(ncm, nombre, email, telefono, idbarrio, idestaca, idconsejo, idpais) VALUES (:ncm, :nombre, :email, :telefono, :idbarrio, :idestaca, :idconsejo, :idpais)");
 
-		$stmt->bindParam(":id_categoria", $datos["id_categoria"], PDO::PARAM_INT);
-		$stmt->bindParam(":codigo", $datos["codigo"], PDO::PARAM_STR);
-		$stmt->bindParam(":descripcion", $datos["descripcion"], PDO::PARAM_STR);
-		$stmt->bindParam(":imagen", $datos["imagen"], PDO::PARAM_STR);
-		$stmt->bindParam(":stock", $datos["stock"], PDO::PARAM_STR);
-		$stmt->bindParam(":precio_compra", $datos["precio_compra"], PDO::PARAM_STR);
-		$stmt->bindParam(":precio_venta", $datos["precio_venta"], PDO::PARAM_STR);
+        $stmt->bindParam(":ncm", $datos["ncm"], PDO::PARAM_INT);
+		$stmt->bindParam(":nombre", $datos["nombre"], PDO::PARAM_INT);
+		$stmt->bindParam(":email", $datos["email"], PDO::PARAM_STR);
+		$stmt->bindParam(":telefono", $datos["telefono"], PDO::PARAM_STR);
+		$stmt->bindParam(":idbarrio", $datos["idbarrio"], PDO::PARAM_STR);
+		$stmt->bindParam(":idestaca", $datos["idestaca"], PDO::PARAM_STR);
+		$stmt->bindParam(":idconsejo", $datos["idconsejo"], PDO::PARAM_STR);
+		$stmt->bindParam(":idpais", $datos["idpais"], PDO::PARAM_STR);
 
 		if($stmt->execute()){
 
