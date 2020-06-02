@@ -16,11 +16,11 @@ class ControladorMiembros{
 
 	}
 
-	static public function ctrMostrarMiembrosConformeBarrioObispo($item, $valor, $orden , $idbarrio){
+	static public function ctrMostrarMiembrosConformeBarrioObispo($item, $valor, $orden , $barrio){
 
 		$tabla = "miembros";
 
-		$respuesta = ModeloMiembros::mdlMostrarMiembrosConformeBarrioObispo($tabla, $item, $valor, $orden, $idbarrio);
+		$respuesta = ModeloMiembros::mdlMostrarMiembrosConformeBarrioObispo($tabla, $item, $valor, $orden, $barrio);
 
 		return $respuesta;
 

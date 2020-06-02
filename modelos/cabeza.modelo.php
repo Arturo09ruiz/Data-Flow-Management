@@ -39,11 +39,11 @@ class ModeloCabeza{
 	
 
 	// MOSTRAR DATOS CONFORME ID DEL OBISPO
-    static public function mdlMostrarCabezaBarrio($tabla, $item, $valor, $orden, $barrio){
+    static public function mdlMostrarCabezaBarrio($tabla, $item, $valor, $orden, $idbarrio){
 
 		if($item != null){
 
-			$stmt = Conexion::conectar()->prepare("SELECT * FROM `cabeza` WHERE `idbarrio` = $barrio");
+			$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE `idbarrio` = $idbarrio");
 
 			$stmt -> bindParam(":".$item, $valor, PDO::PARAM_STR);
 
@@ -53,7 +53,7 @@ class ModeloCabeza{
 
 		}else{
 
-			$stmt = Conexion::conectar()->prepare("SELECT * FROM `cabeza` WHERE `idbarrio` = $barrio");
+			$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE `idbarrio` = $idbarrio");
 
 			$stmt -> execute();
 

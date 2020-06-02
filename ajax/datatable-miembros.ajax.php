@@ -15,9 +15,9 @@ class TablaMiembros{
 		$item = null;
     	$valor = null;
 		$orden = "id";
-		$idbarrio = $_GET["idbarrio"];
+        $barrio = $_GET["barrio"];
 
-  		$miembros = ControladorMiembros::ctrMostrarMiembrosConformeBarrioObispo($item, $valor, $orden, $idbarrio);	
+  		$miembros = ControladorMiembros::ctrMostrarMiembrosConformeBarrioObispo($item, $valor, $orden, $barrio);	
 
   		if(count($miembros) == 0){
 

@@ -13,11 +13,11 @@ $.ajax({
 
 })
 
-var idbarrio = $("#idbarrio").val();
+var barrio = $("#idbarrio").val();
 
 
 $('.tablaMiembros').DataTable( {
-    "ajax": "ajax/datatable-miembros.ajax.php?idbarrio="+idbarrio,
+    "ajax": "ajax/datatable-miembros.ajax.php?barrio="+barrio,
     "deferRender": true,
 	"retrieve": true,
 	"processing": true,

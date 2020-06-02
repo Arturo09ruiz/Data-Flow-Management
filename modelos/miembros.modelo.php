@@ -37,7 +37,7 @@ class ModeloMiembros{
 	}
 
 
-	static public function mdlMostrarMiembrosConformeBarrioObispo($tabla, $item, $valor, $orden, $idbarrio){
+	static public function mdlMostrarMiembrosConformeBarrioObispo($tabla, $item, $valor, $orden, $barrio){
 
 		if($item != null){
 
