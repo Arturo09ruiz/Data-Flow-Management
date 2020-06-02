@@ -10,15 +10,15 @@ class TablaMiembros{
  	 MOSTRAR LA TABLA DE MIEMBROS
   	=============================================*/ 
 
-	public function mostrarTablaProductos(){
+	public function mostrarTablaMiembros(){
 
 		$item = null;
     	$valor = null;
     	$orden = "id";
 
-  		$productos = ControladorProductos::ctrMostrarProductos($item, $valor, $orden);	
+  		$miembros = ControladorMiembros::ctrMostrarMiembros($item, $valor, $orden);	
 
-  		if(count($productos) == 0){
+  		if(count($miembros) == 0){
 
   			echo '{"data": []}';
 
@@ -28,40 +28,10 @@ class TablaMiembros{
   		$datosJson = '{
 		  "data": [';
 
-		  for($i = 0; $i < count($productos); $i++){
+		  for($i = 0; $i < count($miembros); $i++){
 
-		  	/*=============================================
- 	 		TRAEMOS LA IMAGEN
-  			=============================================*/ 
-
-		  	$imagen = "<img src='".$productos[$i]["imagen"]."' width='40px'>";
-
-		  	/*=============================================
- 	 		TRAEMOS LA CATEGORÍA
-  			=============================================*/ 
-
-		  	$item = "id";
-		  	$valor = $productos[$i]["id_categoria"];
-
-		  	$categorias = ControladorCategorias::ctrMostrarCategorias($item, $valor);
-
-		  	/*=============================================
- 	 		STOCK
-  			=============================================*/ 
-
-  			if($productos[$i]["stock"] <= 10){
-
-  				$stock = "<button class='btn btn-danger'>".$productos[$i]["stock"]."</button>";
-
-  			}else if($productos[$i]["stock"] > 11 && $productos[$i]["stock"] <= 15){
-
-  				$stock = "<button class='btn btn-warning'>".$productos[$i]["stock"]."</button>";
-
-  			}else{
-
-  				$stock = "<button class='btn btn-success'>".$productos[$i]["stock"]."</button>";
-
-  			}
+		 
+		
 
 		  	/*=============================================
  	 		TRAEMOS LAS ACCIONES
@@ -69,19 +39,18 @@ class TablaMiembros{
 
   			if(isset($_GET["perfilOculto"]) && $_GET["perfilOculto"] == "Especial"){
 
-  				$botones =  "<div class='btn-group'><button class='btn btn-warning btnEditarProducto' idProducto='".$productos[$i]["id"]."' data-toggle='modal' data-target='#modalEditarProducto'><i class='fa fa-pencil'></i></button></div>"; 
+  				$botones =  "<h1>Sin Acceso</h1>"; 
 
   			}else{
 
-  				 $botones =  "<div class='btn-group'><button class='btn btn-warning btnEditarProducto' idProducto='".$productos[$i]["id"]."' data-toggle='modal' data-target='#modalEditarProducto'><i class='fa fa-pencil'></i></button><button class='btn btn-danger btnEliminarProducto' idProducto='".$productos[$i]["id"]."' codigo='".$productos[$i]["codigo"]."' imagen='".$productos[$i]["imagen"]."'><i class='fa fa-times'></i></button></div>"; 
+  				 $botones =  "<div class='btn-group'><button class='btn btn-warning btnEditarMiembros' idProducto='".$productos[$i]["id"]."' data-toggle='modal' data-target='#modalEditarProducto'><i class='fa fa-pencil'></i></button><button class='btn btn-danger btnEliminarProducto' idProducto='".$productos[$i]["id"]."' codigo='".$productos[$i]["codigo"]."' imagen='".$productos[$i]["imagen"]."'><i class='fa fa-times'></i></button></div>"; 
 
   			}
 
 		 
 		  	$datosJson .='[
 			      "'.($i+1).'",
-			      "'.$imagen.'",
-			      "'.$productos[$i]["codigo"].'",
+			      "'.$miembros[$i]["ncm"].'",
 			      "'.$productos[$i]["descripcion"].'",
 			      "'.$categorias["categoria"].'",
 			      "'.$stock.'",
