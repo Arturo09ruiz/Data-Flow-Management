@@ -52,10 +52,10 @@ $('.tablaMiembros').DataTable( {
 
 
 
-var barrio = $("#idbarrio").val();
+var estaca = $("#idbarrio").val();
 
 $('.tablaMiembrosPdtEstaca').DataTable( {
-    "ajax": "ajax/datatable-miembros-pdt-estaca.ajax.php?barrio="+barrio,
+    "ajax": "ajax/datatable-miembros-pdt-estaca.ajax.php?estaca="+estaca,
     "deferRender": true,
 	"retrieve": true,
 	"processing": true,
