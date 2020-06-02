@@ -4,7 +4,7 @@ require_once "../controladores/miembros.controlador.php";
 require_once "../modelos/miembros.modelo.php";
 
 
-class AjaxProductos{
+class AjaxMiembros{
 
   /*=============================================
   GENERAR CÓDIGO A PARTIR DE ID CATEGORIA
