@@ -4,6 +4,9 @@ require_once "../controladores/miembros-pdt-estaca.controlador.php";
 require_once "../modelos/miembros-pdt-estaca.modelo.php";
 
 
+require_once "../controladores/barrios.controlador.php";
+require_once "../modelos/barrios.modelo.php";
+
 class TablaMiembrosPdtEstaca{
 
  	/*=============================================
@@ -33,14 +36,19 @@ class TablaMiembrosPdtEstaca{
 
 		 
 		
+            $item = "id";
+            $orden = "id";
+            $valor = $miembrosestaca[$i]["idbarrio"];
 
+            $barrios = ControladorBarrios::ctrMostrarBarrios($item, $valor, $orden);
 		 
 		  	$datosJson .='[
 			      "'.($i+1).'",
 			      "'.$miembrosestaca[$i]["ncm"].'",
 			      "'.$miembrosestaca[$i]["nombre"].'",
 			      "'.$miembrosestaca[$i]["email"].'",
-			      "'.$miembrosestaca[$i]["telefono"].'"			      
+                  "'.$miembrosestaca[$i]["telefono"].'",
+                  "'.$barrios["nombre"].'"
 			    ],';
 
 		  }

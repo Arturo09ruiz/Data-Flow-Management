@@ -37,6 +37,8 @@
          <th>Nombre Completo</th>
          <th>Email</th>
          <th>N° De Telf</th>
+         <th>Barrio</th>
+
 
          
        </tr> 

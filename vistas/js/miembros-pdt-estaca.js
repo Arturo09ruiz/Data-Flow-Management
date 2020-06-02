@@ -16,7 +16,7 @@ $.ajax({
 
 var estaca = $("#idestaca").val();
 
-$('.tablaMiembros').DataTable( {
+$('.tablaMiembrosPdtEstaca').DataTable( {
     "ajax": "ajax/datatable-miembros-pdt-estaca.ajax.php?estaca="+estaca,
     "deferRender": true,
 	"retrieve": true,
