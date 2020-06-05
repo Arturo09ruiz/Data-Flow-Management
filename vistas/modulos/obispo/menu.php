@@ -28,7 +28,7 @@ if ($_SESSION["perfil"] == "Obispo") {
 
 			<a href="miembros">
 				
-				<i class="fa fa-circle-o"></i>
+				<i class="fa fa-child"></i>
 				<span>Registrar Miembro</span>
 
 			</a>

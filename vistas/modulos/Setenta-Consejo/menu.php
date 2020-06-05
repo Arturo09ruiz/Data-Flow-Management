@@ -28,7 +28,7 @@ if ($_SESSION["perfil"] == "Setenta-Consejo") {
 
 			<a href="miembros">
 				
-				<i class="fa fa-circle-o"></i>
+				<i class="fa fa-child"></i>
 				<span>Visualizar Miembros</span>
 
 			</a>
