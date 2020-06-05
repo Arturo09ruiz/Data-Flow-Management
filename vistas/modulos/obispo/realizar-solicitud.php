@@ -42,9 +42,9 @@
          <tr>
            
            <th style="width:10px">#</th>
-           <th>Imagen</th>
            <th>Código</th>
-           <th>Descripción</th>
+           <th>NCM</th>
+           <th>Nombre del Miembro</th>
            <th>Categoría</th>
            <th>Stock</th>
            <th>Precio de compra</th>
