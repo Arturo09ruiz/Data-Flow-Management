@@ -339,6 +339,62 @@ CUERPO DOCUMENTO
 
 
 
+  
+
+
+
+  if ($_SESSION["perfil"] == "Setenta-Consejo") {
+
+    include "modulos/Setenta-Consejo/cabezote.php";
+
+    /*=============================================
+    MENU
+    =============================================*/
+
+    include "modulos/Setenta-Consejo/menu.php";
+
+
+    /*=============================================
+    CONTENIDO
+    =============================================*/
+
+
+    if(isset($_GET["ruta"])){
+
+      if($_GET["ruta"] == "inicio" ||
+         $_GET["ruta"] == "miembros" ||
+         $_GET["ruta"] == "salir"){
+
+        include "modulos/Setenta-Consejo/".$_GET["ruta"].".php";
+
+      }else{
+
+        include "modulos/Setenta-Consejo/404.php";
+
+      }
+
+    }else{
+
+      include "modulos/Setenta-Consejo/inicio.php";
+
+    }
+
+
+  
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
