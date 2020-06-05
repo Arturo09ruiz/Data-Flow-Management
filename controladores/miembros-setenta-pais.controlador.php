@@ -4,11 +4,11 @@ class ControladorMiembrosSetentaPais{
 
 
 
-	static public function ctrMostrarMiembrosGerente($item, $valor, $orden , $consejo){
+	static public function ctrMostrarMiembrosSetentaPais($item, $valor, $orden , $pais){
 
 		$tabla = "miembros";
 
-		$respuesta = ModeloMiembrosGerente::mdlMostrarMiembrosGerente($tabla, $item, $valor, $orden, $consejo);
+		$respuesta = ModeloMiembrosSetentaPais::mdlMostrarMiembrosSetentaPais($tabla, $item, $valor, $orden, $pais);
 
 		return $respuesta;
 
