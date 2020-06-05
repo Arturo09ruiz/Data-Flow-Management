@@ -53,7 +53,7 @@
      <input class="idbarrio" type="hidden" value="<?php echo $_SESSION['idbarrio']; ?>" id="idbarrio">
      <input class="idestaca" type="hidden" value="<?php echo $_SESSION['idestaca']; ?>" id="idestaca">
      <input class="idconsejo" type="hidden" value="<?php echo $_SESSION['idconsejo']; ?>" id="idconsejo">
-     <input type="hidden" value="<?php echo $_SESSION['idpais']; ?>" id="idpais">
+     <input class="idpais" type="hidden" value="<?php echo $_SESSION['idpais']; ?>" id="idpais">
 
 
 
