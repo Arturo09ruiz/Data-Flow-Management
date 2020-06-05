@@ -36,6 +36,28 @@ require_once "controladores/miembros-gerente.controlador.php";
 
 
 
+//setentapais
+require_once "controladores/miembros-setenta-pais.controlador.php";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 require_once "modelos/usuarios.modelo.php";
 require_once "modelos/categorias.modelo.php";
 require_once "modelos/productos.modelo.php";
@@ -63,6 +85,13 @@ require_once "modelos/miembros-pdt-estaca.modelo.php";
 
 //gerentemodelo
 require_once "modelos/miembros-gerente.modelo.php";
+
+
+
+
+
+//setentapais
+require_once "modelos/miembros-setenta-pais.modelo.php";
 
 
 $plantilla = new ControladorPlantilla();

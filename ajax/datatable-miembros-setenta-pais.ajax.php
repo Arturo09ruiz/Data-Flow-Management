@@ -7,6 +7,11 @@ require_once "../modelos/miembros-setenta-pais.modelo.php";
 require_once "../controladores/barrios.controlador.php";
 require_once "../modelos/barrios.modelo.php";
 
+require_once "../controladores/pais.controlador.php";
+require_once "../modelos/pais.modelo.php";
+
+require_once "../controladores/consejo.controlador.php";
+require_once "../modelos/consejo.modelo.php";
 
 require_once "../controladores/estaca.controlador.php";
 require_once "../modelos/estaca.modelo.php";
@@ -82,7 +87,7 @@ class TablaMiembrosSetentaPais{
                   "'.$barrios["nombre"].'",
                   "'.$estacas["nombre"].'",
                   "'.$consejos["nombre"].'"
-
+                  
 			    ],';
 
 		  }
