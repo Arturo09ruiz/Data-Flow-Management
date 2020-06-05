@@ -59,6 +59,17 @@ class TablaMiembrosSetentaPais{
 
 
 
+            $item = "id";
+            $orden = "id";
+            $valor = $miembrospais[$i]["idconsejo"];
+
+            $consejos = ControladorConsejo::ctrMostrarConsejo($item, $valor, $orden);
+		 
+
+
+
+
+
 
             
 
@@ -69,7 +80,9 @@ class TablaMiembrosSetentaPais{
 			      "'.$miembrospais[$i]["email"].'",
                   "'.$miembrospais[$i]["telefono"].'",
                   "'.$barrios["nombre"].'",
-                  "'.$estacas["nombre"].'"
+                  "'.$estacas["nombre"].'",
+                  "'.$consejos["nombre"].'"
+
 			    ],';
 
 		  }
