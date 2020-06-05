@@ -389,6 +389,50 @@ CUERPO DOCUMENTO
 
 
 
+  if ($_SESSION["perfil"] == "Setenta-Pais") {
+
+    include "modulos/Setenta-Pais/cabezote.php";
+
+    /*=============================================
+    MENU
+    =============================================*/
+
+    include "modulos/Setenta-Pais/menu.php";
+
+
+    /*=============================================
+    CONTENIDO
+    =============================================*/
+
+
+    if(isset($_GET["ruta"])){
+
+      if($_GET["ruta"] == "inicio" ||
+         $_GET["ruta"] == "miembros" ||
+         $_GET["ruta"] == "salir"){
+
+        include "modulos/Setenta-Pais/".$_GET["ruta"].".php";
+
+      }else{
+
+        include "modulos/Setenta-Pais/404.php";
+
+      }
+
+    }else{
+
+      include "modulos/Setenta-Pais/inicio.php";
+
+    }
+
+
+  
+  }
+
+
+
+
+
 
 
 
