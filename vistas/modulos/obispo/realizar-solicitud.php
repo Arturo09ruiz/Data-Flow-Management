@@ -253,7 +253,7 @@ MODAL AGREGAR PRODUCTO
             
             <div class="form-group">
               
-              <div class="panel">SUBIR INFORME MEDICO</div>
+              <div class="panel">SUBIR PLAN DE AUTOSUFICIENCIA</div>
 
               <input type="file" class="nuevaImagen" name="nuevaImagen">
 
@@ -263,7 +263,7 @@ MODAL AGREGAR PRODUCTO
 
             <!-- ENTRADA PARA SUBIR FOTO -->
 
-             <!-- <div class="form-group">
+          <div class="form-group"> 
               
               <div class="panel">SUBIR INFORME MEDICO</div>
 
@@ -278,12 +278,12 @@ MODAL AGREGAR PRODUCTO
               
               <div class="panel">SUBIR RECIPE MEDICO</div>
 
-              <input type="file" class=" nuevaImagen" name="nuevaImagen">
+              <input type="file" class="nuevaRecipe" name="nuevaRecipe">
 
 
 
             </div>
-
+<!-- 
             <div class="form-group">
               
               <div class="panel">SUBIR CEDULA DE IDENTIDAD DEL MIEMBRO</div>
@@ -292,8 +292,8 @@ MODAL AGREGAR PRODUCTO
 
 
 
-            </div> -->
-
+            </div>
+ -->
 
           </div>
 

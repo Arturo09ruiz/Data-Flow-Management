@@ -106,6 +106,95 @@ class ControladorSolicitudes
 
 
 
+//Recipe Medico
+
+         $ruta2 = "vistas/img/informe_medico/default/anonymous.png";
+
+         if(isset($_FILES["nuevaRecipe"]["tmp_name"])){
+
+          list($ancho, $alto) = getimagesize($_FILES["nuevaRecipe"]["tmp_name"]);
+
+          $nuevoAncho = 1024;
+          $nuevoAlto = 720;
+
+          /*=============================================
+          CREAMOS EL DIRECTORIO DONDE VAMOS A GUARDAR LA FOTO DEL USUARIO
+          =============================================*/
+
+          $directorio = "vistas/img/recipe_medico/".$_POST["nuevoCodigo"];
+
+          mkdir($directorio, 0755);
+
+          /*=============================================
+          DE ACUERDO AL TIPO DE IMAGEN APLICAMOS LAS FUNCIONES POR DEFECTO DE PHP
+          =============================================*/
+
+          if($_FILES["nuevaRecipe"]["type"] == "image/jpeg"){
+
+              /*=============================================
+              GUARDAMOS LA IMAGEN EN EL DIRECTORIO
+              =============================================*/
+
+              $aleatorio = mt_rand(100,999);
+
+              $ruta2 = "vistas/img/recipe_medico/".$_POST["nuevoCodigo"]."/".$aleatorio.".jpg";
+
+              $origen = imagecreatefromjpeg($_FILES["nuevaRecipe"]["tmp_name"]);						
+
+              $destino = imagecreatetruecolor($nuevoAncho, $nuevoAlto);
+
+              imagecopyresized($destino, $origen, 0, 0, 0, 0, $nuevoAncho, $nuevoAlto, $ancho, $alto);
+
+              imagejpeg($destino, $ruta2);
+
+          }
+
+          if($_FILES["nuevaRecipe"]["type"] == "image/png"){
+
+              /*=============================================
+              GUARDAMOS LA IMAGEN EN EL DIRECTORIO
+              =============================================*/
+
+              $aleatorio = mt_rand(100,999);
+
+              $ruta2 = "vistas/img/recipe_medico/".$_POST["nuevoCodigo"]."/".$aleatorio.".png";
+
+              $origen = imagecreatefrompng($_FILES["nuevaRecipe"]["tmp_name"]);						
+
+              $destino = imagecreatetruecolor($nuevoAncho, $nuevoAlto);
+
+              imagecopyresized($destino, $origen, 0, 0, 0, 0, $nuevoAncho, $nuevoAlto, $ancho, $alto);
+
+              imagepng($destino, $ruta2);
+
+          }
+
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -168,7 +257,7 @@ class ControladorSolicitudes
                 "duracion" => $_POST["nuevaDuracion"],
                 "necesidad" => $_POST["nuevaNecesidad"],
                 "Informe_Medico" => $ruta,
-				"Informe_Medico" => $ruta,
+				"Recipe_Medico" => $ruta2
                 
 
             );
