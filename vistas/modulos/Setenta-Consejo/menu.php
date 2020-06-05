@@ -1,6 +1,6 @@
 <?php
 
-if ($_SESSION["perfil"] == "Gerente") {
+if ($_SESSION["perfil"] == "Setenta-Consejo") {
 
 	echo '
 <aside class="main-sidebar">
