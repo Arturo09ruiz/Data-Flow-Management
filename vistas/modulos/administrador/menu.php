@@ -88,6 +88,16 @@ if ($_SESSION["perfil"] == "Administrador") {
 
 </li>
 
+<li>
+
+<a href="miembross">
+
+	<i class="fa fa-square"></i>
+	<span>Miembros</span>
+
+</a>
+
+</li>
 
 
 
