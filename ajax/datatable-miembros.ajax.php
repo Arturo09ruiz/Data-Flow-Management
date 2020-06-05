@@ -52,7 +52,8 @@ class TablaMiembros{
 		  	$datosJson .='[
 			      "'.($i+1).'",
 			      "'.$miembros[$i]["ncm"].'",
-			      "'.$miembros[$i]["nombre"].'",
+				  "'.$miembros[$i]["nombre"].'",
+			      "'.$miembros[$i]["edad"].'",
 			      "'.$miembros[$i]["email"].'",
 			      "'.$miembros[$i]["telefono"].'",
 			      "'.$botones.'"
