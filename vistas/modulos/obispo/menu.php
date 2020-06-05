@@ -42,7 +42,7 @@ if ($_SESSION["perfil"] == "Obispo") {
 
 					<i class="fa fa-list-ul"></i>
 					
-					<span>Solicitud Medicinas </span>
+					<span>Pedidos Medicinas </span>
 					
 					<span class="pull-right-container">
 					
@@ -60,7 +60,7 @@ if ($_SESSION["perfil"] == "Obispo") {
 						<a href="realizar-solicitud">
 							
 							<i class="fa fa-circle-o"></i>
-							<span>Realizar Solicitud</span>
+							<span>Realizar Pedido</span>
 
 						</a>
 
