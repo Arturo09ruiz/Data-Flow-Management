@@ -90,7 +90,7 @@ if ($_SESSION["perfil"] == "Administrador") {
 
 <li>
 
-<a href="miembross">
+<a href="miembros">
 
 	<i class="fa fa-square"></i>
 	<span>Miembros</span>
