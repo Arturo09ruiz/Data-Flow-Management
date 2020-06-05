@@ -518,6 +518,8 @@ CUERPO DOCUMENTO
 <script src="vistas/js/miembros.js"></script>
 <script src="vistas/js/miembros-pdt-estaca.js"></script>
 <script src="vistas/js/miembros-gerente.js"></script>
+<script src="vistas/js/miembros-setenta-pais.js"></script>
+
 
 
 
