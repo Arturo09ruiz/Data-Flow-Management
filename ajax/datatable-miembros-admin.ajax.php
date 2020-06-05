@@ -3,23 +3,33 @@
 require_once "../controladores/miembros.controlador.php";
 require_once "../modelos/miembros.modelo.php";
 
+require_once "../controladores/barrios.controlador.php";
+require_once "../modelos/barrios.modelo.php";
 
-class TablaMiembros{
+require_once "../controladores/pais.controlador.php";
+require_once "../modelos/pais.modelo.php";
+
+require_once "../controladores/consejo.controlador.php";
+require_once "../modelos/consejo.modelo.php";
+
+require_once "../controladores/estaca.controlador.php";
+require_once "../modelos/estaca.modelo.php";
+
+class TablaMiembrosSetentaPais{
 
  	/*=============================================
  	 MOSTRAR LA TABLA DE MIEMBROS
   	=============================================*/ 
 
-	public function mostrarTablaMiembros(){
+	public function mostrarTablaMiembrosSetentaPais(){
 
 		$item = null;
     	$valor = null;
 		$orden = "id";
-        $barrio = $_GET["barrio"];
 
-  		$miembros = ControladorMiembros::ctrMostrarMiembrosConformeBarrioObispo($item, $valor, $orden, $barrio);	
+  		$miembrospais = ControladorMiembros::ctrMostrarMiembros($item, $valor, $orden);	
 
-  		if(count($miembros) == 0){
+  		if(count($miembrospais) == 0){
 
   			echo '{"data": []}';
 
@@ -29,33 +39,65 @@ class TablaMiembros{
   		$datosJson = '{
 		  "data": [';
 
-		  for($i = 0; $i < count($miembros); $i++){
+		  for($i = 0; $i < count($miembrospais); $i++){
 
 		 
 		
+            $item = "id";
+            $orden = "id";
+            $valor = $miembrospais[$i]["idbarrio"];
 
-		  	/*=============================================
- 	 		TRAEMOS LAS ACCIONES
-  			=============================================*/ 
+            $barrios = ControladorBarrios::ctrMostrarBarrios($item, $valor, $orden);
+         
 
-  			if(isset($_GET["perfilOculto"]) && $_GET["perfilOculto"] == "Especial"){
 
-  				$botones =  "<h1>Sin Acceso</h1>"; 
 
-  			}else{
 
-  				 $botones =  "<div class='btn-group'><button class='btn btn-warning btnEditarMiembros' idMiembros='".$miembros[$i]["id"]."' data-toggle='modal' data-target='#modalEditarMiembros'><i class='fa fa-pencil'></i></button><button class='btn btn-danger btnEliminarMiembros' idMiembros='".$miembros[$i]["id"]."' '><i class='fa fa-times'></i></button></div>"; 
+            $item = "id";
+            $orden = "id";
+            $valor = $miembrospais[$i]["idestaca"];
 
-  			}
-
+            $estacas = ControladorEstaca::ctrMostrarEstaca($item, $valor, $orden);
 		 
+
+
+
+            $item = "id";
+            $orden = "id";
+            $valor = $miembrospais[$i]["idconsejo"];
+
+            $consejos = ControladorConsejo::ctrMostrarConsejo($item, $valor, $orden);
+		 
+
+
+
+
+
+            $item = "id";
+            $orden = "id";
+            $valor = $miembrospais[$i]["idpais"];
+
+            $paiss = ControladorPais::ctrMostrarPais($item, $valor, $orden);
+		 
+
+
+
+
+
+            
+
 		  	$datosJson .='[
 			      "'.($i+1).'",
-			      "'.$miembros[$i]["ncm"].'",
-			      "'.$miembros[$i]["nombre"].'",
-			      "'.$miembros[$i]["email"].'",
-			      "'.$miembros[$i]["telefono"].'",
-			      "'.$botones.'"
+			      "'.$miembrospais[$i]["ncm"].'",
+			      "'.$miembrospais[$i]["nombre"].'",
+			      "'.$miembrospais[$i]["email"].'",
+                  "'.$miembrospais[$i]["telefono"].'",
+                  "'.$barrios["nombre"].'",
+                  "'.$estacas["nombre"].'",
+				  "'.$consejos["nombre"].'",
+                  "'.$paiss["nombre"].'"
+				  
+                  
 			    ],';
 
 		  }
@@ -78,6 +120,6 @@ class TablaMiembros{
 /*=============================================
 ACTIVAR TABLA DE MIEMBROS
 =============================================*/ 
-$activarMiembros = new TablaMiembros();
-$activarMiembros -> mostrarTablaMiembros();
+$activarMiembrosSetentaPais = new TablaMiembrosSetentaPais();
+$activarMiembrosSetentaPais -> mostrarTablaMiembrosSetentaPais();
 
