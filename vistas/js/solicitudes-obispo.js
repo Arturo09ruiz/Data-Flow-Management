@@ -1,5 +1,12 @@
-$("#nuevaNombre").change(
+$(".nuevaNombre").change(function(){
 
-    alert("hgh")
 
-);
+    
+    
+
+
+
+
+	
+
+})

@@ -515,6 +515,7 @@ CUERPO DOCUMENTO
 <!-- MIS JS NUEVOS -->
 <script src="vistas/js/pais.js"></script>
 <script src="vistas/js/consejo.js"></script>
+<script src="vistas/js/solicitudes-obispo.js"></script>
 <script src="vistas/js/estaca.js"></script>
 <script src="vistas/js/barrios.js"></script>
 <script src="vistas/js/miembros.js"></script>
