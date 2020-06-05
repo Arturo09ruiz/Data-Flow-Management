@@ -1,25 +1,11 @@
-<?php
 
-if($_SESSION["perfil"] == "Vendedor"){
-
-  echo '<script>
-
-    window.location = "inicio";
-
-  </script>';
-
-  return;
-
-}
-
-?>
 <div class="content-wrapper">
 
   <section class="content-header">
     
     <h1>
       
-      Administrar productos
+      Administrar Solicitudes
     
     </h1>
 
@@ -27,7 +13,7 @@ if($_SESSION["perfil"] == "Vendedor"){
       
       <li><a href="inicio"><i class="fa fa-dashboard"></i> Inicio</a></li>
       
-      <li class="active">Administrar productos</li>
+      <li class="active">Administrar Solicitudes</li>
     
     </ol>
 
@@ -39,9 +25,9 @@ if($_SESSION["perfil"] == "Vendedor"){
 
       <div class="box-header with-border">
   
-        <button class="btn btn-primary" data-toggle="modal" data-target="#modalAgregarProducto">
+        <button class="btn btn-primary" data-toggle="modal" data-target="#modalAgregarSolicitud">
           
-          Agregar producto
+          Agregar Solicitud
 
         </button>
 
@@ -49,7 +35,7 @@ if($_SESSION["perfil"] == "Vendedor"){
 
       <div class="box-body">
         
-       <table class="table table-bordered table-striped dt-responsive tablaProductos" width="100%">
+       <table class="table table-bordered table-striped dt-responsive tablaSolicitud" width="100%">
          
         <thead>
          
