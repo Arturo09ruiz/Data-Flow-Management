@@ -45,7 +45,8 @@ class TablaMiembrosPdtEstaca{
 		  	$datosJson .='[
 			      "'.($i+1).'",
 			      "'.$miembrosestaca[$i]["ncm"].'",
-			      "'.$miembrosestaca[$i]["nombre"].'",
+				  "'.$miembrosestaca[$i]["nombre"].'",
+			      "'.$miembrosestaca[$i]["edad"].'",
 			      "'.$miembrosestaca[$i]["email"].'",
                   "'.$miembrosestaca[$i]["telefono"].'",
                   "'.$barrios["nombre"].'"
