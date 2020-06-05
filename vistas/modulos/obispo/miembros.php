@@ -139,6 +139,18 @@ MODAL AGREGAR PRODUCTO
               
               <div class="input-group">
               
+                <span class="input-group-addon"><i class="fa fa-calendar-plus-o"></i></span> 
+
+                <input type="number" class="form-control input-lg nuevaEdad" id="nuevaEdad" name="nuevaEdad" placeholder="Ingresar Edad" required>
+
+              </div>
+
+            </div>
+
+            <div class="form-group">
+              
+              <div class="input-group">
+              
                 <span class="input-group-addon"><i class="fa fa-envelope"></i></span> 
 
                 <input type="email" class="form-control input-lg" name="nuevoEmail" placeholder="Ingresar email" >
@@ -259,6 +271,9 @@ MODAL EDITAR Miembros
               </div>
 
             </div>
+
+
+           
 
             <div class="form-group">
               

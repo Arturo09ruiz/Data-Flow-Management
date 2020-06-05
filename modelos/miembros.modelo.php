@@ -75,10 +75,11 @@ class ModeloMiembros{
 	=============================================*/
 	static public function mdlIngresarMiembros($tabla, $datos){
 
-		$stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(ncm, nombre, email, telefono, idbarrio, idestaca, idconsejo, idpais) VALUES (:ncm, :nombre, :email, :telefono, :idbarrio, :idestaca, :idconsejo, :idpais)");
+		$stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(ncm, nombre, edad, email, telefono, idbarrio, idestaca, idconsejo, idpais) VALUES (:ncm, :nombre, :edad, :email, :telefono, :idbarrio, :idestaca, :idconsejo, :idpais)");
 
         $stmt->bindParam(":ncm", $datos["ncm"], PDO::PARAM_INT);
 		$stmt->bindParam(":nombre", $datos["nombre"], PDO::PARAM_STR);
+		$stmt->bindParam(":edad", $datos["edad"], PDO::PARAM_STR);
 		$stmt->bindParam(":email", $datos["email"], PDO::PARAM_STR);
 		$stmt->bindParam(":telefono", $datos["telefono"], PDO::PARAM_STR);
 		$stmt->bindParam(":idbarrio", $datos["idbarrio"], PDO::PARAM_STR);

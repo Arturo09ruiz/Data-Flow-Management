@@ -43,6 +43,7 @@ class ControladorMiembros{
 
 				$datos = array("ncm" => $_POST["nuevoNCM"],
 							   "nombre" => $_POST["nuevaNombre"],
+							   "edad" => $_POST["nuevaEdad"],
 							   "email" => $_POST["nuevoEmail"],
                                "telefono" => $_POST["nuevoTelefono"],
                                "idbarrio" => $_POST["idbarrio"],

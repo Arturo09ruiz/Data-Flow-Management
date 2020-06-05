@@ -1,4 +1,9 @@
-
+<script>
+  $(document).ready(function() {
+    
+    $('.js-example-basic-single').select2({
+});})
+</script>
 <div class="content-wrapper">
 
   <section class="content-header">
@@ -45,13 +50,13 @@
            <th>Código</th>
            <th>NCM</th>
            <th>Nombre del Miembro</th>
+           <th>Edad</th>
            <th>Email</th>
            <th>Telf</th>
-           <th>Diagnostico Del Medico</th>
-           <!-- <th>Medico Que lo Trato</th> -->
+           <th>Enfermedad</th>
            <th>Medicamento</th>
            <th>Dosis Recetada</th>
-           <th>Tiempo de Tratamiento</th>
+           <th>Duracion</th>
            <th>Necesidad</th>
            <th>Acciones</th>
 
@@ -76,7 +81,7 @@
 MODAL AGREGAR PRODUCTO
 ======================================-->
 
-<div id="modalAgregarProducto" class="modal fade" role="dialog">
+<div id="modalAgregarSolicitud" class="modal fade" role="dialog">
   
   <div class="modal-dialog">
 
@@ -92,7 +97,7 @@ MODAL AGREGAR PRODUCTO
 
           <button type="button" class="close" data-dismiss="modal">&times;</button>
 
-          <h4 class="modal-title">Agregar producto</h4>
+          <h4 class="modal-title">Agregar Solicitud</h4>
 
         </div>
 
@@ -104,6 +109,19 @@ MODAL AGREGAR PRODUCTO
 
           <div class="box-body">
 
+            <!-- ENTRADA PARA EL CÓDIGO -->
+            
+            <div class="form-group">
+              
+              <div class="input-group">
+              
+                <span class="input-group-addon"><i class="fa fa-code"></i></span> 
+
+                <input type="text" class="form-control input-lg" id="nuevoCodigo" name="nuevoCodigo" placeholder="Ingresar código"  required>
+
+              </div>
+
+            </div>
 
             <!-- ENTRADA PARA SELECCIONAR CATEGORÍA -->
 
@@ -113,20 +131,21 @@ MODAL AGREGAR PRODUCTO
               
                 <span class="input-group-addon"><i class="fa fa-th"></i></span> 
 
-                <select class="form-control input-lg" id="nuevaCategoria" name="nuevaCategoria" required>
+                <select class="js-example-basic-single form-control input-lg" id="nuevaCategoria" name="nuevaCategoria" required>
                   
-                  <option value="">Selecionar categoría</option>
+                  <option value="">Selecionar Miembro</option>
 
                   <?php
 
                   $item = null;
                   $valor = null;
+                  $orden = null;
+                  $barrio = $_SESSION['idbarrio'];
+                  $miembros = ControladorMiembros::ctrMostrarMiembrosConformeBarrioObispo($item, $valor,$orden,$barrio);
 
-                  $categorias = ControladorCategorias::ctrMostrarCategorias($item, $valor);
-
-                  foreach ($categorias as $key => $value) {
+                  foreach ($miembros as $key => $value) {
                     
-                    echo '<option value="'.$value["id"].'">'.$value["categoria"].'</option>';
+                    echo '<option value="'.$value["id"].'">'.$value["nombre"].'</option>';
                   }
 
                   ?>
@@ -137,20 +156,7 @@ MODAL AGREGAR PRODUCTO
 
             </div>
 
-            <!-- ENTRADA PARA EL CÓDIGO -->
-            
-            <div class="form-group">
-              
-              <div class="input-group">
-              
-                <span class="input-group-addon"><i class="fa fa-code"></i></span> 
-
-                <input type="text" class="form-control input-lg" id="nuevoCodigo" name="nuevoCodigo" placeholder="Ingresar código" required>
-
-              </div>
-
-            </div>
-
+         
             <!-- ENTRADA PARA LA DESCRIPCIÓN -->
 
              <div class="form-group">
@@ -159,103 +165,126 @@ MODAL AGREGAR PRODUCTO
               
                 <span class="input-group-addon"><i class="fa fa-product-hunt"></i></span> 
 
-                <input type="text" class="form-control input-lg" name="nuevaDescripcion" placeholder="Ingresar descripción" required>
+                <input type="text" class="form-control input-lg" name="nuevaDescripcion" placeholder="Nombre del Miembro" required>
 
               </div>
 
             </div>
 
-             <!-- ENTRADA PARA STOCK -->
-
-             <div class="form-group">
+            <div class="form-group">
               
               <div class="input-group">
               
-                <span class="input-group-addon"><i class="fa fa-check"></i></span> 
+                <span class="input-group-addon"><i class="fa fa-product-hunt"></i></span> 
 
-                <input type="number" class="form-control input-lg" name="nuevoStock" min="0" placeholder="Stock" required>
+                <input type="text" class="form-control input-lg" name="nuevaDescripcion" placeholder="Ingresar enfermedad" required>
+
+              </div>
+
+            </div>
+            <div class="form-group">
+              
+              <div class="input-group">
+              
+                <span class="input-group-addon"><i class="fa fa-product-hunt"></i></span> 
+
+                <input type="text" class="form-control input-lg" name="nuevaDescripcion" placeholder="Ingresar Medicamento" required>
 
               </div>
 
             </div>
 
-             <!-- ENTRADA PARA PRECIO COMPRA -->
+           
+            <div class="form-group">
+              
+              <div class="input-group">
+              
+                <span class="input-group-addon"><i class="fa fa-product-hunt"></i></span> 
 
-             <div class="form-group row">
+                <input type="text" class="form-control input-lg" name="nuevaDescripcion" placeholder="Ingresar Dosis Recetada" required>
 
-                <div class="col-xs-6">
-                
-                  <div class="input-group">
-                  
-                    <span class="input-group-addon"><i class="fa fa-arrow-up"></i></span> 
-
-                    <input type="number" class="form-control input-lg" id="nuevoPrecioCompra" name="nuevoPrecioCompra" step="any" min="0" placeholder="Precio de compra" required>
-
-                  </div>
-
-                </div>
-
-                <!-- ENTRADA PARA PRECIO VENTA -->
-
-                <div class="col-xs-6">
-                
-                  <div class="input-group">
-                  
-                    <span class="input-group-addon"><i class="fa fa-arrow-down"></i></span> 
-
-                    <input type="number" class="form-control input-lg" id="nuevoPrecioVenta" name="nuevoPrecioVenta" step="any" min="0" placeholder="Precio de venta" required>
-
-                  </div>
-                
-                  <br>
-
-                  <!-- CHECKBOX PARA PORCENTAJE -->
-
-                  <div class="col-xs-6">
-                    
-                    <div class="form-group">
-                      
-                      <label>
-                        
-                        <input type="checkbox" class="minimal porcentaje" checked>
-                        Utilizar procentaje
-                      </label>
-
-                    </div>
-
-                  </div>
-
-                  <!-- ENTRADA PARA PORCENTAJE -->
-
-                  <div class="col-xs-6" style="padding:0">
-                    
-                    <div class="input-group">
-                      
-                      <input type="number" class="form-control input-lg nuevoPorcentaje" min="0" value="40" required>
-
-                      <span class="input-group-addon"><i class="fa fa-percent"></i></span>
-
-                    </div>
-
-                  </div>
-
-                </div>
+              </div>
 
             </div>
+
+            <div class="form-group">
+              
+              <div class="input-group">
+              
+                <span class="input-group-addon"><i class="fa fa-product-hunt"></i></span> 
+
+                <input type="text" class="form-control input-lg" name="nuevaDescripcion" placeholder="Ingresar Duracion" required>
+
+              </div>
+
+            </div>
+
+           
+
+            <div class="form-group">
+              
+              <div class="input-group">
+              
+                <span class="input-group-addon"><i class="fa fa-product-hunt"></i></span> 
+
+                <input type="text" class="form-control input-lg" name="nuevaDescripcion" placeholder="Seleccionar Necesitad" required>
+
+              </div>
+
+            </div>
+
+           
+
+
+
+
+        
+            
+            <div class="form-group">
+              
+              <div class="panel">SUBIR PLAN DE AUTOSUFICIENCIA</div>
+
+              <input type="file" class=" nuevaImagen" name="nuevaImagen">
+
+
+
+            </div>
+
+
 
             <!-- ENTRADA PARA SUBIR FOTO -->
 
              <div class="form-group">
               
-              <div class="panel">SUBIR IMAGEN</div>
+              <div class="panel">SUBIR INFORME MEDICO</div>
 
-              <input type="file" class="nuevaImagen" name="nuevaImagen">
+              <input type="file" class=" nuevaImagen" name="nuevaImagen">
 
-              <p class="help-block">Peso máximo de la imagen 2MB</p>
 
-              <img src="vistas/img/productos/default/anonymous.png" class="img-thumbnail previsualizar" width="100px">
 
             </div>
+
+
+            <div class="form-group">
+              
+              <div class="panel">SUBIR RECIPE MEDICO</div>
+
+              <input type="file" class=" nuevaImagen" name="nuevaImagen">
+
+
+
+            </div>
+
+            <div class="form-group">
+              
+              <div class="panel">SUBIR CEDULA DE IDENTIDAD DEL MIEMBRO</div>
+
+              <input type="file" class=" nuevaImagen" name="nuevaImagen">
+
+
+
+            </div>
+
 
           </div>
 
@@ -269,7 +298,7 @@ MODAL AGREGAR PRODUCTO
 
           <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Salir</button>
 
-          <button type="submit" class="btn btn-primary">Guardar producto</button>
+          <button type="submit" class="btn btn-primary">Enviar Solicitud</button>
 
         </div>
 
