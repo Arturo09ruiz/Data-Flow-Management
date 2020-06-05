@@ -155,8 +155,12 @@ MODAL AGREGAR PRODUCTO
               </div>
 
             </div>
-            <input class="ncm" name="ncm" id="ncm">
 
+
+
+
+
+<input class="ncm" name="ncm" id="ncm">
 <input class="nombre" name="nombre" id="nombre">
 <input class="edad" name="edad" id="edad">
 <input class="email" name="email" id="email">
@@ -164,28 +168,15 @@ MODAL AGREGAR PRODUCTO
 
 
 
-         
-            <!-- ENTRADA PARA LA DESCRIPCIÓN -->
-
-             <div class="form-group">
-              
-              <div class="input-group">
-              
-                <span class="input-group-addon"><i class="fa fa-product-hunt"></i></span> 
-
-                <input type="text" class="form-control input-lg" name="nuevaDescripcion" placeholder="Nombre del Miembro" required>
-
-              </div>
-
-            </div>
+        
 
             <div class="form-group">
               
               <div class="input-group">
               
-                <span class="input-group-addon"><i class="fa fa-product-hunt"></i></span> 
+                <span class="input-group-addon"><i class="fa fa-thermometer-quarter"></i></span> 
 
-                <input type="text" class="form-control input-lg" name="nuevaDescripcion" placeholder="Ingresar enfermedad" required>
+                <input type="text" class="form-control input-lg" name="nuevaEnfermedad" placeholder="Ingresar enfermedad" required>
 
               </div>
 
@@ -194,7 +185,7 @@ MODAL AGREGAR PRODUCTO
               
               <div class="input-group">
               
-                <span class="input-group-addon"><i class="fa fa-product-hunt"></i></span> 
+                <span class="input-group-addon"><i class="fa fa-flask"></i></span> 
 
                 <input type="text" class="form-control input-lg" name="nuevaDescripcion" placeholder="Ingresar Medicamento" required>
 
@@ -207,7 +198,7 @@ MODAL AGREGAR PRODUCTO
               
               <div class="input-group">
               
-                <span class="input-group-addon"><i class="fa fa-product-hunt"></i></span> 
+                <span class="input-group-addon"><i class="fa fa-pie-chart"></i></span> 
 
                 <input type="text" class="form-control input-lg" name="nuevaDescripcion" placeholder="Ingresar Dosis Recetada" required>
 
@@ -219,7 +210,7 @@ MODAL AGREGAR PRODUCTO
               
               <div class="input-group">
               
-                <span class="input-group-addon"><i class="fa fa-product-hunt"></i></span> 
+                <span class="input-group-addon"><i class="fa fa-calendar-o"></i></span> 
 
                 <input type="text" class="form-control input-lg" name="nuevaDescripcion" placeholder="Ingresar Duracion" required>
 
@@ -233,9 +224,14 @@ MODAL AGREGAR PRODUCTO
               
               <div class="input-group">
               
-                <span class="input-group-addon"><i class="fa fa-product-hunt"></i></span> 
+                <span class="input-group-addon"><i class="fa fa-bicycle"></i></span> 
 
-                <input type="text" class="form-control input-lg" name="nuevaDescripcion" placeholder="Seleccionar Necesitad" required>
+                  <select class="form-control input-lg" name="nuevaNecesidad">
+                  <option value="Normal">Normal</option>
+                  <option value="Urgente">Urgente</option>
+                  <option value="Emergencia">Emergencia</option>
+
+                  </select>
 
               </div>
 
@@ -252,9 +248,7 @@ MODAL AGREGAR PRODUCTO
               
               <div class="panel">SUBIR PLAN DE AUTOSUFICIENCIA</div>
 
-              <input type="file" class=" nuevaImagen" name="nuevaImagen">
-
-
+              <input type="file" class="nuevaImagen" name="nuevaImagen">
 
             </div>
 
@@ -262,7 +256,7 @@ MODAL AGREGAR PRODUCTO
 
             <!-- ENTRADA PARA SUBIR FOTO -->
 
-             <div class="form-group">
+             <!-- <div class="form-group">
               
               <div class="panel">SUBIR INFORME MEDICO</div>
 
@@ -291,7 +285,7 @@ MODAL AGREGAR PRODUCTO
 
 
 
-            </div>
+            </div> -->
 
 
           </div>
