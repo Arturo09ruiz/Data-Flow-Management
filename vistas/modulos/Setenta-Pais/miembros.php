@@ -35,6 +35,7 @@
          <th style="width:10px">#</th>
          <th>NCM</th>
          <th>Nombre Completo</th>
+         <th>Edad</th>
          <th>Email</th>
          <th>N° De Telf</th>
          <th>Barrio</th>

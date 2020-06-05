@@ -81,7 +81,8 @@ class TablaMiembrosSetentaPais{
 		  	$datosJson .='[
 			      "'.($i+1).'",
 			      "'.$miembrospais[$i]["ncm"].'",
-			      "'.$miembrospais[$i]["nombre"].'",
+				  "'.$miembrospais[$i]["nombre"].'",
+			      "'.$miembrospais[$i]["edad"].'",
 			      "'.$miembrospais[$i]["email"].'",
                   "'.$miembrospais[$i]["telefono"].'",
                   "'.$barrios["nombre"].'",
