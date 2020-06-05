@@ -47,10 +47,12 @@
            <th>Nombre del Miembro</th>
            <th>Email</th>
            <th>Telf</th>
-           <th>Diagnostico</th>
-           <th>Medico Que lo Trato</th>
+           <th>Diagnostico Del Medico</th>
+           <!-- <th>Medico Que lo Trato</th> -->
            <th>Medicamento</th>
            <th>Dosis Recetada</th>
+           <th>Tiempo de Tratamiento</th>
+           <th>Necesidad</th>
            <th>Acciones</th>
 
            
