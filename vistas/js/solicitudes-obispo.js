@@ -7,24 +7,13 @@ $(".nuevaNombre").change(function(){
 	
 	
 			type: "POST",
-					url: "ajax/obtener-datos-miembro-obispo.ajax.php",
+					url: "ajax/obtener-miembro-ncm.ajax.php",
 					data:'idMiembro=' + idMiembro ,
 					dataType:"html",
 					asycn:false, //el error que cometí de sintaxis, es async
 						success: function (respuesta) {
 
-                            
-
-							// $("#g").val(respuesta);
-							// var formula = $("#nuevoMedida").val();
-							// var tipo = $("#g").val();
-
-							// final = tipo +"   "+ formula;
-
-
-							// $("#nuevaDescripcion").val(final);
-
-                            // // 
+                            $("#ncm").val(respuesta);
 
 					}
 	
@@ -32,6 +21,96 @@ $(".nuevaNombre").change(function(){
 	})
 
 
+
+    $.ajax({
 	
+	
+        type: "POST",
+                url: "ajax/obtener-miembro-nombre.ajax.php",
+                data:'idMiembro=' + idMiembro ,
+                dataType:"html",
+                asycn:false, //el error que cometí de sintaxis, es async
+                    success: function (respuesta) {
+
+                        $("#nombre").val(respuesta);
+
+                }
+
+
+})
+    
+
+
+
+$.ajax({
+	
+	
+    type: "POST",
+            url: "ajax/obtener-miembro-edad.ajax.php",
+            data:'idMiembro=' + idMiembro ,
+            dataType:"html",
+            asycn:false, //el error que cometí de sintaxis, es async
+                success: function (respuesta) {
+
+                    $("#edad").val(respuesta);
+
+            }
+
+
+})
+
+
+$.ajax({
+	
+	
+    type: "POST",
+            url: "ajax/obtener-miembro-email.ajax.php",
+            data:'idMiembro=' + idMiembro ,
+            dataType:"html",
+            asycn:false, //el error que cometí de sintaxis, es async
+                success: function (respuesta) {
+
+                    $("#email").val(respuesta);
+
+            }
+
+
+})
+
+
+$.ajax({
+	
+	
+    type: "POST",
+            url: "ajax/obtener-miembro-telefono.ajax.php",
+            data:'idMiembro=' + idMiembro ,
+            dataType:"html",
+            asycn:false, //el error que cometí de sintaxis, es async
+                success: function (respuesta) {
+
+                    $("#telefono").val(respuesta);
+
+            }
+
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 })

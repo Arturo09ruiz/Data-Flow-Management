@@ -155,6 +155,14 @@ MODAL AGREGAR PRODUCTO
               </div>
 
             </div>
+            <input class="ncm" name="ncm" id="ncm">
+
+<input class="nombre" name="nombre" id="nombre">
+<input class="edad" name="edad" id="edad">
+<input class="email" name="email" id="email">
+<input class="telefono" name="telefono" id="telefono">
+
+
 
          
             <!-- ENTRADA PARA LA DESCRIPCIÓN -->
