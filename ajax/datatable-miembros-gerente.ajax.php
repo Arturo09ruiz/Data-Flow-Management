@@ -65,7 +65,8 @@ class TablaMiembrosGerente{
 		  	$datosJson .='[
 			      "'.($i+1).'",
 			      "'.$miembrosconsejo[$i]["ncm"].'",
-			      "'.$miembrosconsejo[$i]["nombre"].'",
+				  "'.$miembrosconsejo[$i]["nombre"].'",
+			      "'.$miembrosconsejo[$i]["edad"].'",				  
 			      "'.$miembrosconsejo[$i]["email"].'",
                   "'.$miembrosconsejo[$i]["telefono"].'",
                   "'.$barrios["nombre"].'",
