@@ -26,7 +26,7 @@
 
     <div class="box-body">
       
-     <table class="table table-bordered table-striped dt-responsive tablaMiembrosGerente" width="100%">
+     <table class="table table-bordered table-striped dt-responsive tablaMiembrosSetentaPais" width="100%">
        
       <thead>
        
