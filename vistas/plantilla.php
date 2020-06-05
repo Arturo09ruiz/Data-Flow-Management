@@ -213,6 +213,7 @@ CUERPO DOCUMENTO
 
       if($_GET["ruta"] == "inicio" ||
          $_GET["ruta"] == "miembros" ||
+         $_GET["ruta"] == "realizar-solicitud" ||
          $_GET["ruta"] == "salir"){
 
         include "modulos/obispo/".$_GET["ruta"].".php";
