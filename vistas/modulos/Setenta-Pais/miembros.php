@@ -39,6 +39,8 @@
          <th>N° De Telf</th>
          <th>Barrio</th>
          <th>Estaca</th>
+         <th>Consejo</th>
+
 
 
 
