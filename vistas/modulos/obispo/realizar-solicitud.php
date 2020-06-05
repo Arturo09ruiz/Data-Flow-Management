@@ -45,12 +45,14 @@
            <th>Código</th>
            <th>NCM</th>
            <th>Nombre del Miembro</th>
-           <th>Categoría</th>
-           <th>Stock</th>
-           <th>Precio de compra</th>
-           <th>Precio de venta</th>
-           <th>Agregado</th>
+           <th>Email</th>
+           <th>Telf</th>
+           <th>Diagnostico</th>
+           <th>Medico Que lo Trato</th>
+           <th>Medicamento</th>
+           <th>Dosis Recetada</th>
            <th>Acciones</th>
+
            
          </tr> 
 
