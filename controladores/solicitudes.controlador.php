@@ -177,6 +177,72 @@ class ControladorSolicitudes
 
 
 
+//Cedula Identidad Miembro
+
+$ruta3 = "vistas/img/cedulas_identidad_miembro/default/anonymous.png";
+
+if(isset($_FILES["nuevaCedula"]["tmp_name"])){
+
+ list($ancho, $alto) = getimagesize($_FILES["nuevaCedula"]["tmp_name"]);
+
+ $nuevoAncho = 1024;
+ $nuevoAlto = 720;
+
+ /*=============================================
+ CREAMOS EL DIRECTORIO DONDE VAMOS A GUARDAR LA FOTO DEL USUARIO
+ =============================================*/
+
+ $directorio = "vistas/img/cedulas_identidad_miembro/".$_POST["nuevoCodigo"];
+
+ mkdir($directorio, 0755);
+
+ /*=============================================
+ DE ACUERDO AL TIPO DE IMAGEN APLICAMOS LAS FUNCIONES POR DEFECTO DE PHP
+ =============================================*/
+
+ if($_FILES["nuevaCedula"]["type"] == "image/jpeg"){
+
+     /*=============================================
+     GUARDAMOS LA IMAGEN EN EL DIRECTORIO
+     =============================================*/
+
+     $aleatorio = mt_rand(100,999);
+
+     $ruta3 = "vistas/img/cedulas_identidad_miembro/".$_POST["nuevoCodigo"]."/".$aleatorio.".jpg";
+
+     $origen = imagecreatefromjpeg($_FILES["nuevaCedula"]["tmp_name"]);						
+
+     $destino = imagecreatetruecolor($nuevoAncho, $nuevoAlto);
+
+     imagecopyresized($destino, $origen, 0, 0, 0, 0, $nuevoAncho, $nuevoAlto, $ancho, $alto);
+
+     imagejpeg($destino, $ruta3);
+
+ }
+
+ if($_FILES["nuevaCedula"]["type"] == "image/png"){
+
+     /*=============================================
+     GUARDAMOS LA IMAGEN EN EL DIRECTORIO
+     =============================================*/
+
+     $aleatorio = mt_rand(100,999);
+
+     $ruta3 = "vistas/img/cedulas_identidad_miembro/".$_POST["nuevoCodigo"]."/".$aleatorio.".png";
+
+     $origen = imagecreatefrompng($_FILES["nuevaCedula"]["tmp_name"]);						
+
+     $destino = imagecreatetruecolor($nuevoAncho, $nuevoAlto);
+
+     imagecopyresized($destino, $origen, 0, 0, 0, 0, $nuevoAncho, $nuevoAlto, $ancho, $alto);
+
+     imagepng($destino, $ruta3);
+
+ }
+
+}
+
+
 
 
 
@@ -257,7 +323,9 @@ class ControladorSolicitudes
                 "duracion" => $_POST["nuevaDuracion"],
                 "necesidad" => $_POST["nuevaNecesidad"],
                 "Informe_Medico" => $ruta,
-				"Recipe_Medico" => $ruta2
+                "Recipe_Medico" => $ruta2,
+				"CI" => $ruta3
+                
                 
 
             );

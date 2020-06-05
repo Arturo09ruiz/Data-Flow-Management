@@ -283,17 +283,17 @@ MODAL AGREGAR PRODUCTO
 
 
             </div>
-<!-- 
+
             <div class="form-group">
               
               <div class="panel">SUBIR CEDULA DE IDENTIDAD DEL MIEMBRO</div>
 
-              <input type="file" class=" nuevaImagen" name="nuevaImagen">
+              <input type="file" class="nuevaCedula" name="nuevaCedula">
 
 
 
             </div>
- -->
+
 
           </div>
 
