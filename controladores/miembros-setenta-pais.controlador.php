@@ -4,7 +4,7 @@ class ControladorMiembrosSetentaPais{
 
 
 
-	static public function ctrMostrarMiembrosSetentaPais($item, $valor, $orden , $pais){
+	static public function ctrMostrarMiembrosSetentaPais($item, $valor, $orden, $pais){
 
 		$tabla = "miembros";
 
