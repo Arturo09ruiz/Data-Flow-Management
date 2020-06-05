@@ -129,7 +129,7 @@ MODAL AGREGAR PRODUCTO
               
               <div class="input-group">
               
-                <span class="input-group-addon"><i class="fa fa-th"></i></span> 
+                <span class="input-group-addon"><i class="fa fa-child"></i></span> 
 
                 <select class="js-example-basic-single form-control input-lg nuevaNombre" id="nuevaNombre" name="nuevaNombre" required>
                   
@@ -160,11 +160,18 @@ MODAL AGREGAR PRODUCTO
 
 
 
-<input class="ncm" name="ncm" id="ncm">
-<input class="nombre" name="nombre" id="nombre">
-<input class="edad" name="edad" id="edad">
-<input class="email" name="email" id="email">
-<input class="telefono" name="telefono" id="telefono">
+<input type="hidden"  class="ncm" name="ncm" id="ncm">
+<input type="hidden" class="nombre" name="nombre" id="nombre">
+<input type="hidden" class="edad" name="edad" id="edad">
+<input type="hidden" class="email" name="email" id="email">
+<input type="hidden" class="telefono" name="telefono" id="telefono">
+
+      <input name="idbarrio" class="idbarrio" type="hidden" value="<?php echo $_SESSION['idbarrio']; ?>" id="idbarrio">
+       <input name="idestaca" type="hidden" value="<?php echo $_SESSION['idestaca']; ?>" id="idestaca">
+       <input  name="idconsejo" type="hidden" value="<?php echo $_SESSION['idconsejo']; ?>" id="idconsejo">
+       <input  name="idpais" type="hidden" value="<?php echo $_SESSION['idpais']; ?>" id="idpais">
+
+
 
 
 
@@ -187,7 +194,7 @@ MODAL AGREGAR PRODUCTO
               
                 <span class="input-group-addon"><i class="fa fa-flask"></i></span> 
 
-                <input type="text" class="form-control input-lg" name="nuevaDescripcion" placeholder="Ingresar Medicamento" required>
+                <input type="text" class="form-control input-lg" name="nuevaMedicamento" placeholder="Ingresar Medicamento" required>
 
               </div>
 
@@ -200,7 +207,7 @@ MODAL AGREGAR PRODUCTO
               
                 <span class="input-group-addon"><i class="fa fa-pie-chart"></i></span> 
 
-                <input type="text" class="form-control input-lg" name="nuevaDescripcion" placeholder="Ingresar Dosis Recetada" required>
+                <input type="text" class="form-control input-lg" name="nuevaDosis" placeholder="Ingresar Dosis Recetada" required>
 
               </div>
 
@@ -212,7 +219,7 @@ MODAL AGREGAR PRODUCTO
               
                 <span class="input-group-addon"><i class="fa fa-calendar-o"></i></span> 
 
-                <input type="text" class="form-control input-lg" name="nuevaDescripcion" placeholder="Ingresar Duracion" required>
+                <input type="text" class="form-control input-lg" name="nuevaDuracion" placeholder="Ingresar Duracion" required>
 
               </div>
 
@@ -226,7 +233,7 @@ MODAL AGREGAR PRODUCTO
               
                 <span class="input-group-addon"><i class="fa fa-bicycle"></i></span> 
 
-                  <select class="form-control input-lg" name="nuevaNecesidad">
+                  <select class="js-example-basic-single form-control input-lg" name="nuevaNecesidad">
                   <option value="Normal">Normal</option>
                   <option value="Urgente">Urgente</option>
                   <option value="Emergencia">Emergencia</option>
@@ -246,7 +253,7 @@ MODAL AGREGAR PRODUCTO
             
             <div class="form-group">
               
-              <div class="panel">SUBIR PLAN DE AUTOSUFICIENCIA</div>
+              <div class="panel">SUBIR INFORME MEDICO</div>
 
               <input type="file" class="nuevaImagen" name="nuevaImagen">
 
@@ -308,8 +315,8 @@ MODAL AGREGAR PRODUCTO
 
         <?php
 
-          $crearProducto = new ControladorProductos();
-          $crearProducto -> ctrCrearProducto();
+          $crearSolicitudes = new ControladorSolicitudes();
+          $crearSolicitudes -> ctrCrearSolicitudes();
 
         ?>  
 

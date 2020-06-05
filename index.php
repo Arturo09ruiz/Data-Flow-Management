@@ -23,6 +23,9 @@ require_once "controladores/barrios.controlador.php";
 require_once "controladores/miembros.controlador.php";
 
 
+require_once "controladores/solicitudes.controlador.php";
+
+
 
 
 
@@ -75,6 +78,8 @@ require_once "modelos/consejo.modelo.php";
 
 //Obispo Controladores
 require_once "modelos/miembros.modelo.php";
+require_once "modelos/solicitudes.modelo.php";
+
 
 
 //pdtestacamodelo

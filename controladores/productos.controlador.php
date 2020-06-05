@@ -104,7 +104,8 @@ class ControladorProductos{
 							   "stock" => $_POST["nuevoStock"],
 							   "precio_compra" => $_POST["nuevoPrecioCompra"],
 							   "precio_venta" => $_POST["nuevoPrecioVenta"],
-							   "imagen" => $ruta);
+							   "imagen" => $ruta
+							);
 
 				$respuesta = ModeloProductos::mdlIngresarProducto($tabla, $datos);
 
