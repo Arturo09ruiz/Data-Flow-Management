@@ -1,0 +1,5 @@
+$("#nuevaNombre").change(
+
+    alert("hgh")
+
+);

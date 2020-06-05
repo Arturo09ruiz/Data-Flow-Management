@@ -10,7 +10,7 @@
     
     <h1>
       
-      Administrar Solicitudes
+      Administrar Pedidos
     
     </h1>
 
@@ -18,7 +18,7 @@
       
       <li><a href="inicio"><i class="fa fa-dashboard"></i> Inicio</a></li>
       
-      <li class="active">Administrar Solicitudes</li>
+      <li class="active">Administrar Pedidos</li>
     
     </ol>
 
@@ -30,9 +30,9 @@
 
       <div class="box-header with-border">
   
-        <button class="btn btn-primary" data-toggle="modal" data-target="#modalAgregarSolicitud">
+        <button class="btn btn-primary" data-toggle="modal" data-target="#modalAgregarPedidos">
           
-          Agregar Solicitud
+          Agregar Pedidos
 
         </button>
 
@@ -40,7 +40,7 @@
 
       <div class="box-body">
         
-       <table class="table table-bordered table-striped dt-responsive tablaSolicitud" width="100%">
+       <table class="table table-bordered table-striped dt-responsive tablaPedidos" width="100%">
          
         <thead>
          
@@ -81,7 +81,7 @@
 MODAL AGREGAR PRODUCTO
 ======================================-->
 
-<div id="modalAgregarSolicitud" class="modal fade" role="dialog">
+<div id="modalAgregarPedidos" class="modal fade" role="dialog">
   
   <div class="modal-dialog">
 
@@ -97,7 +97,7 @@ MODAL AGREGAR PRODUCTO
 
           <button type="button" class="close" data-dismiss="modal">&times;</button>
 
-          <h4 class="modal-title">Agregar Solicitud</h4>
+          <h4 class="modal-title">Agregar Pedido</h4>
 
         </div>
 
@@ -131,7 +131,7 @@ MODAL AGREGAR PRODUCTO
               
                 <span class="input-group-addon"><i class="fa fa-th"></i></span> 
 
-                <select class="js-example-basic-single form-control input-lg" id="nuevaCategoria" name="nuevaCategoria" required>
+                <select class="js-example-basic-single form-control input-lg nuevaNombre" id="nuevaNombre" name="nuevaNombre" required>
                   
                   <option value="">Selecionar Miembro</option>
 
