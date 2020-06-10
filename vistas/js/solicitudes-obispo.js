@@ -16,7 +16,7 @@ $.ajax({
 
 var barrio = $("#idbarrio").val();
 
-$('.tablaPedidos').DataTable( {
+$('.tablaSolicitudObispo').DataTable( {
     "ajax": "ajax/datatable-solicitudes-obispo.ajax.php?barrio="+barrio,
     "deferRender": true,
 	"retrieve": true,
