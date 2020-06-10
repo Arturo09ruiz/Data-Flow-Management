@@ -250,6 +250,165 @@ if(isset($_FILES["nuevaCedula"]["tmp_name"])){
 
 
 
+//PLAN AUTOSUFICIENCA 1
+
+$ruta4 = "vistas/img/plan-autosuficiencia/default/anonymous.png";
+
+if(isset($_FILES["nuevaPlan1"]["tmp_name"])){
+
+ list($ancho, $alto) = getimagesize($_FILES["nuevaPlan1"]["tmp_name"]);
+
+ $nuevoAncho = 1366;
+ $nuevoAlto = 768;
+
+ /*=============================================
+ CREAMOS EL DIRECTORIO DONDE VAMOS A GUARDAR LA FOTO DEL USUARIO
+ =============================================*/
+
+ $directorio = "vistas/img/plan-autosuficiencia/".$_POST["nuevoCodigo"];
+
+ mkdir($directorio, 0755);
+
+ /*=============================================
+ DE ACUERDO AL TIPO DE IMAGEN APLICAMOS LAS FUNCIONES POR DEFECTO DE PHP
+ =============================================*/
+
+ if($_FILES["nuevaPlan1"]["type"] == "image/jpeg"){
+
+     /*=============================================
+     GUARDAMOS LA IMAGEN EN EL DIRECTORIO
+     =============================================*/
+
+     $aleatorio = mt_rand(100,999);
+
+     $ruta4 = "vistas/img/plan-autosuficiencia/".$_POST["nuevoCodigo"]."/".$aleatorio.".jpg";
+
+     $origen = imagecreatefromjpeg($_FILES["nuevaPlan1"]["tmp_name"]);						
+
+     $destino = imagecreatetruecolor($nuevoAncho, $nuevoAlto);
+
+     imagecopyresized($destino, $origen, 0, 0, 0, 0, $nuevoAncho, $nuevoAlto, $ancho, $alto);
+
+     imagejpeg($destino, $ruta4);
+
+ }
+
+ if($_FILES["nuevaPlan1"]["type"] == "image/png"){
+
+     /*=============================================
+     GUARDAMOS LA IMAGEN EN EL DIRECTORIO
+     =============================================*/
+
+     $aleatorio = mt_rand(100,999);
+
+     $ruta4 = "vistas/img/plan-autosuficiencia/".$_POST["nuevoCodigo"]."/".$aleatorio.".png";
+
+     $origen = imagecreatefrompng($_FILES["nuevaPlan1"]["tmp_name"]);						
+
+     $destino = imagecreatetruecolor($nuevoAncho, $nuevoAlto);
+
+     imagecopyresized($destino, $origen, 0, 0, 0, 0, $nuevoAncho, $nuevoAlto, $ancho, $alto);
+
+     imagepng($destino, $ruta4);
+
+ }
+
+}
+
+
+
+
+
+
+//PLAN AUTOSUFICIENCA 2
+
+$ruta5 = "vistas/img/plan-autosuficiencia/default/anonymous.png";
+
+if(isset($_FILES["nuevaPlan2"]["tmp_name"])){
+
+ list($ancho, $alto) = getimagesize($_FILES["nuevaPlan2"]["tmp_name"]);
+
+ $nuevoAncho = 1366;
+ $nuevoAlto = 768;
+
+ /*=============================================
+ CREAMOS EL DIRECTORIO DONDE VAMOS A GUARDAR LA FOTO DEL USUARIO
+ =============================================*/
+
+ $directorio = "vistas/img/plan-autosuficiencia/".$_POST["nuevoCodigo"];
+
+ mkdir($directorio, 0755);
+
+ /*=============================================
+ DE ACUERDO AL TIPO DE IMAGEN APLICAMOS LAS FUNCIONES POR DEFECTO DE PHP
+ =============================================*/
+
+ if($_FILES["nuevaPlan2"]["type"] == "image/jpeg"){
+
+     /*=============================================
+     GUARDAMOS LA IMAGEN EN EL DIRECTORIO
+     =============================================*/
+
+     $aleatorio = mt_rand(100,999);
+
+     $ruta5 = "vistas/img/plan-autosuficiencia/".$_POST["nuevoCodigo"]."/".$aleatorio.".jpg";
+
+     $origen = imagecreatefromjpeg($_FILES["nuevaPlan2"]["tmp_name"]);						
+
+     $destino = imagecreatetruecolor($nuevoAncho, $nuevoAlto);
+
+     imagecopyresized($destino, $origen, 0, 0, 0, 0, $nuevoAncho, $nuevoAlto, $ancho, $alto);
+
+     imagejpeg($destino, $ruta5);
+
+ }
+
+ if($_FILES["nuevaPlan2"]["type"] == "image/png"){
+
+     /*=============================================
+     GUARDAMOS LA IMAGEN EN EL DIRECTORIO
+     =============================================*/
+
+     $aleatorio = mt_rand(100,999);
+
+     $ruta5 = "vistas/img/plan-autosuficiencia/".$_POST["nuevoCodigo"]."/".$aleatorio.".png";
+
+     $origen = imagecreatefrompng($_FILES["nuevaPlan2"]["tmp_name"]);						
+
+     $destino = imagecreatetruecolor($nuevoAncho, $nuevoAlto);
+
+     imagecopyresized($destino, $origen, 0, 0, 0, 0, $nuevoAncho, $nuevoAlto, $ancho, $alto);
+
+     imagepng($destino, $ruta5);
+
+ }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -322,6 +481,8 @@ if(isset($_FILES["nuevaCedula"]["tmp_name"])){
                 "dosis_recetada" => $_POST["nuevaDosis"],
                 "duracion" => $_POST["nuevaDuracion"],
                 "necesidad" => $_POST["nuevaNecesidad"],
+                "Plan_Autosuficiencia_1" => $ruta4,
+                "Plan_Autosuficiencia_2" => $ruta5,
                 "Informe_Medico" => $ruta,
                 "Recipe_Medico" => $ruta2,
 				"CI" => $ruta3

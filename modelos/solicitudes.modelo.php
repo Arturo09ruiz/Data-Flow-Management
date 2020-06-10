@@ -41,7 +41,7 @@ class ModeloSolicitudes{
 	=============================================*/
 	static public function mdlIngresarSolicitudes($tabla, $datos){
 
-		$stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(codigo, ncm_miembro, nombre_miembro, edad, email, telefono, idbarrio, idestaca, idconsejo, idpais, enfermedad, medicamento, dosis_recetada, duracion, necesidad, Informe_Medico, Recipe_Medico, CI) VALUES (:codigo, :ncm_miembro, :nombre_miembro, :edad, :email, :telefono, :idbarrio, :idestaca, :idconsejo, :idpais, :enfermedad, :medicamento, :dosis_recetada, :duracion, :necesidad, :Informe_Medico, :Recipe_Medico, :CI)");
+		$stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(codigo, ncm_miembro, nombre_miembro, edad, email, telefono, idbarrio, idestaca, idconsejo, idpais, enfermedad, medicamento, dosis_recetada, duracion, necesidad, Plan_Autosuficiencia_1, Plan_Autosuficiencia_2, Informe_Medico, Recipe_Medico, CI) VALUES (:codigo, :ncm_miembro, :nombre_miembro, :edad, :email, :telefono, :idbarrio, :idestaca, :idconsejo, :idpais, :enfermedad, :medicamento, :dosis_recetada, :duracion, :necesidad, :Plan_Autosuficiencia_1, :Plan_Autosuficiencia_2, :Informe_Medico, :Recipe_Medico, :CI)");
 
 		$stmt->bindParam(":codigo", $datos["codigo"], PDO::PARAM_STR);
 		$stmt->bindParam(":ncm_miembro", $datos["ncm_miembro"], PDO::PARAM_STR);
@@ -57,7 +57,9 @@ class ModeloSolicitudes{
         $stmt->bindParam(":medicamento", $datos["medicamento"], PDO::PARAM_STR);
 		$stmt->bindParam(":dosis_recetada", $datos["dosis_recetada"], PDO::PARAM_STR);
 		$stmt->bindParam(":duracion", $datos["duracion"], PDO::PARAM_STR);
-        $stmt->bindParam(":necesidad", $datos["necesidad"], PDO::PARAM_STR);
+		$stmt->bindParam(":necesidad", $datos["necesidad"], PDO::PARAM_STR);
+		$stmt->bindParam(":Plan_Autosuficiencia_1", $datos["Plan_Autosuficiencia_1"], PDO::PARAM_STR);
+		$stmt->bindParam(":Plan_Autosuficiencia_2", $datos["Plan_Autosuficiencia_2"], PDO::PARAM_STR);
 		$stmt->bindParam(":Informe_Medico", $datos["Informe_Medico"], PDO::PARAM_STR);
 		$stmt->bindParam(":Recipe_Medico", $datos["Recipe_Medico"], PDO::PARAM_STR);
 		$stmt->bindParam(":CI", $datos["CI"], PDO::PARAM_STR);
