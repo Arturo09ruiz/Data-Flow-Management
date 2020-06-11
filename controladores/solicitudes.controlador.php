@@ -7,15 +7,41 @@ class ControladorSolicitudes
 	MOSTRAR PRODUCTOS
 	=============================================*/
 
-    static public function ctrMostrarProductos($item, $valor, $orden)
+    // static public function ctrMostrarProductos($item, $valor, $orden)
+    // {
+
+    //     $tabla = "productos";
+
+    //     $respuesta = ModeloProductos::mdlMostrarProductos($tabla, $item, $valor, $orden);
+
+    //     return $respuesta;
+    // }
+
+
+    
+    static public function ctrMostrarSolicitudesConformeBarrioObispo($item, $valor, $orden, $barrio)
     {
 
-        $tabla = "productos";
+        $tabla = "solicitudes";
 
-        $respuesta = ModeloProductos::mdlMostrarProductos($tabla, $item, $valor, $orden);
+        $respuesta = ModeloSolicitudes::mdlMostrarSolicitudesConformeBarrioObispo($tabla, $item, $valor, $orden, $barrio);
 
         return $respuesta;
     }
+
+
+    static public function ctrMostrarSolicitudesConformeBarrioObispoID($item, $valor, $orden, $barrio)
+    {
+
+        $tabla = "solicitudes";
+
+        $respuesta = ModeloSolicitudes::ctrMostrarSolicitudesConformeBarrioObispoID($tabla, $item, $valor, $orden, $barrio);
+
+        return $respuesta;
+    }
+
+    
+    
 
     /*=============================================
 	CREAR PRODUCTO 

@@ -212,3 +212,14 @@ $.ajax({
 
 })
 
+
+
+
+$(".tablaSolicitudObispo tbody").on("click", "button.btnVisualizarSolicitudes", function(){
+
+	var idSolicitudes = $(this).attr("idSolicitudes");
+
+	window.location = "index.php?ruta=visualizar-solicitudes&idSolicitudes="+idSolicitudes;
+
+
+})

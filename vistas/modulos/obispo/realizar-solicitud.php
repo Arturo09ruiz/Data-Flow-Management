@@ -55,19 +55,18 @@
               <th>Edad</th>
               <th>Email</th>
               <th>Telf</th>
-              <th>Enfermedad</th>
-              <th>Medicamento</th>
-              <th>Dosis Recetada</th>
-              <th>Duracion</th>
-              <th>Necesidad</th>
               <th>Acciones</th>
-
 
             </tr>
 
           </thead>
 
+       
+
+
+        
         </table>
+     
 
         <input type="hidden" value="<?php echo $_SESSION['perfil']; ?>" id="perfilOculto">
         <input class="idbarrio" type="hidden" value="<?php echo $_SESSION['idbarrio']; ?>" id="idbarrio">
