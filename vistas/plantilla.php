@@ -29,6 +29,16 @@ session_start();
   <!-- Bootstrap 3.3.7 -->
   <link rel="stylesheet" href="vistas/bower_components/bootstrap/dist/css/bootstrap.min.css">
 
+<!-- 
+
+  <link rel="stylesheet" href="vistas/bower_components/zoom/easyzoom.css">
+  <link rel="stylesheet" href="vistas/bower_components/zoom/example.css">
+  <link rel="stylesheet" href="vistas/bower_components/zoom/pygments.css">
+<script src="vistas/bower_components/zoom/easyzoom.js"></script> -->
+
+  
+
+
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="vistas/bower_components/font-awesome/css/font-awesome.min.css">
