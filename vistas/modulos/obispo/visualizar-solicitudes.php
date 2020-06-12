@@ -383,7 +383,7 @@
 
             <div class="col-lg-7 hidden-md hidden-sm hidden-xs">
 
-                <div class="box box-warning">
+                <div class="box box-primary">
                     <div class="box-header with-border">
                         <p class="text-center"> <b>Documentos de la Solicitud</b> </p>
                     </div>
@@ -405,10 +405,10 @@
                                 <button class="btn btn-block btn-primary" data-toggle="modal" data-target="#modalIM" data-dismiss="modal" id="IM">Informe Médico</button>
                             </div>
                             <div class="col-md-4">
-                                <button class="btn btn-block btn-primary"  data-toggle="modal" data-target="#modalRM" data-dismiss="modal" id="RM">Recipe Médico</button>
+                                <button class="btn btn-block btn-primary" data-toggle="modal" data-target="#modalRM" data-dismiss="modal" id="RM">Recipe Médico</button>
                             </div>
                             <div class="col-md-4">
-                                <button class="btn btn-block btn-primary"  data-toggle="modal" data-target="#modalCI" data-dismiss="modal" id="CI">C.I del Miembro</button>
+                                <button class="btn btn-block btn-primary" data-toggle="modal" data-target="#modalCI" data-dismiss="modal" id="CI">C.I del Miembro</button>
                             </div>
                         </div>
 
@@ -421,11 +421,368 @@
 
             </div>
 
+
+
+
+
+
+            <div class="col-lg-7 hidden-md hidden-sm hidden-xs">
+
+                <div class="box box-warning">
+                    <div class="box-header with-border">
+                        <p class="text-center"> <b>Estado de la Solicitud</b> </p>
+                    </div>
+                    <div class="box-body">
+
+
+
+
+                <div class="row">
+
+
+                    <div class="col-md-4">
+
+                    
+
+                    <?php
+
+                    $aprobado = $solicitudes["aprobacion_gerente"];
+
+                    if ($aprobado == 1) {
+                        echo '
+                    <div class="form-group">
+                    <p class="text-center"> <b>Aprobación Gerente</b> </p> 
+
+                    <div class="input-group">
+
+                    <span class="input-group-addon"><i class="fa fa-user-o"></i></span>
+                    <button type="button" class="form-control btn btn-success">Aprobado</button>
+
+
+
+                    </div>
+
+
+                    </div>
+                    <textarea  class="form-control"  rows="3" readonly>';
+                        echo $solicitudes["comentarios_gerente"];
+                        echo '</textarea>     
+
+                    ';
+                    } else if ($aprobado == 2) {
+                        echo '
+                    <div class="form-group">
+                    <p class="text-center"> <b>Aprobación Gerente</b> </p> 
+
+                    <div class="input-group">
+
+                    <span class="input-group-addon"><i class="fa fa-user-o"></i></span>
+                    <button type="button" class="form-control btn btn-danger">Desaprobado</button>
+
+
+
+                    </div>
+
+                    </div>
+
+                    <textarea  class="form-control"  rows="3" readonly>';
+                        echo $solicitudes["comentarios_gerente"];
+                        echo '</textarea>     
+
+
+
+                    ';
+                    } else {
+
+                        echo '
+                    <div class="form-group">
+                    <p class="text-center"> <b>Aprobación Gerente</b> </p> 
+
+                    <div class="input-group">
+
+                    <span class="input-group-addon"><i class="fa fa-user-o"></i></span>
+                    <button type="button" class="form-control btn btn-info">Aun No Ha Sido Aprobado</button>
+
+
+
+                    </div>
+
+                    </div>
+
+                    ';
+                    }
+
+
+
+
+                    ?>
+
+                </div>
+
+
+
+     
+
+
+<div class="col-md-4">
+
+                    
+
+<?php
+
+$aprobado_asesor = $solicitudes["aprobacion_asesor"];
+
+if ($aprobado_asesor == 1) {
+    echo '
+<div class="form-group">
+<p class="text-center"> <b>Aprobación Asesor Médico</b> </p> 
+
+<div class="input-group">
+
+<span class="input-group-addon"><i class="fa fa-user-md"></i></span>
+<button type="button" class="form-control btn btn-success">Aprobado</button>
+
+
+
+</div>
+
+
+</div>
+<textarea  class="form-control"  rows="3" readonly>';
+    echo $solicitudes["comentarios_asesor"];
+    echo '</textarea>     
+
+';
+} else if ($aprobado_asesor == 2) {
+    echo '
+<div class="form-group">
+<p class="text-center"> <b>Aprobación Asesor Médico</b> </p> 
+
+<div class="input-group">
+
+<span class="input-group-addon"><i class="fa fa-user-md"></i></span>
+<button type="button" class="form-control btn btn-danger">Desaprobado</button>
+
+
+
+</div>
+
+</div>
+
+<textarea  class="form-control"  rows="3" readonly>';
+    echo $solicitudes["comentarios_asesor"];
+    echo '</textarea>     
+
+
+
+';
+} else {
+
+    echo '
+<div class="form-group">
+<p class="text-center"> <b>Aprobación Asesor Médico</b> </p> 
+
+<div class="input-group">
+
+<span class="input-group-addon"><i class="fa fa-user-md"></i></span>
+<button type="button" class="form-control btn btn-info">Aun No Ha Sido Aprobado</button>
+
+
+
+</div>
+
+</div>
+
+';
+}
+
+
+
+
+?>
+
+</div>
+
+
+
+
+<div class="col-md-4">
+
+                    
+
+<?php
+
+$aprobado_finanzas = $solicitudes["aprobacion_finanzas"];
+
+if ($aprobado_finanzas == 1) {
+    echo '
+<div class="form-group">
+<p class="text-center"> <b>Aprobación Finanzas</b> </p> 
+
+<div class="input-group">
+
+<span class="input-group-addon"><i class="fa fa-money"></i></span>
+<button type="button" class="form-control btn btn-success">Aprobado</button>
+
+
+
+</div>
+
+
+</div>
+<textarea  class="form-control"  rows="3" readonly>';
+    echo $solicitudes["comentarios_finanzas"];
+    echo '</textarea>     
+
+';
+} else if ($aprobado_finanzas == 2) {
+    echo '
+<div class="form-group">
+<p class="text-center"> <b>Aprobación Finanzas</b> </p> 
+
+<div class="input-group">
+
+<span class="input-group-addon"><i class="fa fa-money"></i></span>
+<button type="button" class="form-control btn btn-danger">Desaprobado</button>
+
+
+
+</div>
+
+</div>
+
+<textarea  class="form-control"  rows="3" readonly>';
+    echo $solicitudes["comentarios_finanzas"];
+    echo '</textarea>     
+
+
+
+';
+} else {
+
+    echo '
+<div class="form-group">
+<p class="text-center"> <b>Aprobación Finanzas</b> </p> 
+
+<div class="input-group">
+
+<span class="input-group-addon"><i class="fa fa-money"></i></span>
+<button type="button" class="form-control btn btn-info">Aun No Ha Sido Aprobado</button>
+
+
+
+</div>
+
+</div>
+
+';
+}
+
+
+
+
+?>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        </div>
+                   
+
+
+
+
+
+
+
+
+                    </div>
+
+
+
+
+                </div>
+
+
+            </div>
+
         </div>
 
     </section>
 
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <!-- MODAL PAGINA 1 PLAN DE AUTOSUFICIENCIA -->
