@@ -402,7 +402,7 @@
 
                         <div class="row">
                             <div class="col-md-4">
-                                <button class="btn btn-block btn-primary">Informe Médico</button>
+                                <button class="btn btn-block btn-primary" data-toggle="modal" data-target="#modalIM" data-dismiss="modal" id="PA2">Informe Médico</button>
                             </div>
                             <div class="col-md-4">
                                 <button class="btn btn-block btn-primary">Recipe Médico</button>
@@ -413,24 +413,6 @@
                         </div>
 
 
-
-                        <!-- <p class="text-center"> Plan De Autosuficiencia PAG. 1</p>
-                <img class="img-thumbnail" src="<?php echo $solicitudes["Plan_Autosuficiencia_1"]; ?>" alt="">
-<hr>
-
-                <p class="text-center"> Plan De Autosuficiencia PAG. 2</p>
-                <img class="img-thumbnail" src="<?php echo $solicitudes["Plan_Autosuficiencia_2"]; ?>" alt="">
-
-<hr>
-                <p class="text-center"> Informe Médico</p>
-                <img class="img-thumbnail" src="<?php echo $solicitudes["Informe_Medico"]; ?>" alt="">
-<hr>
-               <p class="text-center"> Recipe Médico</p>
-                <img class="img-thumbnail" src="<?php echo $solicitudes["Recipe_Medico"]; ?>" alt="">
-<hr>
-                <p class="text-center"> Cedula de Identidad Del Beneficiario</p>
-                <img class="img-thumbnail" src="<?php echo $solicitudes["CI"]; ?>" alt="">
-<hr> -->
 
                     </div>
 
@@ -534,6 +516,123 @@
                     <div class="">
                         <a href="<?php echo $solicitudes["Plan_Autosuficiencia_2"]; ?>">
                             <img class="img-responsive" src="<?php echo $solicitudes["Plan_Autosuficiencia_2"]; ?>">
+                        </a>
+
+                    </div>
+
+                </div>
+                <!--=====================================
+        PIE DEL MODAL
+        ======================================-->
+
+                <div class="modal-footer">
+
+
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- PLAN DE AUTOSUFICIENCIA PAG 2 -->
+<div id="modalPA2" class="modal fade" role="dialog">
+
+    <div class="modal-dialog modal-lg">
+
+        <div class="modal-content">
+
+
+            <!--=====================================
+        CABEZA DEL MODAL
+        ======================================-->
+
+            <div class="modal-header" style="background:#3c8dbc; color:white">
+
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+
+            </div>
+
+            <!--=====================================
+        CUERPO DEL MODAL
+        ======================================-->
+
+            <div class="modal-body">
+
+                <div class="box-body">
+                    <p class="text-center"><b>Plan De Autosuficiencia PAG. 2</b> </p>
+
+                    <div class="">
+                        <a href="<?php echo $solicitudes["Plan_Autosuficiencia_2"]; ?>">
+                            <img class="img-responsive" src="<?php echo $solicitudes["Plan_Autosuficiencia_2"]; ?>">
+                        </a>
+
+                    </div>
+
+                </div>
+                <!--=====================================
+        PIE DEL MODAL
+        ======================================-->
+
+                <div class="modal-footer">
+
+
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+<!-- INFORME MEDICO -->
+<div id="modalIM" class="modal fade" role="dialog">
+
+    <div class="modal-dialog modal-lg">
+
+        <div class="modal-content">
+
+
+            <!--=====================================
+        CABEZA DEL MODAL
+        ======================================-->
+
+            <div class="modal-header" style="background:#3c8dbc; color:white">
+
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+
+            </div>
+
+            <!--=====================================
+        CUERPO DEL MODAL
+        ======================================-->
+
+            <div class="modal-body">
+
+                <div class="box-body">
+                    <p class="text-center"><b>Informe Médico</b> </p>
+
+                    <div class="">
+                        <a href="<?php echo $solicitudes["Informe_Medico"]; ?>">
+                            <img class="img-responsive" src="<?php echo $solicitudes["Informe_Medico"]; ?>">
                         </a>
 
                     </div>
