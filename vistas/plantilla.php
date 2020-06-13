@@ -277,6 +277,8 @@ CUERPO DOCUMENTO
 
       if($_GET["ruta"] == "inicio" ||
          $_GET["ruta"] == "miembros" ||
+         $_GET["ruta"] == "solicitud" ||
+         $_GET["ruta"] == "visualizar-solicitudes" ||
          $_GET["ruta"] == "salir"){
 
         include "modulos/Presidente-de-Estaca/".$_GET["ruta"].".php";
@@ -323,8 +325,10 @@ CUERPO DOCUMENTO
 
       if($_GET["ruta"] == "inicio" ||
          $_GET["ruta"] == "miembros" ||
+         $_GET["ruta"] == "solicitud" ||
+         $_GET["ruta"] == "visualizar-solicitudes" ||
          $_GET["ruta"] == "salir"){
-
+          
         include "modulos/Gerente/".$_GET["ruta"].".php";
 
       }else{
@@ -527,6 +531,10 @@ CUERPO DOCUMENTO
 <script src="vistas/js/pais.js"></script>
 <script src="vistas/js/consejo.js"></script>
 <script src="vistas/js/solicitudes-obispo.js"></script>
+<script src="vistas/js/solicitudes-pdt-estaca.js"></script>
+<script src="vistas/js/solicitudes-gerente.js"></script>
+
+
 <script src="vistas/js/estaca.js"></script>
 <script src="vistas/js/barrios.js"></script>
 <script src="vistas/js/miembros.js"></script>

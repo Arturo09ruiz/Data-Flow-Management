@@ -1,4 +1,6 @@
-<input class="idbarrio" type="hidden" value="<?php echo $_SESSION['idbarrio']; ?>" id="idbarrio">
+
+
+                            <input class="idbarrio" type="hidden" value="<?php echo $_SESSION['idbarrio']; ?>" id="idbarrio">
 
 <?php
 
@@ -9,14 +11,18 @@ $barrio = $_SESSION['idbarrio'];
 
 $solicitudes = ControladorSolicitudes::ctrMostrarSolicitudesConformeBarrioObispoID($item, $valor, $orden, $barrio);
 
+
+
+
+
 ?>
 
 <?php
 
-$barrio = $solicitudes["idbarrio"];
-$barrio_user= $_SESSION["idbarrio"];
+$estaca = $solicitudes["idestaca"];
+$estaca_user= $_SESSION["idestaca"];
 
-if($barrio == $barrio_user){
+if($estaca == $estaca_user){
  
 
 echo'';
@@ -30,13 +36,13 @@ echo'
 <script>
 swal({
     type: "warning",
-    title: "Esta Solicitud No Pertenece a su Barrio Si tiene alguna duda comuniquese con el Soporte Técnico",
+    title: "Esta Solicitud No Pertenece a su Estaca Si tiene alguna duda comuniquese con el Soporte Técnico",
     showConfirmButton: true,
     confirmButtonText: "Cerrar"
     }).then(function(result){
               if (result.value) {
 
-              window.location = "realizar-solicitud";
+              window.location = "solicitud";
 
               }
           })
@@ -45,19 +51,6 @@ swal({
 ';
 }
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <style>
@@ -127,9 +120,12 @@ swal({
 
                         <div class="box">
 
-                    
 
-                            <!--=====================================
+
+
+
+
+              <!--=====================================
                 ENTRADA DEL VENDEDOR
                 ======================================-->
                             <div class="form-group">
@@ -1255,3 +1251,4 @@ swal({
     </div>
 
 </div>
+

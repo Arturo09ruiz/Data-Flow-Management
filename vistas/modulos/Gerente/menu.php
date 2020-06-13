@@ -42,7 +42,7 @@ if ($_SESSION["perfil"] == "Gerente") {
 
 					<i class="fa fa-list-ul"></i>
 					
-					<span>Solicitud Medicinas </span>
+					<span>Solicitud Medicinas</span>
 					
 					<span class="pull-right-container">
 					
@@ -57,10 +57,10 @@ if ($_SESSION["perfil"] == "Gerente") {
 				
 					<li>
 
-						<a href="realizar-solicitud">
+						<a href="solicitud">
 							
 							<i class="fa fa-circle-o"></i>
-							<span>Realizar Solicitud</span>
+							<span>Visualizar Solicitud</span>
 
 						</a>
 

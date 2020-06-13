@@ -29,6 +29,27 @@ class ControladorSolicitudes
         return $respuesta;
     }
 
+    
+    static public function ctrMostrarSolicitudesConformeEstaca($item, $valor, $orden, $estaca)
+    {
+
+        $tabla = "solicitudes";
+
+        $respuesta = ModeloSolicitudes::mdlMostrarSolicitudesConformeEstaca($tabla, $item, $valor, $orden, $estaca);
+
+        return $respuesta;
+    }
+
+    static public function ctrMostrarSolicitudesConformeConsejo($item, $valor, $orden, $consejo)
+    {
+
+        $tabla = "solicitudes";
+
+        $respuesta = ModeloSolicitudes::mdlMostrarSolicitudesConformeConsejo($tabla, $item, $valor, $orden, $consejo);
+
+        return $respuesta;
+    }
+
 
     static public function ctrMostrarSolicitudesConformeBarrioObispoID($item, $valor, $orden, $barrio)
     {

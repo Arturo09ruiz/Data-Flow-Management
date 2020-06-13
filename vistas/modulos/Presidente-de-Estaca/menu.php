@@ -57,10 +57,10 @@ if ($_SESSION["perfil"] == "Presidente-de-Estaca") {
 				
 					<li>
 
-						<a href="realizar-solicitud">
+						<a href="solicitud">
 							
 							<i class="fa fa-circle-o"></i>
-							<span>Realizar Solicitud</span>
+							<span>Visualizar Solicitudes</span>
 
 						</a>
 

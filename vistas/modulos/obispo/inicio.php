@@ -84,13 +84,13 @@
            
           <?php
 
-          if($_SESSION["perfil"] =="Especial" || $_SESSION["perfil"] =="Vendedor"){
+          if($_SESSION["perfil"] =="Especial" || $_SESSION["perfil"] =="Obispo"){
 
              echo '<div class="box box-success">
 
              <div class="box-header">
 
-             <h1>Bienvenid@ ' .$_SESSION["nombre"].'</h1>
+             <h1>Bienvenido Obispo ' .$_SESSION["nombre"].'</h1>
 
              </div>
 
