@@ -252,14 +252,16 @@
                             </div>
 
                             <p class="text-center hidden-lg"> <b> Documentos de la Solicitud</b> </p>
-                            <button class="hidden-lg btn-block btn btn-primary" data-toggle="modal" data-target="#modalPA1" data-dismiss="modal" id="PA1">Plan de Autosuficiencia PAG. 1</button>
-                            <button class="hidden-lg btn  btn-block btn-primary" data-toggle="modal" data-target="#modalPA2" data-dismiss="modal" id="PA2">Plan de Autosuficiencia PAG. 2</button>
-                           
+                            <button class="hidden-lg btn-block btn btn-primary" data-toggle="modal" data-target="#modalPA1" data-dismiss="modal" id="PA1">Plan de Autosuficiencia PAG.
+                                1</button>
+                            <button class="hidden-lg btn  btn-block btn-primary" data-toggle="modal" data-target="#modalPA2" data-dismiss="modal" id="PA2">Plan de Autosuficiencia PAG.
+                                2</button>
+
                             <button class="hidden-lg btn btn-block btn-primary" data-toggle="modal" data-target="#modalIM" data-dismiss="modal" id="IM">Informe Médico</button>
                             <button class="hidden-lg btn btn-block btn-primary" data-toggle="modal" data-target="#modalRM" data-dismiss="modal" id="RM">Recipe Médico</button>
                             <button class="hidden-lg btn btn-block btn-primary" data-toggle="modal" data-target="#modalCI" data-dismiss="modal" id="CI">C.I del Miembro</button>
-                            
-                            
+
+
 
                         </div>
 
