@@ -259,7 +259,7 @@
                             <button class="hidden-lg btn btn-block btn-primary" data-toggle="modal" data-target="#modalRM" data-dismiss="modal" id="RM">Recipe Médico</button>
                             <button class="hidden-lg btn btn-block btn-primary" data-toggle="modal" data-target="#modalCI" data-dismiss="modal" id="CI">C.I del Miembro</button>
                             
-                            <br>
+                            
 
                         </div>
 
