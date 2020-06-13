@@ -24,14 +24,6 @@
 </style>
 
 
-<script>
-    // Instantiate EasyZoom instances
-    var $easyzoom = $('.easyzoom').easyZoom();
-
-    // Get an instance API
-    var api = $easyzoom.data('easyZoom');
-</script>
-
 <div class="content-wrapper">
 
     <section class="content-header">
@@ -259,8 +251,14 @@
 
                             </div>
 
-
-                            <button data-toggle="modal" data-target="#modalPA1" data-dismiss="modal" id="PA1" class="hidden-lg">shghsggs</button>
+                            <p class="text-center hidden-lg"> <b> Documentos de la Solicitud</b> </p>
+                            <button class="hidden-lg btn-block btn btn-primary" data-toggle="modal" data-target="#modalPA1" data-dismiss="modal" id="PA1">Plan de Autosuficiencia PAG. 1</button>
+                            <button class="hidden-lg btn  btn-block btn-primary" data-toggle="modal" data-target="#modalPA2" data-dismiss="modal" id="PA2">Plan de Autosuficiencia PAG. 2</button>
+                           
+                            <button class="hidden-lg btn btn-block btn-primary" data-toggle="modal" data-target="#modalIM" data-dismiss="modal" id="IM">Informe Médico</button>
+                            <button class="hidden-lg btn btn-block btn-primary" data-toggle="modal" data-target="#modalRM" data-dismiss="modal" id="RM">Recipe Médico</button>
+                            <button class="hidden-lg btn btn-block btn-primary" data-toggle="modal" data-target="#modalCI" data-dismiss="modal" id="CI">C.I del Miembro</button>
+                            
                             <br>
 
                         </div>
@@ -270,29 +268,20 @@
                     <div class="box-footer">
 
 
-
-
-
-
-
-
-
-
-
-
+                        <p class="hidden-lg text-center"> <b>Estado de la Solicitud</b> </p>
                         <?php
 
                         $aprobado = $solicitudes["aprobacion_gerente"];
 
                         if ($aprobado == 1) {
                             echo '
-    <div class="form-group">
-    <p class="text-center"> <b>Aprobación Gerente</b> </p> 
+    <div class="hidden-lg form-group">
+    <p class="hidden-lg text-center"> Aprobación Gerente</p> 
 
-    <div class="input-group">
+    <div class="hidden-lg input-group">
 
-    <span class="input-group-addon"><i class="fa fa-user-o"></i></span>
-    <button type="button" class="form-control btn btn-success">Aprobado</button>
+    <span class="hidden-lg input-group-addon"><i class="fa fa-user-o"></i></span>
+    <button type="hidden-lg button" class="form-control btn btn-success">Aprobado</button>
 
     
         
@@ -300,20 +289,20 @@
 
                 
     </div>
-    <textarea  class="form-control"  rows="3" readonly>';
+    <textarea  class="hidden-lg form-control"  rows="3" readonly>';
                             echo $solicitudes["comentarios_gerente"];
                             echo '</textarea>     
 
     ';
                         } else if ($aprobado == 2) {
                             echo '
-    <div class="form-group">
-    <p class="text-center"> <b>Aprobación Gerente</b> </p> 
+    <div class=" hidden-lg form-group">
+    <p class="text-center hidden-lg"> Aprobación Gerente </p> 
 
-    <div class="input-group">
+    <div class="input-group hidden-lg">
 
-    <span class="input-group-addon"><i class="fa fa-user-o"></i></span>
-    <button type="button" class="form-control btn btn-danger">Desaprobado</button>
+    <span class="input-group-addon hidden-lg"><i class="fa fa-user-o"></i></span>
+    <button type="button" class="form-control hidden-lg btn btn-danger">Desaprobado</button>
 
     
         
@@ -321,7 +310,7 @@
                 
     </div>
 
-    <textarea  class="form-control"  rows="3" readonly>';
+    <textarea  class="hidden-lg form-control"  rows="3" readonly>';
                             echo $solicitudes["comentarios_gerente"];
                             echo '</textarea>     
 
@@ -331,13 +320,13 @@
                         } else {
 
                             echo '
-    <div class="form-group">
-    <p class="text-center"> <b>Aprobación Gerente</b> </p> 
+    <div class="hidden-lg form-group">
+    <p class="text-center hidden-lg"> Aprobación Gerente </p> 
 
-    <div class="input-group">
+    <div class="hidden-lg input-group">
 
-    <span class="input-group-addon"><i class="fa fa-user-o"></i></span>
-    <button type="button" class="form-control btn btn-info">Aun No Ha Sido Aprobado</button>
+    <span class="hidden-lg input-group-addon"><i class="fa fa-user-o"></i></span>
+    <button type="button" class="hidden-lg form-control btn btn-info">Aun No Ha Sido Aprobado</button>
 
     
         
@@ -347,6 +336,81 @@
 
     ';
                         }
+                        ?>
+
+
+
+
+                        <br>
+
+
+                        <?php
+
+                        $aprobado_asesor = $solicitudes["aprobacion_asesor"];
+
+                        if ($aprobado_asesor == 1) {
+                            echo '
+<div class="hidden-lg form-group">
+<p class="hidden-lg text-center"> Aprobación Asesor Médico</p> 
+
+<div class="hidden-lg input-group">
+
+<span class="hidden-lg input-group-addon"><i class="fa fa-user-md"></i></span>
+<button type="hidden-lg button" class="form-control btn btn-success">Aprobado</button>
+
+
+
+</div>
+
+
+</div>
+<textarea  class="hidden-lg form-control"  rows="3" readonly>';
+                            echo $solicitudes["comentarios_asesor"];
+                            echo '</textarea>     
+
+';
+                        } else if ($aprobado_asesor == 2) {
+                            echo '
+<div class="hidden-lg form-group">
+<p class="hidden-lg text-center"> Aprobación Asesor Médico </p> 
+
+<div class="hidden-lg input-group">
+
+<span class="hidden-lg input-group-addon"><i class="fa fa-user-md"></i></span>
+<button type="button" class="hidden-lg form-control btn btn-danger">Desaprobado</button>
+
+
+
+</div>
+
+</div>
+
+<textarea  class="hidden-lg form-control"  rows="3" readonly>';
+                            echo $solicitudes["comentarios_asesor"];
+                            echo '</textarea>     
+
+
+
+';
+                        } else {
+
+                            echo '
+<div class="hidden-lg form-group">
+<p class=" hidden-lg text-center"> Aprobación Asesor Médico </p> 
+
+<div class="hidden-lg input-group">
+
+<span class="hidden-lg input-group-addon"><i class="fa fa-user-md"></i></span>
+<button type="hidden-lg button" class="form-control btn btn-info">Aun No Ha Sido Aprobado</button>
+
+
+
+</div>
+
+</div>
+
+';
+                        }
 
 
 
@@ -355,15 +419,82 @@
 
 
 
+                        <br>
+
+
+
+                        <?php
+
+                        $aprobado_finanzas = $solicitudes["aprobacion_finanzas"];
+
+                        if ($aprobado_finanzas == 1) {
+                            echo '
+<div class="hidden-lg form-group">
+<p class="text-center"> Aprobación Finanzas </p> 
+
+<div class="input-group">
+
+<span class="input-group-addon"><i class="fa fa-money"></i></span>
+<button type="button" class="form-control btn btn-success">Aprobado</button>
+
+
+
+</div>
+
+
+</div>
+<textarea  class="hidden-lg form-control"  rows="3" readonly>';
+                            echo $solicitudes["comentarios_finanzas"];
+                            echo '</textarea>     
+
+';
+                        } else if ($aprobado_finanzas == 2) {
+                            echo '
+<div class="hidden-lg form-group">
+<p class="text-center"> Aprobación Finanzas </p> 
+
+<div class="input-group">
+
+<span class="input-group-addon"><i class="fa fa-money"></i></span>
+<button type="button" class="form-control btn btn-danger">Desaprobado</button>
+
+
+
+</div>
+
+</div>
+
+<textarea  class="hidden-lg form-control"  rows="3" readonly>';
+                            echo $solicitudes["comentarios_finanzas"];
+                            echo '</textarea>     
+
+
+
+';
+                        } else {
+
+                            echo '
+<div class="hidden-lg form-group">
+<p class="text-center"> Aprobación Finanzas</p> 
+
+<div class="input-group">
+
+<span class="input-group-addon"><i class="fa fa-money"></i></span>
+<button type="button" class="form-control btn btn-info">Aun No Ha Sido Aprobado</button>
+
+
+
+</div>
+
+</div>
+
+';
+                        }
 
 
 
 
-
-
-
-
-
+                        ?>
 
 
 
@@ -437,19 +568,19 @@
 
 
 
-                <div class="row">
+                        <div class="row">
 
 
-                    <div class="col-md-4">
+                            <div class="col-md-4">
 
-                    
 
-                    <?php
 
-                    $aprobado = $solicitudes["aprobacion_gerente"];
+                                <?php
 
-                    if ($aprobado == 1) {
-                        echo '
+                                $aprobado = $solicitudes["aprobacion_gerente"];
+
+                                if ($aprobado == 1) {
+                                    echo '
                     <div class="form-group">
                     <p class="text-center"> <b>Aprobación Gerente</b> </p> 
 
@@ -465,12 +596,12 @@
 
                     </div>
                     <textarea  class="form-control"  rows="3" readonly>';
-                        echo $solicitudes["comentarios_gerente"];
-                        echo '</textarea>     
+                                    echo $solicitudes["comentarios_gerente"];
+                                    echo '</textarea>     
 
                     ';
-                    } else if ($aprobado == 2) {
-                        echo '
+                                } else if ($aprobado == 2) {
+                                    echo '
                     <div class="form-group">
                     <p class="text-center"> <b>Aprobación Gerente</b> </p> 
 
@@ -486,15 +617,15 @@
                     </div>
 
                     <textarea  class="form-control"  rows="3" readonly>';
-                        echo $solicitudes["comentarios_gerente"];
-                        echo '</textarea>     
+                                    echo $solicitudes["comentarios_gerente"];
+                                    echo '</textarea>     
 
 
 
                     ';
-                    } else {
+                                } else {
 
-                        echo '
+                                    echo '
                     <div class="form-group">
                     <p class="text-center"> <b>Aprobación Gerente</b> </p> 
 
@@ -510,30 +641,30 @@
                     </div>
 
                     ';
-                    }
+                                }
 
 
 
 
-                    ?>
+                                ?>
 
-                </div>
-
-
-
-     
+                            </div>
 
 
-<div class="col-md-4">
 
-                    
 
-<?php
 
-$aprobado_asesor = $solicitudes["aprobacion_asesor"];
 
-if ($aprobado_asesor == 1) {
-    echo '
+                            <div class="col-md-4">
+
+
+
+                                <?php
+
+                                $aprobado_asesor = $solicitudes["aprobacion_asesor"];
+
+                                if ($aprobado_asesor == 1) {
+                                    echo '
 <div class="form-group">
 <p class="text-center"> <b>Aprobación Asesor Médico</b> </p> 
 
@@ -549,12 +680,12 @@ if ($aprobado_asesor == 1) {
 
 </div>
 <textarea  class="form-control"  rows="3" readonly>';
-    echo $solicitudes["comentarios_asesor"];
-    echo '</textarea>     
+                                    echo $solicitudes["comentarios_asesor"];
+                                    echo '</textarea>     
 
 ';
-} else if ($aprobado_asesor == 2) {
-    echo '
+                                } else if ($aprobado_asesor == 2) {
+                                    echo '
 <div class="form-group">
 <p class="text-center"> <b>Aprobación Asesor Médico</b> </p> 
 
@@ -570,15 +701,15 @@ if ($aprobado_asesor == 1) {
 </div>
 
 <textarea  class="form-control"  rows="3" readonly>';
-    echo $solicitudes["comentarios_asesor"];
-    echo '</textarea>     
+                                    echo $solicitudes["comentarios_asesor"];
+                                    echo '</textarea>     
 
 
 
 ';
-} else {
+                                } else {
 
-    echo '
+                                    echo '
 <div class="form-group">
 <p class="text-center"> <b>Aprobación Asesor Médico</b> </p> 
 
@@ -594,28 +725,28 @@ if ($aprobado_asesor == 1) {
 </div>
 
 ';
-}
+                                }
 
 
 
 
-?>
+                                ?>
 
-</div>
-
-
+                            </div>
 
 
-<div class="col-md-4">
 
-                    
 
-<?php
+                            <div class="col-md-4">
 
-$aprobado_finanzas = $solicitudes["aprobacion_finanzas"];
 
-if ($aprobado_finanzas == 1) {
-    echo '
+
+                                <?php
+
+                                $aprobado_finanzas = $solicitudes["aprobacion_finanzas"];
+
+                                if ($aprobado_finanzas == 1) {
+                                    echo '
 <div class="form-group">
 <p class="text-center"> <b>Aprobación Finanzas</b> </p> 
 
@@ -631,12 +762,12 @@ if ($aprobado_finanzas == 1) {
 
 </div>
 <textarea  class="form-control"  rows="3" readonly>';
-    echo $solicitudes["comentarios_finanzas"];
-    echo '</textarea>     
+                                    echo $solicitudes["comentarios_finanzas"];
+                                    echo '</textarea>     
 
 ';
-} else if ($aprobado_finanzas == 2) {
-    echo '
+                                } else if ($aprobado_finanzas == 2) {
+                                    echo '
 <div class="form-group">
 <p class="text-center"> <b>Aprobación Finanzas</b> </p> 
 
@@ -652,15 +783,15 @@ if ($aprobado_finanzas == 1) {
 </div>
 
 <textarea  class="form-control"  rows="3" readonly>';
-    echo $solicitudes["comentarios_finanzas"];
-    echo '</textarea>     
+                                    echo $solicitudes["comentarios_finanzas"];
+                                    echo '</textarea>     
 
 
 
 ';
-} else {
+                                } else {
 
-    echo '
+                                    echo '
 <div class="form-group">
 <p class="text-center"> <b>Aprobación Finanzas</b> </p> 
 
@@ -676,14 +807,14 @@ if ($aprobado_finanzas == 1) {
 </div>
 
 ';
-}
+                                }
 
 
 
 
-?>
+                                ?>
 
-</div>
+                            </div>
 
 
 
@@ -698,7 +829,7 @@ if ($aprobado_finanzas == 1) {
 
 
                         </div>
-                   
+
 
 
 
