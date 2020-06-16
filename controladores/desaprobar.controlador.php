@@ -243,4 +243,17 @@ class ControladorDesaprobar
         return $respuesta;
     }
 
+	
+	static public function ctrMostrarSolicitudesDesaprobadasE($item, $valor, $orden, $estaca)
+    {
+
+        $tabla = "desaprobado";
+
+        $respuesta = ModeloDesaprobar::mdlMostrarSolicitudesDesaprobadasE($tabla, $item, $valor, $orden, $estaca);
+
+        return $respuesta;
+    }
+
+
+	
 }

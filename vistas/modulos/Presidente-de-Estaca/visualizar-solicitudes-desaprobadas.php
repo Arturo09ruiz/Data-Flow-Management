@@ -1,14 +1,14 @@
 
-<input class="idbarrio" type="hidden" value="<?php echo $_SESSION['idbarrio']; ?>" id="idbarrio">
+<input class="idestaca" type="hidden" value="<?php echo $_SESSION['idestaca']; ?>" id="idestaca">
 
 <?php
 
 $item = "id";
 $valor = $_GET["idSolicitudes"];
 $orden = "id";
-$barrio = $_SESSION['idbarrio'];
+$estaca = $_SESSION['idestaca'];
 
-$solicitudes = ControladorDesaprobar::ctrMostrarSolicitudesDesaprobadasO($item, $valor, $orden, $barrio);
+$solicitudes = ControladorDesaprobar::ctrMostrarSolicitudesDesaprobadasE($item, $valor, $orden, $estaca);
 
 
 
@@ -18,10 +18,10 @@ $solicitudes = ControladorDesaprobar::ctrMostrarSolicitudesDesaprobadasO($item, 
 
 <?php
 
-$barrio = $solicitudes["idbarrio"];
-$barrio_user= $_SESSION["idbarrio"];
+$estaca = $solicitudes["idestaca"];
+$estaca_user= $_SESSION["idestaca"];
 
-if($barrio == $barrio_user){
+if($estaca == $estaca_user){
  
 
 echo'';
@@ -35,13 +35,13 @@ echo'
 <script>
 swal({
     type: "warning",
-    title: "Esta Solicitud No Pertenece a su Consejo Si tiene alguna duda comuniquese con el Soporte Técnico",
+    title: "Esta Solicitud No Pertenece a su Estaca Si tiene alguna duda comuniquese con el Soporte Técnico",
     showConfirmButton: true,
     confirmButtonText: "Cerrar"
     }).then(function(result){
               if (result.value) {
 
-              window.location = "desaprobado";
+              window.location = "desaprobadas";
 
               }
           })

@@ -282,6 +282,7 @@ CUERPO DOCUMENTO
          $_GET["ruta"] == "solicitud" ||
          $_GET["ruta"] == "visualizar-solicitudes" ||
          $_GET["ruta"] == "desaprobadas" ||
+         $_GET["ruta"] == "visualizar-solicitudes-desaprobadas" ||
          $_GET["ruta"] == "salir"){
 
         include "modulos/Presidente-de-Estaca/".$_GET["ruta"].".php";
@@ -543,6 +544,8 @@ CUERPO DOCUMENTO
 <script src="vistas/js/solicitudes-gerente.js"></script>
 <script src="vistas/js/solicitudes-desaprobadas-gerente.js"></script>
 <script src="vistas/js/solicitudes-desaprobadas-obispo.js"></script>
+<script src="vistas/js/test.js"></script>
+
 
 
 
