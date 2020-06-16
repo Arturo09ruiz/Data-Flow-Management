@@ -317,7 +317,7 @@ class ControladorDesaprobar
 							  }).then(function(result){
 										if (result.value) {
 
-										window.location = "desaprobado";
+										window.location = "solicitud";
 
 										}
 									})

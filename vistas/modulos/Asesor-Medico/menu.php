@@ -54,27 +54,6 @@ if ($_SESSION["perfil"] == "Asesor-Medico") {
 
 					</li>
 
-					<li>
-
-					<a href="desaprobado">
-						
-						<i class="fa fa-circle-o"></i>
-						<span>Desaprobadas</span>
-
-					</a>
-
-				</li>
-					<li>
-
-						<a href="#">
-							
-							<i class="fa fa-circle-o"></i>
-							<span>Reporte de Solicitudes</span>
-
-						</a>
-
-					</li>
-
 					
 
 				

@@ -568,7 +568,7 @@ swal({
 
 <br>
 <br>
-<button type="button" id="cambios_gerente" class="cambios_gerente btn btn-info pull-right"> Guardar Cambios </button>
+<button type="button" id="cambios_gerente" class="hidden-lg cambios_gerente btn btn-info pull-right"> Guardar Cambios </button>
 
                     </div>
 

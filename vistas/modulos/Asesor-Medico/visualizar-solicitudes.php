@@ -341,20 +341,22 @@ swal({
                         } else {
 
                             echo '
-<div class="hidden-lg form-group">
-<p class=" hidden-lg text-center"> Aprobación Asesor Médico </p> 
-
-<div class="hidden-lg input-group">
-
-<span class="hidden-lg input-group-addon"><i class="fa fa-user-md"></i></span>
-<button type="hidden-lg button" class="form-control btn btn-info">Aun No Ha Sido Aprobado</button>
-
-
-
-</div>
-
-</div>
-
+                            <input type="hidden" class="id_solicitud_asesor" id="id_solicitud_asesor" name="id_solicitud_asesor" value="'; echo $solicitudes["id"];   echo'" ></input>
+                            <input type="hidden" name="codigo_solicitud_asesor" value="';echo $solicitudes["codigo"]; echo'"> </input>
+                                    <div class="hidden-lg form-group">
+                                    <p class="text-center"> <b>Aprobación Asesor </b> </p> 
+                
+                                    <div class="input-group">
+                
+                                    <span class="input-group-addon"><i class="fa fa-user-md"></i></span>
+                                    <button type="button" id="aprobacion_asesor_2"  class="aprobacion_asesor_2 form-control btn btn-info">Aun No Ha Sido Aprobado</button>
+                                     <input type="hidden" name="boton_aprobacion_asesor_2" value="0" class="boton_aprobacion_asesor_2" id="boton_aprobacion_asesor_2"></input>                   
+                
+                                    </div>
+                
+                                    </div>
+                                    <textarea   id="comentarios_asesor_2" name="comentarios_asesor_2" class="hidden-lg comentarios_asesor_2 form-control"  rows="3"></textarea>
+                                         <br>   
 ';
                         }
 
@@ -371,7 +373,8 @@ swal({
 
 <br>
 <br>
-<button type="button" id="cambios_gerente" class="cambios_gerente btn btn-info pull-right"> Guardar Cambios </button>
+<button type="button" id="cambios_asesor_2" class="mag hidden-lg cambios_asesor_2 btn btn-info pull-right"> Guardar Cambios </button>
+
 
                     </div>
 
@@ -507,7 +510,7 @@ swal({
                                             </div>
                                             <textarea   id="comentarios_asesor" name="comentarios_asesor" class="comentarios_asesor form-control"  rows="3"></textarea>
                                                  <br>   
-                                <button type="button" id="cambios_asesor" class="mag cambios_asesor btn btn-info pull-right"> Guardar Cambios </button>
+                                <button type="button" id="cambios_asesor" class=" mag cambios_asesor btn btn-info pull-right"> Guardar Cambios </button>
 
                         
 ';
