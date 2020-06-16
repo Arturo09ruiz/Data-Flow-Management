@@ -55,7 +55,7 @@ $(".tablaSolicitudDesaprobadaGerente tbody").on("click", "button.btnVisualizarSo
 
 	var idSolicitudes = $(this).attr("idSolicitudes");
 
-	window.location = "index.php?ruta=visualizar-solicitudes&idSolicitudes="+idSolicitudes;
+	window.location = "index.php?ruta=visualizar-solicitudes-desaprobadas&idSolicitudes="+idSolicitudes;
 
 
 	 
