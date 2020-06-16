@@ -12,7 +12,7 @@
 
     <h1>
 
-      Administrar Pedidos
+      Administrar Solicitudes
 
     </h1>
 
@@ -20,7 +20,7 @@
 
       <li><a href="inicio"><i class="fa fa-dashboard"></i> Inicio</a></li>
 
-      <li class="active">Administrar Pedidos</li>
+      <li class="active">Administrar Solicitudes</li>
 
     </ol>
 
@@ -34,7 +34,7 @@
 
         <button class="btn btn-primary" data-toggle="modal" data-target="#modalAgregarSolicitud">
 
-          Agregar Pedido
+          Agregar Solicitud
 
         </button>
 
@@ -55,6 +55,7 @@
               <th>Edad</th>
               <th>Email</th>
               <th>Telf</th>
+              <th>Necesidad</th>
               <th>Acciones</th>
 
             </tr>

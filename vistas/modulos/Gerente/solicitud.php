@@ -46,6 +46,7 @@
 
               <th style="width:10px">#</th>
               <th>Código</th>
+              <th>Necesidad</th>
               <th>Aprobación Asesor Médico</th>
               <th>Aprobación Finanzas</th>
               <th>Barrio</th>

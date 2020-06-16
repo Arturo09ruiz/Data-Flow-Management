@@ -42,13 +42,9 @@ if ($_SESSION["perfil"] == "Obispo") {
 
 					<i class="fa fa-list-ul"></i>
 					
-					<span>Pedidos Medicinas </span>
+					<span>Solicitudes Medicinas </span>
 					
-					<span class="pull-right-container">
-					
-						<i class="fa fa-angle-left pull-right"></i>
-
-					</span>
+				
 
 				</a>
 
@@ -60,12 +56,23 @@ if ($_SESSION["perfil"] == "Obispo") {
 						<a href="realizar-solicitud">
 							
 							<i class="fa fa-circle-o"></i>
-							<span>Realizar Pedido</span>
+							<span>Realizar Solicitud</span>
 
 						</a>
 
 					</li>
 
+
+					<li>
+
+					<a href="desaprobadas">
+						
+						<i class="fa fa-circle-o"></i>
+						<span>Desaprobadas</span>
+
+					</a>
+
+				</li>
 
 					<li>
 

@@ -41,6 +41,8 @@ require_once "controladores/miembros-gerente.controlador.php";
 
 //setentapais
 require_once "controladores/miembros-setenta-pais.controlador.php";
+require_once "controladores/desaprobar.controlador.php";
+
 
 
 
@@ -97,6 +99,9 @@ require_once "modelos/miembros-gerente.modelo.php";
 
 //setentapais
 require_once "modelos/miembros-setenta-pais.modelo.php";
+
+require_once "modelos/desaprobar.modelo.php";
+
 
 
 $plantilla = new ControladorPlantilla();

@@ -32,7 +32,15 @@ class TablaSolicitudesObispo{
 		  for($i = 0; $i < count($solicitudes); $i++){
 
 		 
-		
+			if($solicitudes[$i]["necesidad"] == "Normal"){
+				$ne = "<button class='btn btn-success btn-block'>Normal</button>";
+			}else if($solicitudes[$i]["necesidad"] == "Urgente"){
+				$ne = "<button class='btn btn-warning btn-block'>Urgente</button>";
+			}else if($solicitudes[$i]["necesidad"] == "Emergencia"){
+				$ne = "<button class='btn btn-block btn-danger'>Emergencia</button>";
+			
+			}
+					
 			$botones =  "<div class='btn-group'><button class='btn btn-info btnVisualizarSolicitudes' idSolicitudes='".$solicitudes[$i]["id"]."' '><i class='fa fa-eye'></i></button></div>"; 
 
   		
@@ -45,6 +53,7 @@ class TablaSolicitudesObispo{
 			      "'.$solicitudes[$i]["edad"].'",
                   "'.$solicitudes[$i]["email"].'",
 				  "'.$solicitudes[$i]["telefono"].'",
+				  "'.$ne.'",
 				  "'.$botones.'"
 
 			    ],';

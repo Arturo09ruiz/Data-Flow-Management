@@ -59,8 +59,14 @@ class TablaSolicitudesGerente{
             $estaca = ControladorEstaca::ctrMostrarEstaca($item, $valor, $orden);
 
 
+if($solicitudes[$i]["necesidad"] == "Normal"){
+	$ne = "<button class='btn btn-success btn-block'>Normal</button>";
+}else if($solicitudes[$i]["necesidad"] == "Urgente"){
+	$ne = "<button class='btn btn-warning btn-block'>Urgente</button>";
+}else if($solicitudes[$i]["necesidad"] == "Emergencia"){
+	$ne = "<button class='btn btn-block btn-danger'>Emergencia</button>";
 
-
+}
         
 
         if($solicitudes[$i]["aprobacion_asesor"] == 1){
@@ -94,7 +100,8 @@ class TablaSolicitudesGerente{
 		 
 		  	$datosJson .='[
 			      "'.($i+1).'",
-                  "'.$solicitudes[$i]["codigo"].'",
+				  "'.$solicitudes[$i]["codigo"].'",
+				  "'.$ne.'",
 				  "'.$medico.'",
 			      "'.$finanzas.'",
                   "'.$barrios["nombre"].'",
