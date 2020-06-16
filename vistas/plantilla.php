@@ -226,6 +226,7 @@ CUERPO DOCUMENTO
          $_GET["ruta"] == "realizar-solicitud" ||
          $_GET["ruta"] == "desaprobadas" ||
          $_GET["ruta"] == "visualizar-solicitudes" ||
+         $_GET["ruta"] == "visualizar-solicitudes-desaprobadas" ||
          $_GET["ruta"] == "salir"){
 
         include "modulos/obispo/".$_GET["ruta"].".php";
