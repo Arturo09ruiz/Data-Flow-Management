@@ -69,16 +69,23 @@ class TablaSolicitudesDesaprobadasGerente{
                 $ne = "<button class='btn btn-block btn-danger'>Emergencia</button>";
             }
 
+		
+		if($desaprobadas[$i]["aprobacion_gerente"] == 1){
+            $gerente = "<button class='btn btn-success btn-block'>Aprobado</button>";
+		}else if($desaprobadas[$i]["aprobacion_gerente"] == 2){
+            $gerente = "<button class='btn btn-block btn-danger'>Desaprobado</button>";
+		}else{
+             $gerente="<button class='btn btn-info btn-block' >Aun No Ha Sido Aprobado</button>";
+		}
+
+
 
 
 //         if($desaprobadas[$i]["aprobacion_asesor"] == 1){
 
-//             $medico = "<button class='btn btn-success btn-block'>Aprobado</button>";
             
 //         }else if($desaprobadas[$i]["aprobacion_asesor"] == 2){
-//              $medico = "<button class='btn btn-block btn-danger'>Desaprobado</button>";
 //         }else{
-//             $medico="<button class='btn btn-info btn-block' >Aun No Ha Sido Aprobado</button>";
 //         }
 
 
@@ -104,6 +111,7 @@ class TablaSolicitudesDesaprobadasGerente{
 			      "'.($i+1).'",
 				  "'.$desaprobadas[$i]["codigo"].'",
 				  "'.$ne.'",
+				  "'.$gerente.'",
                   "'.$barrios["nombre"].'",
                   "'.$estaca["nombre"].'",
 				  "'.$botones.'"
