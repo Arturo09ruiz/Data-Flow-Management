@@ -224,6 +224,7 @@ CUERPO DOCUMENTO
       if($_GET["ruta"] == "inicio" ||
          $_GET["ruta"] == "miembros" ||
          $_GET["ruta"] == "realizar-solicitud" ||
+         $_GET["ruta"] == "desaprobadas" ||
          $_GET["ruta"] == "visualizar-solicitudes" ||
          $_GET["ruta"] == "salir"){
 
