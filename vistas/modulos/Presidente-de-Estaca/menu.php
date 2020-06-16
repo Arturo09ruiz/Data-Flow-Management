@@ -19,6 +19,11 @@ if ($_SESSION["perfil"] == "Presidente-de-Estaca") {
 					<span>Inicio</span>
 
 				</a>
+				<span class="pull-right-container">
+					
+						<i class="fa fa-angle-left pull-right"></i>
+
+					</span>
 
 			</li>
 
