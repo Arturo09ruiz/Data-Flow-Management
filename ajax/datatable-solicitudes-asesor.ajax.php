@@ -67,6 +67,17 @@ if($solicitudes[$i]["necesidad"] == "Normal"){
 	$ne = "<button class='btn btn-block btn-danger'>Emergencia</button>";
 
 }
+
+if($solicitudes[$i]["aprobacion_asesor"] == 1){
+	$a = "<button class='btn btn-success btn-block'>Aprobado</button>";
+}else if($solicitudes[$i]["aprobacion_asesor"] == 2){
+	$a = "<button class='btn btn-warning btn-block'>Desaprobado</button>";
+}else{
+	$a = "<button class='btn btn-warning btn-block'>Sin Aprobar</button>";
+
+}
+        
+
         
 
 
@@ -78,6 +89,7 @@ if($solicitudes[$i]["necesidad"] == "Normal"){
 			      "'.($i+1).'",
 				  "'.$solicitudes[$i]["codigo"].'",
 				  "'.$ne.'",
+				  "'.$a.'",
                   "'.$barrios["nombre"].'",
                   "'.$estaca["nombre"].'",
 				  "'.$botones.'"

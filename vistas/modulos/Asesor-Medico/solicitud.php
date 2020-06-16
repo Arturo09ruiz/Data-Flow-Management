@@ -47,6 +47,7 @@
               <th style="width:10px">#</th>
               <th>Código</th>
               <th>Necesidad</th>
+              <th>Aprobación</th>
               <th>Barrio</th>
               <th>Estaca</th>
               <th>Acciones</th>
