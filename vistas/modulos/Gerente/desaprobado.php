@@ -52,7 +52,7 @@
               <th>Aprobación Finanzas</th>
               <th>Barrio</th>
               <th>Estaca</th>
-              <th>Fecha Solicitud</th>
+              <th>Fecha</th>
               <th>Acciones</th>
 
             </tr>

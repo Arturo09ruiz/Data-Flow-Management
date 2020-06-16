@@ -119,7 +119,7 @@ class TablaSolicitudesDesaprobadasGerente{
 				  "'.$finanzas.'",
                   "'.$barrios["nombre"].'",
 				  "'.$estaca["nombre"].'",
-				  "'.$desaprobadas[$i]["fecha_solicitud"].'",
+				  "'.$desaprobadas[$i]["fecha"].'",
 				  "'.$botones.'"
 
 			    ],';
