@@ -51,7 +51,7 @@ $('.tablaSolicitudDesaprobadaGerente').DataTable( {
 } );
 
 
-$(".tablaSolicitudGerente tbody").on("click", "button.btnVisualizarSolicitudesGerente", function(){
+$(".tablaSolicitudDesaprobadaGerente tbody").on("click", "button.btnVisualizarSolicitudesGerente", function(){
 
 	var idSolicitudes = $(this).attr("idSolicitudes");
 
