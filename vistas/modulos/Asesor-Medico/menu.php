@@ -1,6 +1,6 @@
 <?php
 
-if ($_SESSION["perfil"] == "Gerente") {
+if ($_SESSION["perfil"] == "Asesor-Medico") {
 
 	echo '
 <aside class="main-sidebar">
@@ -22,18 +22,6 @@ if ($_SESSION["perfil"] == "Gerente") {
 
 			</li>
 
-
-
-			<li>
-
-			<a href="miembros">
-				
-				<i class="fa fa-child"></i>
-				<span>Visualizar Miembros</span>
-
-			</a>
-
-		</li>
 
 
 	<li class="treeview">

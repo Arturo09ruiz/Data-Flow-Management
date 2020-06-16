@@ -481,7 +481,8 @@ CUERPO DOCUMENTO
     if(isset($_GET["ruta"])){
 
       if($_GET["ruta"] == "inicio" ||
-         $_GET["ruta"] == "miembros" ||
+         $_GET["ruta"] == "solicitud" ||
+         $_GET["ruta"] == "visualizar-solicitudes" ||
          $_GET["ruta"] == "salir"){
 
         include "modulos/Asesor-Medico/".$_GET["ruta"].".php";
@@ -586,6 +587,8 @@ CUERPO DOCUMENTO
 <script src="vistas/js/solicitudes-desaprobadas-gerente.js"></script>
 <script src="vistas/js/solicitudes-desaprobadas-obispo.js"></script>
 <script src="vistas/js/test.js"></script>
+<script src="vistas/js/solicitudes-asesor.js"></script>
+
 
 
 

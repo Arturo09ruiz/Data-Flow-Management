@@ -67,7 +67,6 @@ swal({
         display: block;
     }
 
-
     /* Shrink wrap strategy 2 */
     .easyzoom {
         display: inline-block;
@@ -146,20 +145,6 @@ swal({
                 ENTRADA DEL CLIENTE
                 ======================================-->
 
-
-                            <div class="form-group">
-
-                                <div class="input-group">
-
-                                    <span class="input-group-addon"><i class="fa fa-key"></i></span>
-
-                                    <input type="text" class="ncm form-control" value="<?php echo $solicitudes["ncm_miembro"]; ?>" readonly>
-
-
-                                </div>
-
-                            </div>
-
                             
 
                             <div class="form-group">
@@ -192,36 +177,6 @@ swal({
 
 
 
-
-                            <div class="form-group">
-
-                                <div class="input-group">
-
-                                    <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-
-                                    <input type="text" class="email form-control" value="<?php echo $solicitudes["email"]; ?>" readonly>
-
-
-                                </div>
-
-                            </div>
-
-
-
-
-
-                            <div class="form-group">
-
-                                <div class="input-group">
-
-                                    <span class="input-group-addon"><i class="fa fa-phone"></i></span>
-
-                                    <input type="text" class="telefono form-control" value="<?php echo $solicitudes["telefono"]; ?>" readonly>
-
-
-                                </div>
-
-                            </div>
 
 
 
@@ -315,11 +270,7 @@ swal({
 
 
                             <p class="text-center hidden-lg"> <b> Documentos de la Solicitud</b> </p>
-                            <button class="hidden-lg btn-block btn btn-primary" data-toggle="modal" data-target="#modalPA1" data-dismiss="modal" id="PA1">Plan de Autosuficiencia PAG.
-                                1</button>
-                            <button class="hidden-lg btn  btn-block btn-primary" data-toggle="modal" data-target="#modalPA2" data-dismiss="modal" id="PA2">Plan de Autosuficiencia PAG.
-                                2</button>
-
+                          
                             <button class="hidden-lg btn btn-block btn-primary" data-toggle="modal" data-target="#modalIM" data-dismiss="modal" id="IM">Informe Médico</button>
                             <button class="hidden-lg btn btn-block btn-primary" data-toggle="modal" data-target="#modalRM" data-dismiss="modal" id="RM">Recipe Médico</button>
                             <button class="hidden-lg btn btn-block btn-primary" data-toggle="modal" data-target="#modalCI" data-dismiss="modal" id="CI">C.I del Miembro</button>
@@ -334,83 +285,7 @@ swal({
 
 
                         <p class="hidden-lg text-center"> <b>Estado de la Solicitud</b> </p>
-                        <?php
 
-                        $aprobado = $solicitudes["aprobacion_gerente"];
-
-                        if ($aprobado == 1) {
-                            echo '
-    <div class="hidden-lg form-group">
-    <p class="hidden-lg text-center"> Aprobación Gerente</p> 
-
-    <div class="hidden-lg input-group">
-
-    <span class="hidden-lg input-group-addon"><i class="fa fa-user-o"></i></span>
-    <button type="hidden-lg button" class="form-control btn btn-success">Aprobado</button>
-
-    
-        
-    </div>
-
-                
-    </div>
-    <textarea  class="hidden-lg form-control"  rows="3" readonly>';
-                            echo $solicitudes["comentarios_gerente"];
-                            echo '</textarea>     
-
-    ';
-                        } else if ($aprobado == 2) {
-                            echo '
-    <div class=" hidden-lg form-group">
-    <p class="text-center hidden-lg"> Aprobación Gerente </p> 
-
-    <div class="input-group hidden-lg">
-
-    <span class="input-group-addon hidden-lg"><i class="fa fa-user-o"></i></span>
-    <button type="button" class="form-control hidden-lg btn btn-danger">Desaprobado</button>
-
-    
-        
-    </div>
-                
-    </div>
-
-    <textarea  class="hidden-lg form-control"  rows="3" readonly>';
-                            echo $solicitudes["comentarios_gerente"];
-                            echo '</textarea>     
-
-
-
-    ';
-                        } else {
-
-                            echo '
-                            <input type="hidden" class="id_solicitud" id="id_solicitud" name="id_solicitud" value="'; echo $solicitudes["id"];   echo'" ></input>
-                            <input type="hidden" name="codigo_solicitud" value="';echo $solicitudes["codigo"]; echo'"> </input>
-                                    <div class="hidden-lg form-group">
-                                    <p class="text-center"> <b>Aprobación Gerente</b> </p> 
-                
-                                    <div class="input-group">
-                
-                                    <span class="input-group-addon"><i class="fa fa-user-o"></i></span>
-                                    <button type="button" id="aprobacion_gerente"  class="aprobacion_gerente form-control btn btn-info">Aun No Ha Sido Aprobado</button>
-                                     <input type="hidden" name="boton_aprobacion_gerente" value="0"class="boton_aprobacion_gerente" id="boton_aprobacion_gerente"></input>                   
-                
-                                    </div>
-                
-                                    </div>
-                                    <textarea   id="comentarios_gerente" name="comentarios_gerente" class="hidden-lg comentarios_gerente form-control"  rows="3"></textarea>
-                                         <br>   
-                
-
-    ';
-                        }
-                        ?>
-
-
-
-
-                        <br>
 
 
                         <?php
@@ -488,83 +363,9 @@ swal({
 
 
 
-                        <br>
 
 
-
-                        <?php
-
-                        $aprobado_finanzas = $solicitudes["aprobacion_finanzas"];
-
-                        if ($aprobado_finanzas == 1) {
-                            echo '
-<div class="hidden-lg form-group">
-<p class="text-center"> Aprobación Finanzas </p> 
-
-<div class="input-group">
-
-<span class="input-group-addon"><i class="fa fa-money"></i></span>
-<button type="button" class="form-control btn btn-success">Aprobado</button>
-
-
-
-</div>
-
-
-</div>
-<textarea  class="hidden-lg form-control"  rows="3" readonly>';
-                            echo $solicitudes["comentarios_finanzas"];
-                            echo '</textarea>     
-
-';
-                        } else if ($aprobado_finanzas == 2) {
-                            echo '
-<div class="hidden-lg form-group">
-<p class="text-center"> Aprobación Finanzas </p> 
-
-<div class="input-group">
-
-<span class="input-group-addon"><i class="fa fa-money"></i></span>
-<button type="button" class="form-control btn btn-danger">Desaprobado</button>
-
-
-
-</div>
-
-</div>
-
-<textarea  class="hidden-lg form-control"  rows="3" readonly>';
-                            echo $solicitudes["comentarios_finanzas"];
-                            echo '</textarea>     
-
-
-
-';
-                        } else {
-
-                            echo '
-<div class="hidden-lg form-group">
-<p class="text-center"> Aprobación Finanzas</p> 
-
-<div class="input-group">
-
-<span class="input-group-addon"><i class="fa fa-money"></i></span>
-<button type="button" class="form-control btn btn-info">Aun No Ha Sido Aprobado</button>
-
-
-
-</div>
-
-</div>
-
-';
-                        }
-
-
-
-
-                        ?>
-
+                  
 
 <br>
 <br>
@@ -590,17 +391,7 @@ swal({
                         <p class="text-center"> <b>Documentos de la Solicitud</b> </p>
                     </div>
                     <div class="box-body">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <button class="btn-block btn btn-primary" data-toggle="modal" data-target="#modalPA1" data-dismiss="modal" id="PA1">Plan de Autosuficiencia PAG. 1</button>
-                            </div>
-                            <div class="col-md-6">
-                                <button class="btn  btn-block btn-primary" data-toggle="modal" data-target="#modalPA2" data-dismiss="modal" id="PA2">Plan de Autosuficiencia PAG. 2</button>
-                            </div>
-
-                        </div>
-
-                        <br>
+                    
 
                         <div class="row">
                             <div class="col-md-4">
@@ -642,94 +433,6 @@ swal({
                         <div class="row">
 
 
-                            <div class="col-md-4">
-
-
-
-                                <?php
-
-                                $aprobado = $solicitudes["aprobacion_gerente"];
-                                $id = $solicitudes["id"];
-
-
-                                if ($aprobado == 1) {
-                                    echo '
-                    <div class="form-group">
-                    <p class="text-center"> <b>Aprobación Gerente</b> </p> 
-
-                    <div class="input-group">
-
-                    <span class="input-group-addon"><i class="fa fa-user-o"></i></span>
-                    <button type="button" class="form-control btn btn-success">Aprobado</button>
-
-
-
-                    </div>
-
-
-                    </div>
-                    <textarea  class="form-control"  rows="3" readonly>';
-                                    echo $solicitudes["comentarios_gerente"];
-                                    echo '</textarea>     
-
-                    ';
-                                } else if ($aprobado == 2) {
-                                    echo '
-                    <div class="form-group">
-                    <p class="text-center"> <b>Aprobación Gerente</b> </p> 
-
-                    <div class="input-group">
-
-                    <span class="input-group-addon"><i class="fa fa-user-o"></i></span>
-                    <button type="button" class="form-control btn btn-danger">Desaprobado</button>
-
-
-
-                    </div>
-
-                    </div>
-
-                    <textarea  class="form-control"  rows="3" readonly>';
-                                    echo $solicitudes["comentarios_gerente"];
-                                    echo '</textarea>     
-
-
-
-                    ';
-                                } else {
-
-                                    echo '
-            <input type="hidden" class="id_solicitud_2" id="id_solicitud_2" name="id_solicitud_2" value="'; echo $solicitudes["id"];   echo'" ></input>
-            <input type="hidden" name="codigo_solicitud_2" value="';echo $solicitudes["codigo"]; echo'"> </input>
-                    <div class="form-group">
-                    <p class="text-center"> <b>Aprobación Gerente</b> </p> 
-
-                    <div class="input-group">
-
-                    <span class="input-group-addon"><i class="fa fa-user-o"></i></span>
-                    <button type="button" id="aprobacion_gerente_2"  class="aprobacion_gerente_2 form-control btn btn-info">Aun No Ha Sido Aprobado</button>
-                     <input type="hidden" name="boton_aprobacion_gerente_2" value="0"class="boton_aprobacion_gerente_2" id="boton_aprobacion_gerente_2"></input>                   
-
-                    </div>
-
-                    </div>
-                    <textarea   id="comentarios_gerente_2" name="comentarios_gerente_2" class="comentarios_gerente_2 form-control"  rows="3"></textarea>
-                         <br>   
-
-                    ';
-
-
-
-                                }
-
-
-      
-
-
-
-                                ?>
-
-                            </div>
 
                   <div class="col-md-4">
 
@@ -786,20 +489,23 @@ swal({
                                 } else {
 
                                     echo '
-<div class="form-group">
-<p class="text-center"> <b>Aprobación Asesor Médico</b> </p> 
-
-<div class="input-group">
-
-<span class="input-group-addon"><i class="fa fa-user-md"></i></span>
-<button type="button" class="form-control btn btn-info">Aun No Ha Sido Aprobado</button>
-
-
-
-</div>
-
-</div>
-
+                                    <input type="hidden" class="id_solicitud_2" id="id_solicitud_2" name="id_solicitud_2" value="'; echo $solicitudes["id"];   echo'" ></input>
+                                    <input type="hidden" name="codigo_solicitud_2" value="';echo $solicitudes["codigo"]; echo'"> </input>
+                                            <div class="form-group">
+                                            <p class="text-center"> <b>Aprobación Asesor </b> </p> 
+                        
+                                            <div class="input-group">
+                        
+                                            <span class="input-group-addon"><i class="fa fa-user-md"></i></span>
+                                            <button type="button" id="aprobacion_gerente_2"  class="aprobacion_gerente_2 form-control btn btn-info">Aun No Ha Sido Aprobado</button>
+                                             <input type="hidden" name="boton_aprobacion_gerente_2" value="0"class="boton_aprobacion_gerente_2" id="boton_aprobacion_gerente_2"></input>                   
+                        
+                                            </div>
+                        
+                                            </div>
+                                            <textarea   id="comentarios_gerente_2" name="comentarios_gerente_2" class="comentarios_gerente_2 form-control"  rows="3"></textarea>
+                                                 <br>   
+                        
 ';
                                 }
 
@@ -807,94 +513,18 @@ swal({
 
 
                                 ?>
+
+                                <button type="button" id="cambios_gerente_2" class="mag cambios_gerente_2 btn btn-info pull-right"> Guardar Cambios </button>
 
                             </div>
+                            </div>
+
+                          
 
 
 
 
-                            <div class="col-md-4">
-
-
-
-                                <?php
-
-                                $aprobado_finanzas = $solicitudes["aprobacion_finanzas"];
-
-                                if ($aprobado_finanzas == 1) {
-                                    echo '
-<div class="form-group">
-<p class="text-center"> <b>Aprobación Finanzas</b> </p> 
-
-<div class="input-group">
-
-<span class="input-group-addon"><i class="fa fa-money"></i></span>
-<button type="button" class="form-control btn btn-success">Aprobado</button>
-
-
-
-</div>
-
-
-</div>
-<textarea  class="form-control"  rows="3" readonly>';
-                                    echo $solicitudes["comentarios_finanzas"];
-                                    echo '</textarea>     
-
-';
-                                } else if ($aprobado_finanzas == 2) {
-                                    echo '
-<div class="form-group">
-<p class="text-center"> <b>Aprobación Finanzas</b> </p> 
-
-<div class="input-group">
-
-<span class="input-group-addon"><i class="fa fa-money"></i></span>
-<button type="button" class="form-control btn btn-danger">Desaprobado</button>
-
-
-
-</div>
-
-</div>
-
-<textarea  class="form-control"  rows="3" readonly>';
-                                    echo $solicitudes["comentarios_finanzas"];
-                                    echo '</textarea>     
-
-
-
-';
-                                } else {
-
-                                    echo '
-<div class="form-group">
-<p class="text-center"> <b>Aprobación Finanzas</b> </p> 
-
-<div class="input-group">
-
-<span class="input-group-addon"><i class="fa fa-money"></i></span>
-<button type="button" class="form-control btn btn-info">Aun No Ha Sido Aprobado</button>
-
-
-
-</div>
-
-</div>
-
-';
-                                }
-
-
-
-
-                                ?>
-                                <br>
-                                <br>
-                                <br>
-                    <button type="button" id="cambios_gerente_2" class="cambios_gerente_2 btn btn-info pull-right"> Guardar Cambios </button>
-
-                                <div>
+                                
 
 
 <form id="prueba-desaprobado-gerente" role="form" method="post" enctype="multipart/form-data">
@@ -969,6 +599,7 @@ swal({
             </div>
 
         </div>
+
 
     </section>
 
