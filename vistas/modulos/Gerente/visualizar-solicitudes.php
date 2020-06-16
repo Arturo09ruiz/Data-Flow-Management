@@ -385,19 +385,23 @@ swal({
                         } else {
 
                             echo '
-    <div class="hidden-lg form-group">
-    <p class="text-center hidden-lg"> Aprobación Gerente </p> 
-
-    <div class="hidden-lg input-group">
-
-    <span class="hidden-lg input-group-addon"><i class="fa fa-user-o"></i></span>
-    <button type="button" class="hidden-lg form-control btn btn-info">Aun No Ha Sido Aprobado</button>
-
-    
-        
-    </div>
+                            <input type="hidden" class="id_solicitud" id="id_solicitud" name="id_solicitud" value="'; echo $solicitudes["id"];   echo'" ></input>
+                            <input type="hidden" name="codigo_solicitud" value="';echo $solicitudes["codigo"]; echo'"> </input>
+                                    <div class="hidden-lg form-group">
+                                    <p class="text-center"> <b>Aprobación Gerente</b> </p> 
                 
-    </div>
+                                    <div class="input-group">
+                
+                                    <span class="input-group-addon"><i class="fa fa-user-o"></i></span>
+                                    <button type="button" id="aprobacion_gerente"  class="aprobacion_gerente form-control btn btn-info">Aun No Ha Sido Aprobado</button>
+                                     <input type="hidden" name="boton_aprobacion_gerente" value="0"class="boton_aprobacion_gerente" id="boton_aprobacion_gerente"></input>                   
+                
+                                    </div>
+                
+                                    </div>
+                                    <textarea   id="comentarios_gerente" name="comentarios_gerente" class="hidden-lg comentarios_gerente form-control"  rows="3"></textarea>
+                                         <br>   
+                
 
     ';
                         }
@@ -562,7 +566,9 @@ swal({
                         ?>
 
 
-
+<br>
+<br>
+<button type="button" id="cambios_gerente" class="cambios_gerente btn btn-info pull-right"> Guardar Cambios </button>
 
                     </div>
 
@@ -693,21 +699,21 @@ swal({
                                 } else {
 
                                     echo '
-            <input type="hidden" class="id_solicitud" id="id_solicitud" name="id_solicitud" value="'; echo $solicitudes["id"];   echo'" ></input>
-            <input type="hidden" name="codigo_solicitud" value="';echo $solicitudes["codigo"]; echo'"> </input>
+            <input type="" class="id_solicitud_2" id="id_solicitud_2" name="id_solicitud_2" value="'; echo $solicitudes["id"];   echo'" ></input>
+            <input type="" name="codigo_solicitud_2" value="';echo $solicitudes["codigo"]; echo'"> </input>
                     <div class="form-group">
                     <p class="text-center"> <b>Aprobación Gerente</b> </p> 
 
                     <div class="input-group">
 
                     <span class="input-group-addon"><i class="fa fa-user-o"></i></span>
-                    <button type="button" id="aprobacion_gerente"  class="aprobacion_gerente form-control btn btn-info">Aun No Ha Sido Aprobado</button>
-                     <input type="hidden" name="boton_aprobacion_gerente" value="0"class="boton_aprobacion_gerente" id="boton_aprobacion_gerente"></input>                   
+                    <button type="button" id="aprobacion_gerente_2"  class="aprobacion_gerente_2 form-control btn btn-info">Aun No Ha Sido Aprobado</button>
+                     <input type="" name="boton_aprobacion_gerente_2" value="0"class="boton_aprobacion_gerente_2" id="boton_aprobacion_gerente_2"></input>                   
 
                     </div>
 
                     </div>
-                    <textarea   id="comentarios_gerente" name="comentarios_gerente" class="comentarios_gerente form-control"  rows="3"></textarea>
+                    <textarea   id="comentarios_gerente_2" name="comentarios_gerente_2" class="comentarios_gerente_2 form-control"  rows="3"></textarea>
                          <br>   
 
                     ';
@@ -886,7 +892,7 @@ swal({
                                 <br>
                                 <br>
                                 <br>
-                    <button type="button" id="cambios_gerente" class="cambios_gerente btn btn-info pull-right"> Guardar Cambios </button>
+                    <button type="button" id="cambios_gerente_2" class="cambios_gerente_2 btn btn-info pull-right"> Guardar Cambios </button>
 
                                 <div>
 
