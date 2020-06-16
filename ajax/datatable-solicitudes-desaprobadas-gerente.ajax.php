@@ -69,6 +69,8 @@ class TablaSolicitudesDesaprobadasGerente{
                 $ne = "<button class='btn btn-block btn-danger'>Emergencia</button>";
             }
 
+
+
 		
 		if($desaprobadas[$i]["aprobacion_gerente"] == 1){
             $gerente = "<button class='btn btn-success btn-block'>Aprobado</button>";
@@ -78,26 +80,27 @@ class TablaSolicitudesDesaprobadasGerente{
              $gerente="<button class='btn btn-info btn-block' >Aun No Ha Sido Aprobado</button>";
 		}
 
+		if($desaprobadas[$i]["aprobacion_asesor"] == 1){
+            $asesor = "<button class='btn btn-success btn-block'>Aprobado</button>";
+		}else if($desaprobadas[$i]["aprobacion_asesor"] == 2){
+            $asesor = "<button class='btn btn-block btn-danger'>Desaprobado</button>";
+		}else{
+			$asesor="<button class='btn btn-info btn-block' >Aun No Ha Sido Aprobado</button>";
+		}
 
 
 
-//         if($desaprobadas[$i]["aprobacion_asesor"] == 1){
 
+
+        if($desaprobadas[$i]["aprobacion_finanzas"] == 1){
+
+            $finanzas = "<button class='btn btn-success btn-block'>Aprobado</button>";
             
-//         }else if($desaprobadas[$i]["aprobacion_asesor"] == 2){
-//         }else{
-//         }
-
-
-//         if($desaprobadas[$i]["aprobacion_finanzas"] == 1){
-
-//             $finanzas = "<button class='btn btn-success btn-block'>Aprobado</button>";
-            
-//         }else if($desaprobadas[$i]["aprobacion_finanzas"] == 2){
-//              $finanzas = "<button class='btn btn-block btn-danger'>Desaprobado</button>";
-//         }else{
-//             $finanzas="<button class='btn btn-info btn-block' >Aun No Ha Sido Aprobado</button>";
-//         }
+        }else if($desaprobadas[$i]["aprobacion_finanzas"] == 2){
+             $finanzas = "<button class='btn btn-block btn-danger'>Desaprobado</button>";
+        }else{
+            $finanzas="<button class='btn btn-info btn-block' >Aun No Ha Sido Aprobado</button>";
+        }
 
 
 
@@ -112,6 +115,8 @@ class TablaSolicitudesDesaprobadasGerente{
 				  "'.$desaprobadas[$i]["codigo"].'",
 				  "'.$ne.'",
 				  "'.$gerente.'",
+				  "'.$asesor.'",
+				  "'.$finanzas.'",
                   "'.$barrios["nombre"].'",
                   "'.$estaca["nombre"].'",
 				  "'.$botones.'"
