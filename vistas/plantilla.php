@@ -462,6 +462,47 @@ CUERPO DOCUMENTO
 
 
 
+  if ($_SESSION["perfil"] == "Asesor-Medico") {
+
+    include "modulos/Asesor-Medico/cabezote.php";
+
+    /*=============================================
+    MENU
+    =============================================*/
+
+    include "modulos/Asesor-Medico/menu.php";
+
+
+    /*=============================================
+    CONTENIDO
+    =============================================*/
+
+
+    if(isset($_GET["ruta"])){
+
+      if($_GET["ruta"] == "inicio" ||
+         $_GET["ruta"] == "miembros" ||
+         $_GET["ruta"] == "salir"){
+
+        include "modulos/Asesor-Medico/".$_GET["ruta"].".php";
+
+      }else{
+
+        include "modulos/Asesor-Medico/404.php";
+
+      }
+
+    }else{
+
+      include "modulos/Asesor-Medico/inicio.php";
+
+    }
+
+
+  
+  }
+
+
 
 
 
