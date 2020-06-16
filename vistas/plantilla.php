@@ -328,6 +328,7 @@ CUERPO DOCUMENTO
          $_GET["ruta"] == "solicitud" ||
          $_GET["ruta"] == "visualizar-solicitudes" ||
          $_GET["ruta"] == "desaprobado" ||
+         $_GET["ruta"] == "visualizar-solicitudes-desaprobadas" ||
          $_GET["ruta"] == "salir"){
           
         include "modulos/Gerente/".$_GET["ruta"].".php";
