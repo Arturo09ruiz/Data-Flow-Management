@@ -341,7 +341,6 @@ $(".cambios_gerente_2").click(function(){
 		var edad = $(".edad").val();
 		var email = $(".email").val();
 		var telefono = $(".telefono").val();
-		var idbarrio = $(".idbarrio").val();
 		var idestaca = $(".idestaca").val();
 		var idconsejo = $(".idconsejo").val();
 		var idpais = $(".idpais").val();
@@ -368,7 +367,6 @@ $(".cambios_gerente_2").click(function(){
 		document.getElementById("edad").value = edad;
 		document.getElementById("email").value = email;
 		document.getElementById("telefono").value = telefono;
-		document.getElementById("barrioid").value = idbarrio;
 		document.getElementById("idestaca").value = idestaca;
 		document.getElementById("idconsejo").value = idconsejo;
 		document.getElementById("idpais").value = idpais;

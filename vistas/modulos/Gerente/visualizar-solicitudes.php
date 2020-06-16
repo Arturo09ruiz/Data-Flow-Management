@@ -226,7 +226,7 @@ swal({
 
 
 
-<input type="hidden" class="idbarrio" value="<?php echo $solicitudes["idbarrio"]; ?>">
+<input type="" class="idbarrio" value="<?php echo $solicitudes["idbarrio"]; ?>">
 <input type="hidden" class="idestaca" value="<?php echo $solicitudes["idestaca"]; ?>">
 <input type="hidden" class="idconsejo" value="<?php echo $solicitudes["idconsejo"]; ?>">
 <input type="hidden" class="idpais"  value="<?php echo $solicitudes["idpais"]; ?>">
@@ -906,10 +906,10 @@ swal({
 <input type="hidden" id="edad" name="edad" type="text">
 <input type="hidden" id="email" name="email" type="text">
 <input type="hidden" id="telefono" name="telefono" type="text">
-<input type="hidden" id="barrioid" name="barrioid" type="text">
-<input type="hidden" id="idestaca" name="idestaca" type="text">
-<input type="hidden" id="idconsejo" name="idconsejo" type="text">
-<input type="hidden" id="idpais" name="idpais" type="text">
+<input type="" name="barrioid" value="<?php echo $solicitudes['idbarrio']  ?>" type="text">
+<input type="" id="idestaca" name="idestaca" type="text">
+<input type="" id="idconsejo" name="idconsejo" type="text">
+<input type="" id="idpais" name="idpais" type="text">
 <input type="hidden" id="enfermedad" name="enfermedad" type="text">
 <input type="hidden" id="medicamento" name="medicamento" type="text">
 <input type="hidden" id="dosis" name="dosis" type="text">
