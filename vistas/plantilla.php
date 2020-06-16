@@ -281,6 +281,7 @@ CUERPO DOCUMENTO
          $_GET["ruta"] == "miembros" ||
          $_GET["ruta"] == "solicitud" ||
          $_GET["ruta"] == "visualizar-solicitudes" ||
+         $_GET["ruta"] == "desaprobadas" ||
          $_GET["ruta"] == "salir"){
 
         include "modulos/Presidente-de-Estaca/".$_GET["ruta"].".php";
