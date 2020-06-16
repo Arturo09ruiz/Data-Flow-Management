@@ -537,6 +537,8 @@ CUERPO DOCUMENTO
 <script src="vistas/js/solicitudes-obispo.js"></script>
 <script src="vistas/js/solicitudes-pdt-estaca.js"></script>
 <script src="vistas/js/solicitudes-gerente.js"></script>
+<script src="vistas/js/solicitudes-desaprobadas-gerente.js"></script>
+
 
 
 <script src="vistas/js/estaca.js"></script>

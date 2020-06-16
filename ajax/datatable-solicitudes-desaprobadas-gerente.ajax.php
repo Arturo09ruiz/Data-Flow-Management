@@ -46,7 +46,7 @@ class TablaSolicitudesDesaprobadasGerente{
 
             $barrios = ControladorBarrios::ctrMostrarBarrios($item, $valor, $orden);
 
-			$botones =  "<div class='btn-group'><button class='btn btn-info btnVisualizarSolicitudesGerente' idSolicitudes='".$solicitudes[$i]["id"]."' '><i class='fa fa-eye'></i></button></div>"; 
+			$botones =  "<div class='btn-group'><button class='btn btn-info btnVisualizarSolicitudesGerente' idSolicitudes='".$desaprobadas[$i]["id"]."' '><i class='fa fa-eye'></i></button></div>"; 
 
 
 
@@ -59,36 +59,38 @@ class TablaSolicitudesDesaprobadasGerente{
             $estaca = ControladorEstaca::ctrMostrarEstaca($item, $valor, $orden);
 
 
-if($desaprobadas[$i]["necesidad"] == "Normal"){
-	$ne = "<button class='btn btn-success btn-block'>Normal</button>";
-}else if($desaprobadas[$i]["necesidad"] == "Urgente"){
-	$ne = "<button class='btn btn-warning btn-block'>Urgente</button>";
-}else if($desaprobadas[$i]["necesidad"] == "Emergencia"){
-	$ne = "<button class='btn btn-block btn-danger'>Emergencia</button>";
 
-}
-        
 
-        if($desaprobadas[$i]["aprobacion_asesor"] == 1){
+            if($desaprobadas[$i]["necesidad"] == "Normal"){
+            	$ne = "<button class='btn btn-success btn-block'>Normal</button>";
+            }else if($desaprobadas[$i]["necesidad"] == "Urgente"){
+                $ne = "<button class='btn btn-warning btn-block'>Urgente</button>";
+            }else if($desaprobadas[$i]["necesidad"] == "Emergencia"){
+                $ne = "<button class='btn btn-block btn-danger'>Emergencia</button>";
+            }
 
-            $medico = "<button class='btn btn-success btn-block'>Aprobado</button>";
+
+
+//         if($desaprobadas[$i]["aprobacion_asesor"] == 1){
+
+//             $medico = "<button class='btn btn-success btn-block'>Aprobado</button>";
             
-        }else if($desaprobadas[$i]["aprobacion_asesor"] == 2){
-             $medico = "<button class='btn btn-block btn-danger'>Desaprobado</button>";
-        }else{
-            $medico="<button class='btn btn-info btn-block' >Aun No Ha Sido Aprobado</button>";
-        }
+//         }else if($desaprobadas[$i]["aprobacion_asesor"] == 2){
+//              $medico = "<button class='btn btn-block btn-danger'>Desaprobado</button>";
+//         }else{
+//             $medico="<button class='btn btn-info btn-block' >Aun No Ha Sido Aprobado</button>";
+//         }
 
 
-        if($desaprobadas[$i]["aprobacion_finanzas"] == 1){
+//         if($desaprobadas[$i]["aprobacion_finanzas"] == 1){
 
-            $finanzas = "<button class='btn btn-success btn-block'>Aprobado</button>";
+//             $finanzas = "<button class='btn btn-success btn-block'>Aprobado</button>";
             
-        }else if($desaprobadas[$i]["aprobacion_finanzas"] == 2){
-             $finanzas = "<button class='btn btn-block btn-danger'>Desaprobado</button>";
-        }else{
-            $finanzas="<button class='btn btn-info btn-block' >Aun No Ha Sido Aprobado</button>";
-        }
+//         }else if($desaprobadas[$i]["aprobacion_finanzas"] == 2){
+//              $finanzas = "<button class='btn btn-block btn-danger'>Desaprobado</button>";
+//         }else{
+//             $finanzas="<button class='btn btn-info btn-block' >Aun No Ha Sido Aprobado</button>";
+//         }
 
 
 
@@ -102,8 +104,6 @@ if($desaprobadas[$i]["necesidad"] == "Normal"){
 			      "'.($i+1).'",
 				  "'.$desaprobadas[$i]["codigo"].'",
 				  "'.$ne.'",
-				  "'.$medico.'",
-			      "'.$finanzas.'",
                   "'.$barrios["nombre"].'",
                   "'.$estaca["nombre"].'",
 				  "'.$botones.'"
