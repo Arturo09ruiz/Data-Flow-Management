@@ -301,6 +301,22 @@ swal({
                                 </div>
 
                             </div>
+                            <div class="form-group">
+
+<div class="input-group">
+
+    <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+
+    <input type="text" class="necesidad form-control" value="<?php echo $solicitudes["fecha_solicitud"]; ?>" readonly>
+
+
+</div>
+
+</div>
+
+
+
+                  
 <input type="hidden" class="pa1" value="<?php echo $solicitudes["pa1"]; ?>">
 <input type="hidden" class="pa2" value="<?php echo $solicitudes["pa2"]; ?>">
 <input type="hidden" class="im" value="<?php echo $solicitudes["im"]; ?>">
