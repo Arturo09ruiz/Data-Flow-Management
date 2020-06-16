@@ -34,6 +34,16 @@ class TablaSolicitudesPdtEstaca{
 
 		  for($i = 0; $i < count($solicitudes); $i++){
 
+
+			 
+			if($solicitudes[$i]["necesidad"] == "Normal"){
+				$ne = "<button class='btn btn-success btn-block'>Normal</button>";
+			}else if($solicitudes[$i]["necesidad"] == "Urgente"){
+				$ne = "<button class='btn btn-warning btn-block'>Urgente</button>";
+			}else if($solicitudes[$i]["necesidad"] == "Emergencia"){
+				$ne = "<button class='btn btn-block btn-danger'>Emergencia</button>";
+			
+			}
 		 
 		
             $item = "id";
@@ -52,7 +62,8 @@ class TablaSolicitudesPdtEstaca{
 				  "'.$solicitudes[$i]["ncm_miembro"].'",
 			      "'.$solicitudes[$i]["nombre_miembro"].'",
 			      "'.$solicitudes[$i]["edad"].'",
-                  "'.$solicitudes[$i]["telefono"].'",
+				  "'.$solicitudes[$i]["telefono"].'",
+				  "'.$ne.'",	
                   "'.$barrios["nombre"].'",
 				  "'.$botones.'"
 

@@ -50,6 +50,7 @@
               <th>Nombre del Miembro</th>
               <th>Edad</th>
               <th>Telf</th>
+              <th>Necesidad</th>
               <th>Barrio</th>
               <th>Acciones</th>
 
