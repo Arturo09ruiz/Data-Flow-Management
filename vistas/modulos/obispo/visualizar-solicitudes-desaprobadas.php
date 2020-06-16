@@ -35,13 +35,13 @@ echo'
 <script>
 swal({
     type: "warning",
-    title: "Esta Solicitud No Pertenece a su Consejo Si tiene alguna duda comuniquese con el Soporte Técnico",
+    title: "Esta Solicitud No Pertenece a su Barrio Si tiene alguna duda comuniquese con el Soporte Técnico",
     showConfirmButton: true,
     confirmButtonText: "Cerrar"
     }).then(function(result){
               if (result.value) {
 
-              window.location = "desaprobado";
+              window.location = "desaprobadas";
 
               }
           })

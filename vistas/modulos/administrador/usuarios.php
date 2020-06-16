@@ -384,9 +384,11 @@ MODAL AGREGAR USUARIO
 
                   <option value="Obispo">Obispo</option>
 
-                  <option value="Especial">Especial</option>
+                  <option value="Asesor-Medico">Asesor Médico</option>
 
-                  <option value="Vendedor">Vendedor</option>
+                  <option value="Finanzas">Finanzas</option>
+
+
 
                 </select>
 
