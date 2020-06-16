@@ -67,29 +67,7 @@ if ($_SESSION["perfil"] == "Obispo") {
 					</li>
 
 
-					<li>
 
-					<a href="desaprobadas">
-						
-						<i class="fa fa-circle-o"></i>
-						<span>Desaprobadas</span>
-
-					</a>
-
-				</li>
-
-					<li>
-
-						<a href="#">
-							
-							<i class="fa fa-circle-o"></i>
-							<span>Reporte de Solicitudes</span>
-
-						</a>
-
-					</li>
-
-					
 
 				
 

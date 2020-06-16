@@ -687,6 +687,47 @@ if(isset($_FILES["nuevaPlan2"]["tmp_name"])){
     }
 
     
+       
+    static public function ctrGuardarEstadoAsesor()
+    {
+
+        if (isset($_POST["aprobacion"])) {
+
+            $tabla = "solicitudes";
+
+            $datos = array(
+                "id" => $_POST["id"], 
+                "aprobacion_asesor" => $_POST["aprobacion"],              
+                "comentarios_asesor" => $_POST["comentarios"]
+                
+
+            );
+
+            $respuesta = ModeloSolicitudes::mdlGuardarEstadoAsesor($tabla, $datos);
+            if ($respuesta == "ok") {
+
+                echo '<script>
+
+						swal({
+							  type: "success",
+							  title: "El Estado ha sido guardado correctamente",
+							  showConfirmButton: true,
+							  confirmButtonText: "Cerrar"
+							  }).then(function(result){
+										if (result.value) {
+
+										window.location = "solicitud";
+
+										}
+									})
+
+						</script>';
+            }
+        }
+    }
+
+    
+
 
 
 

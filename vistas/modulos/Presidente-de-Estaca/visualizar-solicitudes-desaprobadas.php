@@ -716,13 +716,12 @@ swal({
                     <div class="input-group">
 
                     <span class="input-group-addon"><i class="fa fa-user-o"></i></span>
-                    <button type="button" id="aprobacion_gerente"  class="aprobacion_gerente form-control btn btn-info">Aun No Ha Sido Aprobado</button>
+                    <button type="button" id=""  class=" form-control btn btn-info">Aun No Ha Sido Aprobado</button>
                      <input type="hidden" name="boton_aprobacion_gerente" value="0"class="boton_aprobacion_gerente" id="boton_aprobacion_gerente"></input>                   
 
                     </div>
 
                     </div>
-                    <textarea   id="comentarios_gerente" name="comentarios_gerente" class="comentarios_gerente form-control"  rows="3"></textarea>
                          <br>   
 
                     ';

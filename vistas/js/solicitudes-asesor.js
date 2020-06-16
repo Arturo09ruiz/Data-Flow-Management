@@ -62,84 +62,33 @@ $(".tablaSolicitudAsesor tbody").on("click", "button.btnVisualizarSolicitudesAse
 })
 
 
+$(".aprobacion_asesor").click(function(){
 
+    var boton = $(".boton_aprobacion_asesor").val();
 
+    if(boton == 1){
 
-$(".aprobacion_gerente").click(function(){
+    $(this).removeClass("aprobacion_asesor form-control btn btn-info");
 
-	var boton = $(".boton_aprobacion_gerente").val();
+    $(this).addClass("aprobacion_asesor form-control btn btn-danger");
 
-	if(boton == 1){
+    $("#aprobacion_asesor").html('Desaprobado');
+    $("#boton_aprobacion_asesor").val(2);
 
-	$(this).removeClass("aprobacion_gerente form-control btn btn-info");
+    }else if(boton == 0){
+        $(this).removeClass("aprobacion_asesor form-control btn btn-info");
 
-	$(this).addClass("aprobacion_gerente form-control btn btn-danger");
+        $(this).addClass("aprobacion_asesor form-control btn btn-success");
+    	$("#aprobacion_asesor").html('Aprobado');
+		$("#boton_aprobacion_asesor").val(1);
+    }else if(boton == 2){
+    $(this).removeClass("aprobacion_asesor form-control btn btn-danger");
 
-	$("#aprobacion_gerente").html('Desaprobado');
-	$("#boton_aprobacion_gerente").val(2);
+    $(this).addClass("aprobacion_asesor form-control btn btn-success");
+    $("#aprobacion_asesor").html('Aprobado');
+    $("#boton_aprobacion_asesor").val(1);
 
-
-
-	}else if(boton == 0){
-
-	$(this).removeClass("aprobacion_gerente form-control btn btn-info");
-
-	$(this).addClass("aprobacion_gerente form-control btn btn-success");
-
-	$("#aprobacion_gerente").html('Aprobado');
-
-		$("#boton_aprobacion_gerente").val(1);
-		
-	}else if(boton == 2){
-		
-	$(this).removeClass("aprobacion_gerente form-control btn btn-danger");
-
-	$(this).addClass("aprobacion_gerente form-control btn btn-success");
-
-	$("#aprobacion_gerente").html('Aprobado');
-
-		$("#boton_aprobacion_gerente").val(1);
-	}
-
-})
-
-
-$(".aprobacion_gerente_2").click(function(){
-
-	var boton = $(".boton_aprobacion_gerente_2").val();
-
-	if(boton == 1){
-
-	$(this).removeClass("aprobacion_gerente_2 form-control btn btn-info");
-
-	$(this).addClass("aprobacion_gerente_2 form-control btn btn-danger");
-
-	$("#aprobacion_gerente_2").html('Desaprobado');
-
-	$("#boton_aprobacion_gerente_2").val(2);
-
-
-
-	}else if(boton == 0){
-
-	$(this).removeClass("aprobacion_gerente_2 form-control btn btn-info");
-
-	$(this).addClass("aprobacion_gerente_2 form-control btn btn-success");
-
-	$("#aprobacion_gerente_2").html('Aprobado');
-
-		$("#boton_aprobacion_gerente_2").val(1);
-		
-	}else if(boton == 2){
-		
-	$(this).removeClass("aprobacion_gerente_2 form-control btn btn-danger");
-
-	$(this).addClass("aprobacion_gerente_2 form-control btn btn-success");
-
-	$("#aprobacion_gerente_2").html('Aprobado');
-
-		$("#boton_aprobacion_gerente_2").val(1);
-	}
+    }
 
 })
 
@@ -147,13 +96,19 @@ $(".aprobacion_gerente_2").click(function(){
 
 
 
-$(".cambios_gerente").click(function(){
-	var boton = $(".boton_aprobacion_gerente").val();
+
+
+
+
+$(".cambios_asesor").click(function(){
+
+    var boton = $(".boton_aprobacion_asesor").val();
 
 	if(boton == 1){
-		var id = $(".id_solicitud").val();
-		var aprobacion = $(".boton_aprobacion_gerente").val();
-		var comentarios = $(".comentarios_gerente").val();
+        var id = $(".id_solicitud_asesor").val();
+        alert(id)
+        var aprobacion = $(".boton_aprobacion_asesor").val();
+        var comentarios = $(".comentarios_asesor").val();
 
 		document.getElementById("id").value = id;
 		document.getElementById("aprobacion").value = aprobacion;
@@ -162,10 +117,11 @@ $(".cambios_gerente").click(function(){
 		document.forms["prueba-guardar-estado-aprobado"].submit();
 
 	}else if(boton ==2){
-		var id = $(".id_solicitud").val();
+
+        var id = $(".id_solicitud_asesor").val();
 		var codigo = $(".codigo").val();
-		var ncm = $(".ncm").val();
-		var nombre = $(".nombre").val();
+        var ncm = $(".ncm").val();
+        var nombre = $(".nombre").val();
 		var edad = $(".edad").val();
 		var email = $(".email").val();
 		var telefono = $(".telefono").val();
@@ -182,19 +138,16 @@ $(".cambios_gerente").click(function(){
 		var im = $(".im").val();
 		var rm = $(".rm").val();
 		var ci = $(".ci").val();
-		var aprobacion = $(".boton_aprobacion_gerente").val();
-		var comentarios = $(".comentarios_gerente").val();
+		var aprobacion = $(".boton_aprobacion_asesor").val();
+		var comentarios = $(".comentarios_asesor").val();
 		var fecha_solicitud = $(".fecha_solicitud").val();
 
 
 
 		document.getElementById("id").value = id;
-		document.getElementById("cod").value = codigo;
-		document.getElementById("ncm").value = ncm;
+        document.getElementById("cod").value = codigo;
 		document.getElementById("nombre").value = nombre;
 		document.getElementById("edad").value = edad;
-		document.getElementById("email").value = email;
-		document.getElementById("telefono").value = telefono;
 		document.getElementById("idestaca").value = idestaca;
 		document.getElementById("idconsejo").value = idconsejo;
 		document.getElementById("idpais").value = idpais;
@@ -208,8 +161,8 @@ $(".cambios_gerente").click(function(){
 		document.getElementById("im").value = im;
 		document.getElementById("rm").value = rm;
 		document.getElementById("ci").value = ci;
-		document.getElementById("aprobacion_g").value = aprobacion;
-		document.getElementById("comentarios_g").value = comentarios;
+		document.getElementById("aprobacion_a").value = aprobacion;
+		document.getElementById("comentarios_a").value = comentarios;
 		document.getElementById("fecha_solicitud").value = fecha_solicitud;
 
 
@@ -231,13 +184,13 @@ $(".cambios_gerente").click(function(){
 
 				$.ajax({
 						type: "POST",
-								url: "ajax/desaprobar-solicitud-gerente.ajax.php",
+								url: "ajax/desaprobar-solicitud-asesor.ajax.php",
 								data:'id=' + id ,
 								dataType:"html",
 								asycn:false, //el error que cometí de sintaxis, es async
 									success: function (respuesta) {
 
-									 document.forms["prueba-desaprobado-gerente"].submit();
+									 document.forms["prueba-desaprobado-asesor"].submit();
 				
 							
 						}

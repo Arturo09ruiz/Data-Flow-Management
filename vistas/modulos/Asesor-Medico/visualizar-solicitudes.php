@@ -52,7 +52,9 @@ swal({
 }
 ?>
 
-
+<script>
+    
+</script>
 <style>
     .boton_mover_1 {
         transform: translate(120px);
@@ -135,7 +137,7 @@ swal({
                                     <span class="input-group-addon"><i class="fa fa-code"></i></span>
 
                                     <input type="text" id="codigo" class="codigo form-control" value="<?php echo  $solicitudes["codigo"]; ?>" readonly>
-
+<input type="hidden" class="ncm" id="ncm"  value="<?php echo  $solicitudes["ncm_miembro"]; ?>" type="">
                                 </div>
 
                             </div>
@@ -489,22 +491,24 @@ swal({
                                 } else {
 
                                     echo '
-                                    <input type="hidden" class="id_solicitud_2" id="id_solicitud_2" name="id_solicitud_2" value="'; echo $solicitudes["id"];   echo'" ></input>
-                                    <input type="hidden" name="codigo_solicitud_2" value="';echo $solicitudes["codigo"]; echo'"> </input>
+                                    <input type="hidden" class="id_solicitud_asesor" id="id_solicitud_asesor" name="id_solicitud_asesor" value="'; echo $solicitudes["id"];   echo'" ></input>
+                                    <input type="hidden" name="codigo_solicitud_asesor" value="';echo $solicitudes["codigo"]; echo'"> </input>
                                             <div class="form-group">
                                             <p class="text-center"> <b>Aprobación Asesor </b> </p> 
                         
                                             <div class="input-group">
                         
                                             <span class="input-group-addon"><i class="fa fa-user-md"></i></span>
-                                            <button type="button" id="aprobacion_gerente_2"  class="aprobacion_gerente_2 form-control btn btn-info">Aun No Ha Sido Aprobado</button>
-                                             <input type="hidden" name="boton_aprobacion_gerente_2" value="0"class="boton_aprobacion_gerente_2" id="boton_aprobacion_gerente_2"></input>                   
+                                            <button type="button" id="aprobacion_asesor"  class="aprobacion_asesor form-control btn btn-info">Aun No Ha Sido Aprobado</button>
+                                             <input type="hidden" name="boton_aprobacion_asesor" value="0" class="boton_aprobacion_asesor" id="boton_aprobacion_asesor"></input>                   
                         
                                             </div>
                         
                                             </div>
-                                            <textarea   id="comentarios_gerente_2" name="comentarios_gerente_2" class="comentarios_gerente_2 form-control"  rows="3"></textarea>
+                                            <textarea   id="comentarios_asesor" name="comentarios_asesor" class="comentarios_asesor form-control"  rows="3"></textarea>
                                                  <br>   
+                                <button type="button" id="cambios_asesor" class="mag cambios_asesor btn btn-info pull-right"> Guardar Cambios </button>
+
                         
 ';
                                 }
@@ -514,7 +518,6 @@ swal({
 
                                 ?>
 
-                                <button type="button" id="cambios_gerente_2" class="mag cambios_gerente_2 btn btn-info pull-right"> Guardar Cambios </button>
 
                             </div>
                             </div>
@@ -527,15 +530,15 @@ swal({
                                 
 
 
-<form id="prueba-desaprobado-gerente" role="form" method="post" enctype="multipart/form-data">
+<form id="prueba-desaprobado-asesor" role="form" method="post" enctype="multipart/form-data">
 <!-- 
 <input type="" id="id" name="id" type="text"> -->
 <input type="hidden" class="cod" id="cod" name="nuevoCodigo" type="text">
-<input type="hidden" id="ncm" name="ncm" type="text">
+<input type="hidden" value="<?php echo  $solicitudes["ncm_miembro"]; ?>" id="ncm" name="ncm" type="text">
 <input type="hidden" id="nombre" name="nombre" type="text">
 <input type="hidden" id="edad" name="edad" type="text">
-<input type="hidden" id="email" name="email" type="text">
-<input type="hidden" id="telefono" name="telefono" type="text">
+<input type="hidden" value="<?php echo  $solicitudes["email"]; ?>" id="email" name="email" type="text">
+<input type="hidden" value="<?php echo  $solicitudes["telefono"]; ?>" id="telefono" name="telefono" type="text">
 <input type="hidden" name="barrioid" value="<?php echo $solicitudes['idbarrio']  ?>" type="text">
 <input type="hidden" id="idestaca" name="idestaca" type="text">
 <input type="hidden" id="idconsejo" name="idconsejo" type="text">
@@ -550,14 +553,18 @@ swal({
 <input type="hidden" id="im" name="im" type="text">
 <input type="hidden" id="rm" name="rm" type="text">
 <input type="hidden" id="ci" name="ci" type="text">
-<input type="hidden" id="aprobacion_g" name="aprobacion_g" type="text">
-<input type="hidden" id="comentarios_g" name="comentarios_g" type="text">
+<input type="hidden" value="<?php echo  $solicitudes["aprobacion_gerente"]; ?>" id="aprobacion_g" name="aprobacion_g" type="text">
+<input type="hidden" value="<?php echo  $solicitudes["comentarios_gerente"]; ?>" id="comentarios_g" name="comentarios_g" type="text">
+<input type="hidden" id="aprobacion_a" name="aprobacion_a" type="text">
+<input type="hidden" id="comentarios_a" name="comentarios_a" type="text">
+<input type="hidden" value="<?php echo  $solicitudes["aprobacion_finanzas"]; ?>" id="aprobacion_f" name="aprobacion_f" type="text">
+<input type="hidden" value="<?php echo  $solicitudes["comentarios_finanzas"]; ?>" id="comentarios_f" name="comentarios_f" type="text">
 <input type="hidden" id="fecha_solicitud" name="fecha_solicitud" type="text">
 
 </form>
 <?php
     $crearProducto = new ControladorDesaprobar();
-    $crearProducto -> ctrCrearDesaprobar();
+    $crearProducto -> ctrCrearDesaprobarAsesor();
 ?>   
        
 
@@ -966,7 +973,7 @@ swal({
 
         <?php
            $crearestadogerente = new ControladorSolicitudes();
-           $crearestadogerente -> ctrGuardarEstadoGerente();
+           $crearestadogerente -> ctrGuardarEstadoAsesor();
         ?>  
        
 </div>

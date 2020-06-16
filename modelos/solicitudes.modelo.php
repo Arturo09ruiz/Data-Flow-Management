@@ -334,7 +334,32 @@ class ModeloSolicitudes{
 	}
 
 	
+	static public function mdlGuardarEstadoAsesor($tabla, $datos){
+
+		$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET aprobacion_asesor = :aprobacion_asesor, comentarios_asesor = :comentarios_asesor WHERE id = :id");
+
+		$stmt->bindParam(":id", $datos["id"], PDO::PARAM_STR);
+		$stmt->bindParam(":aprobacion_asesor", $datos["aprobacion_asesor"], PDO::PARAM_STR);
+		$stmt->bindParam(":comentarios_asesor", $datos["comentarios_asesor"], PDO::PARAM_STR);
 	
+        
+        
+
+		if($stmt->execute()){
+
+			return "ok";
+
+		}else{
+
+			return "error";
+		
+		}
+
+		$stmt->close();
+		$stmt = null;
+
+	}
+
 	/*=============================================
 	EDITAR PRODUCTO
 	=============================================*/
