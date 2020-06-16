@@ -43,13 +43,6 @@ if ($_SESSION["perfil"] == "Gerente") {
 					<i class="fa fa-list-ul"></i>
 					
 					<span>Solicitud Medicinas</span>
-					
-					<span class="pull-right-container">
-					
-						<i class="fa fa-angle-left pull-right"></i>
-
-					</span>
-
 				</a>
 
 				<ul class="treeview-menu">
@@ -66,7 +59,16 @@ if ($_SESSION["perfil"] == "Gerente") {
 
 					</li>
 
+					<li>
 
+					<a href="desaprobado">
+						
+						<i class="fa fa-circle-o"></i>
+						<span>Desaprobadas</span>
+
+					</a>
+
+				</li>
 					<li>
 
 						<a href="#">
