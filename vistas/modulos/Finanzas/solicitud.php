@@ -50,6 +50,7 @@
               <th>Aprobación</th>
               <th>Barrio</th>
               <th>Estaca</th>
+              <th>Consejo</th>
               <th>Acciones</th>
 
             </tr>
@@ -67,7 +68,7 @@
         <input class="idbarrio" type="hidden" value="<?php echo $_SESSION['idbarrio']; ?>" id="idbarrio">
        <input class="idestaca" type="hidden" value="<?php echo $_SESSION['idestaca']; ?>" id="idestaca">
        <input  class="idconsejo" type="hidden" value="<?php echo $_SESSION['idconsejo']; ?>" id="idconsejo">
-       <input type="hidden" value="<?php echo $_SESSION['idpais']; ?>" id="idpais">
+       <input class="idpais" type="hidden" value="<?php echo $_SESSION['idpais']; ?>" id="idpais">
 
       </div>
 

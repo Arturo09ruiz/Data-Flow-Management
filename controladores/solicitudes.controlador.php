@@ -61,6 +61,16 @@ class ControladorSolicitudes
         return $respuesta;
     }
 
+    static public function ctrMostrarSolicitudesConformePais($item, $valor, $orden, $pais)
+    {
+
+        $tabla = "solicitudes";
+
+        $respuesta = ModeloSolicitudes::ctrMostrarSolicitudesConformePais($tabla, $item, $valor, $orden, $pais);
+
+        return $respuesta;
+    }
+
     
     
 
@@ -687,6 +697,45 @@ if(isset($_FILES["nuevaPlan2"]["tmp_name"])){
     }
 
     
+    static public function ctrGuardarEstadoFinanzas()
+    {
+
+        if (isset($_POST["aprobacion"])) {
+
+            $tabla = "solicitudes";
+
+            $datos = array(
+                "id" => $_POST["id"], 
+                "aprobacion_finanzas" => $_POST["aprobacion"],              
+                "comentarios_finanzas" => $_POST["comentarios"]
+                
+
+            );
+
+            $respuesta = ModeloSolicitudes::mdlGuardarEstadoFinanzas($tabla, $datos);
+            if ($respuesta == "ok") {
+
+                echo '<script>
+
+						swal({
+							  type: "success",
+							  title: "El Estado ha sido guardado correctamente",
+							  showConfirmButton: true,
+							  confirmButtonText: "Cerrar"
+							  }).then(function(result){
+										if (result.value) {
+
+										window.location = "solicitud";
+
+										}
+									})
+
+						</script>';
+            }
+        }
+    }
+
+
        
     static public function ctrGuardarEstadoAsesor()
     {

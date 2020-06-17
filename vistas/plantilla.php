@@ -629,6 +629,8 @@ CUERPO DOCUMENTO
 <script src="vistas/js/solicitudes-desaprobadas-obispo.js"></script>
 <script src="vistas/js/test.js"></script>
 <script src="vistas/js/solicitudes-asesor.js"></script>
+<script src="vistas/js/solicitudes-finanzas.js"></script>
+
 
 
 

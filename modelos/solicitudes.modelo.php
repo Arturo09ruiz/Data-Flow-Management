@@ -194,6 +194,35 @@ class ModeloSolicitudes{
 
 	}
 
+	
+
+	static public function ctrMostrarSolicitudesConformePais($tabla, $item, $valor, $orden, $pais){
+
+		if($item != null){
+
+			$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE `idpais` = $pais");
+
+			$stmt -> bindParam(":".$item, $valor, PDO::PARAM_STR);
+
+			$stmt -> execute();
+
+			return $stmt -> fetch();
+
+		}else{
+
+			$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE `idpais` = $pais");
+
+			$stmt -> execute();
+
+			return $stmt -> fetchAll();
+
+		}
+
+		$stmt -> close();
+
+		$stmt = null;
+
+	}
 
 	static public function mdlMostrarSolicitudesConformeConsejo($tabla, $item, $valor, $orden, $consejo){
 
@@ -341,6 +370,32 @@ class ModeloSolicitudes{
 		$stmt->bindParam(":id", $datos["id"], PDO::PARAM_STR);
 		$stmt->bindParam(":aprobacion_asesor", $datos["aprobacion_asesor"], PDO::PARAM_STR);
 		$stmt->bindParam(":comentarios_asesor", $datos["comentarios_asesor"], PDO::PARAM_STR);
+	
+        
+        
+
+		if($stmt->execute()){
+
+			return "ok";
+
+		}else{
+
+			return "error";
+		
+		}
+
+		$stmt->close();
+		$stmt = null;
+
+	}
+
+	static public function mdlGuardarEstadoFinanzas($tabla, $datos){
+
+		$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET aprobacion_finanzas = :aprobacion_finanzas, comentarios_finanzas = :comentarios_finanzas WHERE id = :id");
+
+		$stmt->bindParam(":id", $datos["id"], PDO::PARAM_STR);
+		$stmt->bindParam(":aprobacion_finanzas", $datos["aprobacion_finanzas"], PDO::PARAM_STR);
+		$stmt->bindParam(":comentarios_finanzas", $datos["comentarios_finanzas"], PDO::PARAM_STR);
 	
         
         
