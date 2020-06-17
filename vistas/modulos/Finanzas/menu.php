@@ -24,17 +24,6 @@ if ($_SESSION["perfil"] == "Finanzas") {
 
 
 
-			<li>
-
-			<a href="miembros">
-				
-				<i class="fa fa-child"></i>
-				<span>Visualizar Miembros</span>
-
-			</a>
-
-		</li>
-
 
 	<li class="treeview">
 
@@ -66,28 +55,7 @@ if ($_SESSION["perfil"] == "Finanzas") {
 
 					</li>
 
-					<li>
 
-					<a href="desaprobado">
-						
-						<i class="fa fa-circle-o"></i>
-						<span>Desaprobadas</span>
-
-					</a>
-
-				</li>
-					<li>
-
-						<a href="#">
-							
-							<i class="fa fa-circle-o"></i>
-							<span>Reporte de Solicitudes</span>
-
-						</a>
-
-					</li>
-
-					
 
 				
 
