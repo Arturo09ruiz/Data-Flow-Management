@@ -75,8 +75,7 @@ class ModeloDesaprobar{
 	// }
     static public function mdlDesaprobar($tabla, $datos){
 
-		$stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(codigo, ncm, nombre, edad, email, telefono, idbarrio, idestaca, idconsejo, idpais, enfermedad, medicamento, dosis, duracion, necesidad, pa1, pa2, im, rm, ci, aprobacion_gerente, comentarios_gerente, fecha_solicitud) VALUES (:codigo, :ncm, :nombre, :edad, :email, :telefono, :idbarrio, :idestaca, :idconsejo, :idpais, :enfermedad, :medicamento, :dosis, :duracion, :necesidad, :pa1, :pa2, :im, :rm, :ci, :aprobacion_gerente, :comentarios_gerente, :fecha_solicitud)");
-
+		$stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(codigo, ncm, nombre, edad, email, telefono, idbarrio, idestaca, idconsejo, idpais, enfermedad, medicamento, dosis, duracion, necesidad, pa1, pa2, im, rm, ci, aprobacion_gerente, comentarios_gerente,aprobacion_asesor, comentarios_asesor, aprobacion_finanzas, comentarios_finanzas,fecha_solicitud) VALUES (:codigo, :ncm, :nombre, :edad, :email, :telefono, :idbarrio, :idestaca, :idconsejo, :idpais, :enfermedad, :medicamento, :dosis, :duracion, :necesidad, :pa1, :pa2, :im, :rm, :ci, :aprobacion_gerente, :comentarios_gerente,:aprobacion_asesor, :comentarios_asesor, :aprobacion_finanzas, :comentarios_finanzas, :fecha_solicitud)");
 		
 		$stmt->bindParam(":codigo", $datos["codigo"], PDO::PARAM_STR);
 		$stmt->bindParam(":ncm", $datos["ncm"], PDO::PARAM_STR);
@@ -100,7 +99,12 @@ class ModeloDesaprobar{
 		$stmt->bindParam(":ci", $datos["ci"], PDO::PARAM_STR);
 		$stmt->bindParam(":aprobacion_gerente", $datos["aprobacion_gerente"], PDO::PARAM_STR);
 		$stmt->bindParam(":comentarios_gerente", $datos["comentarios_gerente"], PDO::PARAM_STR);
+		$stmt->bindParam(":aprobacion_asesor", $datos["aprobacion_asesor"], PDO::PARAM_STR);
+		$stmt->bindParam(":comentarios_asesor", $datos["comentarios_asesor"], PDO::PARAM_STR);
+		$stmt->bindParam(":aprobacion_finanzas", $datos["aprobacion_finanzas"], PDO::PARAM_STR);
+		$stmt->bindParam(":comentarios_finanzas", $datos["comentarios_finanzas"], PDO::PARAM_STR);
 		$stmt->bindParam(":fecha_solicitud", $datos["fecha_solicitud"], PDO::PARAM_STR);
+
 
 
 		if($stmt->execute()){
