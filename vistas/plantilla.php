@@ -506,6 +506,47 @@ CUERPO DOCUMENTO
 
 
 
+  if ($_SESSION["perfil"] == "Finanzas") {
+
+    include "modulos/Finanzas/cabezote.php";
+
+    /*=============================================
+    MENU
+    =============================================*/
+
+    include "modulos/Finanzas/menu.php";
+
+
+    /*=============================================
+    CONTENIDO
+    =============================================*/
+
+
+    if(isset($_GET["ruta"])){
+
+      if($_GET["ruta"] == "inicio" ||
+         $_GET["ruta"] == "solicitud" ||
+         $_GET["ruta"] == "visualizar-solicitudes" ||
+         $_GET["ruta"] == "salir"){
+
+        include "modulos/Finanzas/".$_GET["ruta"].".php";
+
+      }else{
+
+        include "modulos/Finanzas/404.php";
+
+      }
+
+    }else{
+
+      include "modulos/Finanzas/inicio.php";
+
+    }
+
+
+  
+  }
+
 
 
 
