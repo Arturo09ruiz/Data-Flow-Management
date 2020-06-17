@@ -38,7 +38,7 @@
 
       <div class="box-body">
 
-        <table class="table table-bordered table-striped dt-responsive tablaSolicitudGerente" width="100%">
+        <table class="table table-bordered table-striped dt-responsive tablaSolicitudFinanzas" width="100%">
 
           <thead>
 
@@ -47,8 +47,7 @@
               <th style="width:10px">#</th>
               <th>Código</th>
               <th>Necesidad</th>
-              <th>Aprobación Asesor Médico</th>
-              <th>Aprobación Finanzas</th>
+              <th>Aprobación</th>
               <th>Barrio</th>
               <th>Estaca</th>
               <th>Acciones</th>
