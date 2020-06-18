@@ -46,11 +46,12 @@ class TablaSolicitudesDesaprobadasGerente{
 
             $barrios = ControladorBarrios::ctrMostrarBarrios($item, $valor, $orden);
 
-			$botones =  "<div class='btn-group'><button class='btn btn-info btnVisualizarSolicitudesGerente' idSolicitudes='".$desaprobadas[$i]["id"]."' '><i class='fa fa-eye'></i></button></div>"; 
+			$botones =  "<div class='btn-group'><button class='btn btn-info btnVisualizarSolicitudesGerente' idSolicitudes='".$desaprobadas[$i]["id"]."' '><i class='fa fa-eye'></i></button><button class='btn btn-success btnActivarSolicitud' idSolicitudes='".$desaprobadas[$i]["id"]."' ' codigo='".$desaprobadas[$i]["codigo"]."' '  ncm='".$desaprobadas[$i]["ncm"]."' ' nombre='".$desaprobadas[$i]["nombre"]."' edad='".$desaprobadas[$i]["edad"]."' email='".$desaprobadas[$i]["email"]."' telefono='".$desaprobadas[$i]["telefono"]."' idbarrio='".$desaprobadas[$i]["idbarrio"]."' idestaca='".$desaprobadas[$i]["idestaca"]."' idconsejo='".$desaprobadas[$i]["idconsejo"]."' idpais='".$desaprobadas[$i]["idpais"]."' enfermedad='".$desaprobadas[$i]["enfermedad"]."'medicamento='".$desaprobadas[$i]["medicamento"]."'dosis='".$desaprobadas[$i]["dosis"]."'duracion='".$desaprobadas[$i]["duracion"]."'necesidad='".$desaprobadas[$i]["necesidad"]."' pa1='".$desaprobadas[$i]["pa1"]."'pa2='".$desaprobadas[$i]["pa2"]."'im='".$desaprobadas[$i]["im"]."'rm='".$desaprobadas[$i]["rm"]."'ci='".$desaprobadas[$i]["ci"]."'><i class='fa fa-check'></i></button> </div>"; 
 
 
 
 
+			$te =  "<div class='btn-group'></div>"; 
 
             $item = "id";
             $orden = "id";
@@ -114,14 +115,10 @@ class TablaSolicitudesDesaprobadasGerente{
 			      "'.($i+1).'",
 				  "'.$desaprobadas[$i]["codigo"].'",
 				  "'.$ne.'",
-				  "'.$gerente.'",
-				  "'.$asesor.'",
-				  "'.$finanzas.'",
                   "'.$barrios["nombre"].'",
 				  "'.$estaca["nombre"].'",
 				  "'.$desaprobadas[$i]["fecha"].'",
 				  "'.$botones.'"
-
 			    ],';
 
 		  }
