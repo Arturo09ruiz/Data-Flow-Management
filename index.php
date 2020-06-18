@@ -42,6 +42,8 @@ require_once "controladores/miembros-gerente.controlador.php";
 //setentapais
 require_once "controladores/miembros-setenta-pais.controlador.php";
 require_once "controladores/desaprobar.controlador.php";
+require_once "controladores/entregar.controlador.php";
+
 
 
 
@@ -86,6 +88,8 @@ require_once "modelos/solicitudes.modelo.php";
 
 //pdtestacamodelo
 require_once "modelos/miembros-pdt-estaca.modelo.php";
+require_once "modelos/entregar.modelo.php";
+
 
 
 

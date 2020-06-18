@@ -312,7 +312,7 @@ class ControladorDesaprobar
 
 						swal({
 							  type: "success",
-							  title: "El Pedido Ha Sido Desprobado Correctamente",
+							  title: "La solicitud Ha Sido Desprobada Correctamente",
 							  showConfirmButton: true,
 							  confirmButtonText: "Cerrar"
 							  }).then(function(result){
@@ -390,13 +390,13 @@ class ControladorDesaprobar
 
 						swal({
 							  type: "success",
-							  title: "El Pedido Ha Sido Reactivado Correctamente",
+							  title: "La solicitud Ha Sido Reactivado Correctamente",
 							  showConfirmButton: true,
 							  confirmButtonText: "Cerrar"
 							  }).then(function(result){
 										if (result.value) {
 
-										window.location = "solicitudes";
+										window.location = "solicitud";
 
 										}
 									})

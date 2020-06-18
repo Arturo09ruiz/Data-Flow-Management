@@ -151,15 +151,81 @@ $(".cambios_gerente").click(function(){
 	var boton = $(".boton_aprobacion_gerente").val();
 
 	if(boton == 1){
+		
 		var id = $(".id_solicitud").val();
 		var aprobacion = $(".boton_aprobacion_gerente").val();
 		var comentarios = $(".comentarios_gerente").val();
 
-		document.getElementById("id").value = id;
-		document.getElementById("aprobacion").value = aprobacion;
+  		document.getElementById("aprobacion").value = aprobacion;
 		document.getElementById("comentarios").value = comentarios;
 
-		document.forms["prueba-guardar-estado-aprobado"].submit();
+	
+
+		swal({
+
+			title: '¿Esta Seguro de Aprobar la Solicitud?',
+			text: "¡Si no lo está puede cancelar la accíón!",
+			type: 'warning',
+			showCancelButton: true,
+			confirmButtonColor: '#3085d6',
+			cancelButtonColor: '#d33',
+			cancelButtonText: 'Cancelar',
+			confirmButtonText: 'Si, Aprobar!'
+		}).then(function (result) {
+			if (result.value) {
+
+				$.ajax({
+						type: "POST",
+								url: "ajax/eliminar-solicitud-gerente.ajax.php",
+								data:'id=' + id ,
+								dataType:"html",
+								asycn:false, //el error que cometí de sintaxis, es async
+									success: function (respuesta) {
+										document.forms["prueba"].submit();
+
+
+							
+						}
+				
+			
+				})
+			
+
+
+				
+	
+	
+
+
+		
+
+
+		// 		// window.location = "index.php?ruta=local&idlocal=" + idlocal;
+
+
+
+
+
+
+
+
+			
+
+			}});
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
 
 	}else if(boton ==2){
 		var id = $(".id_solicitud").val();
@@ -188,7 +254,6 @@ $(".cambios_gerente").click(function(){
 
 
 
-		document.getElementById("id").value = id;
 		document.getElementById("cod").value = codigo;
 		document.getElementById("ncm").value = ncm;
 		document.getElementById("nombre").value = nombre;
@@ -321,15 +386,72 @@ $(".cambios_gerente_2").click(function(){
 	var boton = $(".boton_aprobacion_gerente_2").val();
 
 	if(boton == 1){
+		
 		var id = $(".id_solicitud").val();
-		var aprobacion = $(".boton_aprobacion_gerente_2").val();
-		var comentarios = $(".comentarios_gerente_2").val();
+		var aprobacion = $(".boton_aprobacion_gerente").val();
+		var comentarios = $(".comentarios_gerente").val();
 
-		document.getElementById("id").value = id;
-		document.getElementById("aprobacion").value = aprobacion;
+  		document.getElementById("aprobacion").value = aprobacion;
 		document.getElementById("comentarios").value = comentarios;
 
-		document.forms["prueba-guardar-estado-aprobado"].submit();
+	
+
+		swal({
+
+			title: '¿Esta Seguro de Aprobar la Solicitud?',
+			text: "¡Si no lo está puede cancelar la accíón!",
+			type: 'warning',
+			showCancelButton: true,
+			confirmButtonColor: '#3085d6',
+			cancelButtonColor: '#d33',
+			cancelButtonText: 'Cancelar',
+			confirmButtonText: 'Si, Aprobar!'
+		}).then(function (result) {
+			if (result.value) {
+
+				$.ajax({
+						type: "POST",
+								url: "ajax/eliminar-solicitud-gerente.ajax.php",
+								data:'id=' + id ,
+								dataType:"html",
+								asycn:false, //el error que cometí de sintaxis, es async
+									success: function (respuesta) {
+										document.forms["prueba"].submit();
+
+
+							
+						}
+				
+			
+				})
+			
+
+
+				
+	
+	
+
+
+		
+
+
+		// 		// window.location = "index.php?ruta=local&idlocal=" + idlocal;
+
+
+
+
+
+
+
+
+			
+
+			}});
+
+
+
+		
+
 
 	}else if(boton ==2){
 		var id = $(".id_solicitud").val();
@@ -358,7 +480,6 @@ $(".cambios_gerente_2").click(function(){
 
 
 
-		document.getElementById("id").value = id;
 		document.getElementById("cod").value = codigo;
 		document.getElementById("ncm").value = ncm;
 		document.getElementById("nombre").value = nombre;

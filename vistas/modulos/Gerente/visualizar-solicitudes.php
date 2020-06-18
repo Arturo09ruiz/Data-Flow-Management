@@ -1,5 +1,3 @@
-
-
 <input class="idbarrio" type="hidden" value="<?php echo $_SESSION['idbarrio']; ?>" id="idbarrio">
 
 <?php
@@ -20,18 +18,14 @@ $solicitudes = ControladorSolicitudes::ctrMostrarSolicitudesConformeBarrioObispo
 <?php
 
 $consejo = $solicitudes["idconsejo"];
-$consejo_user= $_SESSION["idconsejo"];
+$consejo_user = $_SESSION["idconsejo"];
 
-if($consejo == $consejo_user){
- 
-
-echo'';
+if ($consejo == $consejo_user) {
 
 
-
-    
-}else{
-echo'
+    echo '';
+} else {
+    echo '
 
 <script>
 swal({
@@ -76,7 +70,6 @@ swal({
     .easyzoom img {
         vertical-align: bottom;
     }
-   
 </style>
 
 
@@ -126,7 +119,7 @@ swal({
 
 
 
-              <!--=====================================
+                            <!--=====================================
                 ENTRADA DEL VENDEDOR
                 ======================================-->
                             <div class="form-group">
@@ -160,7 +153,7 @@ swal({
 
                             </div>
 
-                            
+
 
                             <div class="form-group">
 
@@ -226,10 +219,10 @@ swal({
 
 
 
-<input type="hidden" class="idbarrio" value="<?php echo $solicitudes["idbarrio"]; ?>">
-<input type="hidden" class="idestaca" value="<?php echo $solicitudes["idestaca"]; ?>">
-<input type="hidden" class="idconsejo" value="<?php echo $solicitudes["idconsejo"]; ?>">
-<input type="hidden" class="idpais"  value="<?php echo $solicitudes["idpais"]; ?>">
+                            <input type="hidden" class="idbarrio" value="<?php echo $solicitudes["idbarrio"]; ?>">
+                            <input type="hidden" class="idestaca" value="<?php echo $solicitudes["idestaca"]; ?>">
+                            <input type="hidden" class="idconsejo" value="<?php echo $solicitudes["idconsejo"]; ?>">
+                            <input type="hidden" class="idpais" value="<?php echo $solicitudes["idpais"]; ?>">
 
 
 
@@ -302,12 +295,12 @@ swal({
                                 </div>
 
                             </div>
-<input type="hidden" class="pa1" value="<?php echo $solicitudes["Plan_Autosuficiencia_1"]; ?>">
-<input type="hidden" class="pa2" value="<?php echo $solicitudes["Plan_Autosuficiencia_2"]; ?>">
-<input type="hidden" class="im" value="<?php echo $solicitudes["Informe_Medico"]; ?>">
-<input type="hidden" class="rm" value="<?php echo $solicitudes["Recipe_Medico"]; ?>">
-<input type="hidden" class="ci" value="<?php echo $solicitudes["CI"]; ?>">
-<input type="hidden" class="fecha_solicitud" value="<?php echo $solicitudes["fecha"]; ?>">
+                            <input type="hidden" class="pa1" value="<?php echo $solicitudes["Plan_Autosuficiencia_1"]; ?>">
+                            <input type="hidden" class="pa2" value="<?php echo $solicitudes["Plan_Autosuficiencia_2"]; ?>">
+                            <input type="hidden" class="im" value="<?php echo $solicitudes["Informe_Medico"]; ?>">
+                            <input type="hidden" class="rm" value="<?php echo $solicitudes["Recipe_Medico"]; ?>">
+                            <input type="hidden" class="ci" value="<?php echo $solicitudes["CI"]; ?>">
+                            <input type="hidden" class="fecha_solicitud" value="<?php echo $solicitudes["fecha"]; ?>">
 
 
 
@@ -385,8 +378,12 @@ swal({
                         } else {
 
                             echo '
-                            <input type="hidden" class="id_solicitud" id="id_solicitud" name="id_solicitud" value="'; echo $solicitudes["id"];   echo'" ></input>
-                            <input type="hidden" name="codigo_solicitud" value="';echo $solicitudes["codigo"]; echo'"> </input>
+                            <input type="hidden" class="id_solicitud" id="id_solicitud" name="id_solicitud" value="';
+                            echo $solicitudes["id"];
+                            echo '" ></input>
+                            <input type="hidden" name="codigo_solicitud" value="';
+                            echo $solicitudes["codigo"];
+                            echo '"> </input>
                                     <div class="hidden-lg form-group">
                                     <p class="text-center"> <b>Aprobación Gerente</b> </p> 
                 
@@ -566,9 +563,9 @@ swal({
                         ?>
 
 
-<br>
-<br>
-<button type="button" id="cambios_gerente" class="hidden-lg cambios_gerente btn btn-info pull-right"> Guardar Cambios </button>
+                        <br>
+                        <br>
+                        <button type="button" id="cambios_gerente" class="hidden-lg cambios_gerente btn btn-info pull-right"> Guardar Cambios </button>
 
                     </div>
 
@@ -699,8 +696,12 @@ swal({
                                 } else {
 
                                     echo '
-            <input type="hidden" class="id_solicitud_2" id="id_solicitud_2" name="id_solicitud_2" value="'; echo $solicitudes["id"];   echo'" ></input>
-            <input type="hidden" name="codigo_solicitud_2" value="';echo $solicitudes["codigo"]; echo'"> </input>
+            <input type="hidden" class="id_solicitud_2" id="id_solicitud_2" name="id_solicitud_2" value="';
+                                    echo $solicitudes["id"];
+                                    echo '" ></input>
+            <input type="hidden" name="codigo_solicitud_2" value="';
+                                    echo $solicitudes["codigo"];
+                                    echo '"> </input>
                     <div class="form-group">
                     <p class="text-center"> <b>Aprobación Gerente</b> </p> 
 
@@ -717,13 +718,10 @@ swal({
                          <br>   
 
                     ';
-
-
-
                                 }
 
 
-      
+
 
 
 
@@ -731,7 +729,7 @@ swal({
 
                             </div>
 
-                  <div class="col-md-4">
+                            <div class="col-md-4">
 
 
 
@@ -892,15 +890,15 @@ swal({
                                 <br>
                                 <br>
                                 <br>
-                    <button type="button" id="cambios_gerente_2" class="cambios_gerente_2 btn btn-info pull-right"> Guardar Cambios </button>
+                                <button type="button" id="cambios_gerente_2" class="cambios_gerente_2 btn btn-info pull-right"> Guardar Cambios </button>
 
                                 <div>
 
 
-<form id="prueba-desaprobado-gerente" role="form" method="post" enctype="multipart/form-data">
-<!-- 
+                                    <form id="prueba-desaprobado-gerente" role="form" method="post" enctype="multipart/form-data">
+                                        <!-- 
 <input type="" id="id" name="id" type="text"> -->
-<!-- <input type="hidden" class="cod" id="cod" name="nuevoCodigo" type="text">
+                                        <!-- <input type="hidden" class="cod" id="cod" name="nuevoCodigo" type="text">
 <input type="hidden" id="ncm" name="ncm" type="text">
 <input type="hidden" id="nombre" name="nombre" type="text">
 <input type="hidden" id="edad" name="edad" type="text">
@@ -923,42 +921,42 @@ swal({
 <input type="hidden" id="aprobacion_g" name="aprobacion_g" type="text">
 <input type="hidden" id="comentarios_g" name="comentarios_g" type="text">
 <input type="hidden" id="fecha_solicitud" name="fecha_solicitud" type="text"> -->
-<input type="hidden" class="cod" id="cod" name="nuevoCodigo" type="text">
-<input type="hidden" value="<?php echo  $solicitudes["ncm_miembro"]; ?>" id="ncm" name="ncm" type="text">
-<input type="hidden" id="nombre" name="nombre" type="text">
-<input type="hidden" id="edad" name="edad" type="text">
-<input type="hidden" value="<?php echo  $solicitudes["email"]; ?>" id="email" name="email" type="text">
-<input type="hidden" value="<?php echo  $solicitudes["telefono"]; ?>" id="telefono" name="telefono" type="text">
-<input type="hidden" name="barrioid" value="<?php echo $solicitudes['idbarrio']  ?>" type="text">
-<input type="hidden" id="idestaca" name="idestaca" type="text">
-<input type="hidden" id="idconsejo" name="idconsejo" type="text">
-<input type="hidden" id="idpais" name="idpais" type="text">
-<input type="hidden" id="enfermedad" name="enfermedad" type="text">
-<input type="hidden" id="medicamento" name="medicamento" type="text">
-<input type="hidden" id="dosis" name="dosis" type="text">
-<input type="hidden" id="duracion" name="duracion" type="text">
-<input type="hidden" id="necesidad" name="necesidad" type="text">
-<input type="hidden" id="pa1" name="pa1" type="text">
-<input type="hidden" id="pa2" name="pa2" type="text">
-<input type="hidden" id="im" name="im" type="text">
-<input type="hidden" id="rm" name="rm" type="text">
-<input type="hidden" id="ci" name="ci" type="text">
-<input type="hidden" value="<?php echo  $solicitudes["aprobacion_gerente"]; ?>" id="aprobacion_g" name="aprobacion_g" type="text">
-<input type="hidden" value="<?php echo  $solicitudes["comentarios_gerente"]; ?>" id="comentarios_g" name="comentarios_g" type="text">
-<input type="hidden"  value="<?php echo  $solicitudes["aprobacion_asesor"]; ?>" id="aprobacion_a" name="aprobacion_a" type="text">
-<input type="hidden"  value="<?php echo  $solicitudes["comentarios_asesor"]; ?>" id="comentarios_a" name="comentarios_a" type="text">
-<input type="hidden"  value="<?php echo  $solicitudes["aprobacion_finanzas"]; ?>" id="aprobacion_f" name="aprobacion_f" type="text">
-<input type="hidden"  value="<?php echo  $solicitudes["comentarios_finanzas"]; ?>" id="comentarios_f" name="comentarios_f" type="text">
-<input type="hidden" id="fecha_solicitud" name="fecha_solicitud" type="text">
+                                        <input type="hidden" class="cod" id="cod" name="nuevoCodigo" type="text">
+                                        <input type="hidden" value="<?php echo  $solicitudes["ncm_miembro"]; ?>" id="ncm" name="ncm" type="text">
+                                        <input type="hidden" id="nombre" name="nombre" type="text">
+                                        <input type="hidden" id="edad" name="edad" type="text">
+                                        <input type="hidden" value="<?php echo  $solicitudes["email"]; ?>" id="email" name="email" type="text">
+                                        <input type="hidden" value="<?php echo  $solicitudes["telefono"]; ?>" id="telefono" name="telefono" type="text">
+                                        <input type="hidden" name="barrioid" value="<?php echo $solicitudes['idbarrio']  ?>" type="text">
+                                        <input type="hidden" id="idestaca" name="idestaca" type="text">
+                                        <input type="hidden" id="idconsejo" name="idconsejo" type="text">
+                                        <input type="hidden" id="idpais" name="idpais" type="text">
+                                        <input type="hidden" id="enfermedad" name="enfermedad" type="text">
+                                        <input type="hidden" id="medicamento" name="medicamento" type="text">
+                                        <input type="hidden" id="dosis" name="dosis" type="text">
+                                        <input type="hidden" id="duracion" name="duracion" type="text">
+                                        <input type="hidden" id="necesidad" name="necesidad" type="text">
+                                        <input type="hidden" id="pa1" name="pa1" type="text">
+                                        <input type="hidden" id="pa2" name="pa2" type="text">
+                                        <input type="hidden" id="im" name="im" type="text">
+                                        <input type="hidden" id="rm" name="rm" type="text">
+                                        <input type="hidden" id="ci" name="ci" type="text">
+                                        <input type="hidden" value="<?php echo  $solicitudes["aprobacion_gerente"]; ?>" id="aprobacion_g" name="aprobacion_g" type="text">
+                                        <input type="hidden" value="<?php echo  $solicitudes["comentarios_gerente"]; ?>" id="comentarios_g" name="comentarios_g" type="text">
+                                        <input type="hidden" value="<?php echo  $solicitudes["aprobacion_asesor"]; ?>" id="aprobacion_a" name="aprobacion_a" type="text">
+                                        <input type="hidden" value="<?php echo  $solicitudes["comentarios_asesor"]; ?>" id="comentarios_a" name="comentarios_a" type="text">
+                                        <input type="hidden" value="<?php echo  $solicitudes["aprobacion_finanzas"]; ?>" id="aprobacion_f" name="aprobacion_f" type="text">
+                                        <input type="hidden" value="<?php echo  $solicitudes["comentarios_finanzas"]; ?>" id="comentarios_f" name="comentarios_f" type="text">
+                                        <input type="hidden" id="fecha_solicitud" name="fecha_solicitud" type="text">
 
-</form>
-<?php
-    $crearProducto = new ControladorDesaprobar();
-    $crearProducto -> ctrCrearDesaprobar();
-?>   
-       
+                                    </form>
+                                    <?php
+                                    $crearProducto = new ControladorDesaprobar();
+                                    $crearProducto->ctrCrearDesaprobar();
+                                    ?>
 
-</div>
+
+                                </div>
 
                             </div>
 
@@ -977,13 +975,13 @@ swal({
                         </div>
 
 
-<br>
+                        <br>
 
 
 
 
 
-<br>
+                        <br>
 
                     </div>
 
@@ -1347,31 +1345,62 @@ swal({
 
 
 
+
+
+
+
+
         </div>
 
     </div>
 
 </div>
 
-<div>       
-        <form id="prueba-guardar-estado-aprobado" role="form" method="post" enctype="multipart/form-data">
-        <input type="hidden" id="id" name="id" type="text">
-        <input type="hidden"  id="aprobacion" name="aprobacion" type="text">
-        <input type="hidden" id="comentarios" name="comentarios" type="text">       
-        </form>
 
-        <?php
-           $crearestadogerente = new ControladorSolicitudes();
-           $crearestadogerente -> ctrGuardarEstadoGerente();
-        ?>  
-       
+
+
+
+
+
+<div>
+<div>
+    <form id="prueba" role="form" method="post" enctype="multipart/form-data">
+
+
+        <input type="hidden" value="<?php echo  $solicitudes["codigo"]; ?>" name="codigo" type="text">
+        <input type="hidden" value="<?php echo  $solicitudes["ncm_miembro"]; ?>" name="ncm" type="text">
+        <input type="hidden" value="<?php echo  $solicitudes["nombre_miembro"]; ?>" name="nombre" type="text">
+        <input type="hidden" value="<?php echo  $solicitudes["edad"]; ?>" name="edad" type="text">
+        <input type="hidden" value="<?php echo  $solicitudes["email"]; ?>" id="email" name="email" type="text">
+        <input type="hidden" value="<?php echo  $solicitudes["telefono"]; ?>" name="telefono" type="text">
+        <input type="hidden" name="idbarrio" value="<?php echo $solicitudes['idbarrio']  ?>" type="text">
+        <input type="hidden" value="<?php echo  $solicitudes["idestaca"]; ?>" name="idestaca" type="text">
+        <input type="hidden" value="<?php echo  $solicitudes["idconsejo"]; ?>"  name="idconsejo" type="text">
+        <input type="hidden" value="<?php echo  $solicitudes["idpais"]; ?>"  name="idpais" type="text">
+        <input type="hidden" value="<?php echo  $solicitudes["enfermedad"]; ?>"  name="enfermedad" type="text">
+        <input type="hidden" value="<?php echo  $solicitudes["medicamento"]; ?>" name="medicamento" type="text">
+        <input type="hidden" value="<?php echo  $solicitudes["dosis_recetada"]; ?>"  name="dosis" type="text">
+        <input type="hidden" value="<?php echo  $solicitudes["duracion"]; ?>"  name="duracion" type="text">
+        <input type="hidden" value="<?php echo  $solicitudes["necesidad"]; ?>" name="necesidad" type="text">
+        <input type="hidden" value="<?php echo  $solicitudes["Plan_Autosuficiencia_1"]; ?>"  name="pa1" type="text">
+        <input type="hidden" value="<?php echo  $solicitudes["Plan_Autosuficiencia_2"]; ?>" name="pa2" type="text">
+        <input type="hidden" value="<?php echo  $solicitudes["Informe_Medico"]; ?>" name="im" type="text">
+        <input type="hidden" value="<?php echo  $solicitudes["Recipe_Medico"]; ?>"  name="rm" type="text">
+        <input type="hidden" value="<?php echo  $solicitudes["CI"]; ?>" id="ci" name="ci" type="text">
+        <input type="hidden" id="aprobacion" name="aprobacion_gerente" type="text">
+        <input type="hidden" id="comentarios" name="comentarios_gerente" type="text">
+        <input type="hidden" value="<?php echo  $solicitudes["aprobacion_asesor"]; ?>" name="aprobacion_asesor" type="text">
+        <input type="hidden" value="<?php echo  $solicitudes["comentarios_asesor"]; ?>" name="comentarios_asesor" type="text">
+        <input type="hidden" value="<?php echo  $solicitudes["aprobacion_finanzas"]; ?>"name="aprobacion_finanzas" type="text">
+        <input type="hidden" value="<?php echo  $solicitudes["comentarios_finanzas"]; ?>" name="comentarios_finanzas" type="text">
+        <input type="hidden" value="<?php echo  $solicitudes["fecha"]; ?>" name="fecha_solicitud" type="text">
+    </form>
+
+  
+
+    <?php
+    $guardarsolicitudentregar = new ControladorEntregar();
+    $guardarsolicitudentregar->ctrCrearEntregar();
+    ?>
+
 </div>
-                     
-
-
-
-
-
-
-
-

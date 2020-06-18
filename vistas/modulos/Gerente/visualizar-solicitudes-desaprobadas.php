@@ -400,19 +400,20 @@ swal({
                         } else {
 
                             echo '
-    <div class="hidden-lg form-group">
-    <p class="text-center hidden-lg"> Aprobación Gerente </p> 
+             <div class="form-group">
+<p class="text-center"> <b>Aprobación Gerente</b> </p> 
 
-    <div class="hidden-lg input-group">
+<div class="input-group">
 
-    <span class="hidden-lg input-group-addon"><i class="fa fa-user-o"></i></span>
-    <button type="button" class="hidden-lg form-control btn btn-info">Aun No Ha Sido Aprobado</button>
+<span class="input-group-addon"><i class="fa fa-user-o"></i></span>
+<button type="button" class="form-control btn btn-info">Aun No Ha Sido Aprobado</button>
 
-    
-        
-    </div>
-                
-    </div>
+
+
+</div>
+
+</div>
+
 
     ';
                         }
@@ -708,22 +709,19 @@ swal({
                                 } else {
 
                                     echo '
-            <input type="hidden" class="id_solicitud" id="id_solicitud" name="id_solicitud" value="'; echo $solicitudes["id"];   echo'" ></input>
-            <input type="hidden" name="codigo_solicitud" value="';echo $solicitudes["codigo"]; echo'"> </input>
-                    <div class="form-group">
-                    <p class="text-center"> <b>Aprobación Gerente</b> </p> 
+           <div class="form-group">
+<p class="text-center"> <b>Aprobación Gerente</b> </p> 
 
-                    <div class="input-group">
+<div class="input-group">
 
-                    <span class="input-group-addon"><i class="fa fa-user-o"></i></span>
-                    <button type="button" id="aprobacion_gerente"  class="aprobacion_gerente form-control btn btn-info">Aun No Ha Sido Aprobado</button>
-                     <input type="hidden" name="boton_aprobacion_gerente" value="0"class="boton_aprobacion_gerente" id="boton_aprobacion_gerente"></input>                   
+<span class="input-group-addon"><i class="fa fa-user-o"></i></span>
+<button type="button" class="form-control btn btn-info">Aun No Ha Sido Aprobado</button>
 
-                    </div>
 
-                    </div>
-                    <textarea   id="comentarios_gerente" name="comentarios_gerente" class="comentarios_gerente form-control"  rows="3"></textarea>
-                         <br>   
+
+</div>
+
+</div>
 
                     ';
 
