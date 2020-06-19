@@ -84,6 +84,35 @@ class ModeloEntregar{
 		$stmt = null;
 
 	}
+
+	
+	static public function mdlMostrarSolicitudesEntregar($tabla, $item, $valor, $orden){
+
+		if($item != null){
+
+			$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE `id` = $valor");
+
+			$stmt -> bindParam(":".$item, $valor, PDO::PARAM_STR);
+
+			$stmt -> execute();
+
+			return $stmt -> fetch();
+
+		}else{
+
+			$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE `id` = $valor");
+
+			$stmt -> execute();
+
+			return $stmt -> fetchAll();
+
+		}
+
+		$stmt -> close();
+
+		$stmt = null;
+
+	}
 	
 	static public function mdlEntregar($tabla, $datos){
 

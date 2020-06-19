@@ -71,7 +71,15 @@ class ControladorEntregados{
 	}
 
 
+    static public function ctrMostrarSolicitudesEntregadosGerente($item, $valor, $orden, $consejo)
+	{
 
+		$tabla = "entregados";
+
+		$respuesta = ModeloEntregrados::mdlMostrarSolicitudesEntregadosGerente($tabla, $item, $valor, $orden, $consejo);
+
+		return $respuesta;
+	}
 
 
 }

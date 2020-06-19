@@ -103,7 +103,7 @@ $(".tablaSolicitudPorEntregarGerente tbody").on("click", "button.btnEntregarSoli
 
 		swal({
 
-			title: 'Desea Reactivar el Pedido?',
+			title: 'Desea Entregar el Pedido?',
 			text: "¡Si no lo está puede cancelar la accíón!",
 			type: 'success',
 			showCancelButton: true,

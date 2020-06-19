@@ -82,33 +82,33 @@
 
 <form id="prueba-entregado" role="form" method="post" enctype="multipart/form-data">
 
-  <input type="" id="codigo" name="nuevoCodigo" type="text">
-  <input type="" id="ncm" name="ncm" type="text">
-  <input type="" id="nombre" name="nombre" type="text">
-  <input type="" id="edad" name="edad" type="text">
-  <input type="" id="email" name="email" type="text">
-  <input type="" id="telefono" name="telefono" type="text">
-  <input type="" id="idb" name="idbarrio" type="text">
-  <input type="" id="ide" name="idestaca" type="text">
-  <input type="" id="idc" name="idconsejo" type="text">
-  <input type="" id="idp" name="idpais" type="text">
-  <input type="" id="enfermedad" name="nuevaEnfermedad" type="text">
-  <input type="" id="medi" name="nuevaMedicamento" type="text">
-  <input type="" id="dosis" name="nuevaDosis" type="text">
-  <input type="" id="duracion" name="nuevaDuracion" type="text">
-  <input type="" id="necesidad" name="nuevaNecesidad" type="text">
-  <input type="" id="pa1" name="pa1" type="text">
-  <input type="" id="pa2" name="pa2" type="text">
-  <input type="" id="im" name="im" type="text">
-  <input type="" id="rm" name="rm" type="text">
-  <input type="" id="ci" name="ci" type="text">
-  <input type="" id="aprobacion_gerente" name="aprobacion_gerente" type="text">
-  <input type="" id="comentarios_gerente" name="comentarios_gerente" type="text">
-  <input type="" id="aprobacion_asesor" name="aprobacion_asesor" type="text">
-  <input type="" id="comentarios_asesor" name="comentarios_asesor" type="text">
-  <input type="" id="aprobacion_finanzas" name="aprobacion_finanzas" type="text">
-  <input type="" id="comentarios_finanzas" name="comentarios_finanzas" type="text">
-  <input type="" id="fecha_solicitud" name="fecha_solicitud" type="text">
+  <input type="hidden" id="codigo" name="nuevoCodigo" type="text">
+  <input type="hidden" id="ncm" name="ncm" type="text">
+  <input type="hidden" id="nombre" name="nombre" type="text">
+  <input type="hidden" id="edad" name="edad" type="text">
+  <input type="hidden" id="email" name="email" type="text">
+  <input type="hidden" id="telefono" name="telefono" type="text">
+  <input type="hidden" id="idb" name="idbarrio" type="text">
+  <input type="hidden" id="ide" name="idestaca" type="text">
+  <input type="hidden" id="idc" name="idconsejo" type="text">
+  <input type="hidden" id="idp" name="idpais" type="text">
+  <input type="hidden" id="enfermedad" name="nuevaEnfermedad" type="text">
+  <input type="hidden" id="medi" name="nuevaMedicamento" type="text">
+  <input type="hidden" id="dosis" name="nuevaDosis" type="text">
+  <input type="hidden" id="duracion" name="nuevaDuracion" type="text">
+  <input type="hidden" id="necesidad" name="nuevaNecesidad" type="text">
+  <input type="hidden" id="pa1" name="pa1" type="text">
+  <input type="hidden" id="pa2" name="pa2" type="text">
+  <input type="hidden" id="im" name="im" type="text">
+  <input type="hidden" id="rm" name="rm" type="text">
+  <input type="hidden" id="ci" name="ci" type="text">
+  <input type="hidden" id="aprobacion_gerente" name="aprobacion_gerente" type="text">
+  <input type="hidden" id="comentarios_gerente" name="comentarios_gerente" type="text">
+  <input type="hidden" id="aprobacion_asesor" name="aprobacion_asesor" type="text">
+  <input type="hidden" id="comentarios_asesor" name="comentarios_asesor" type="text">
+  <input type="hidden" id="aprobacion_finanzas" name="aprobacion_finanzas" type="text">
+  <input type="hidden" id="comentarios_finanzas" name="comentarios_finanzas" type="text">
+  <input type="hidden" id="fecha_solicitud" name="fecha_solicitud" type="text">
 
 
 

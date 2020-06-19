@@ -79,4 +79,15 @@ class ControladorEntregar{
 		return $respuesta;
 	}
 
+	static public function ctrMostrarSolicitudesEntregar($item, $valor, $orden)
+	{
+
+		$tabla = "entregar";
+
+		$respuesta = ModeloEntregar::mdlMostrarSolicitudesEntregar($tabla, $item, $valor, $orden);
+
+		return $respuesta;
+	}
+
+
 }
