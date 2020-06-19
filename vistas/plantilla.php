@@ -126,7 +126,8 @@ CUERPO DOCUMENTO
 ======================================-->
 
 <body class="hold-transition skin-blue sidebar-collapse sidebar-mini login-page">
- 
+
+ </div>
   <?php
 
   if(isset($_SESSION["iniciarSesion"]) && $_SESSION["iniciarSesion"] == "ok"){
@@ -331,6 +332,7 @@ CUERPO DOCUMENTO
          $_GET["ruta"] == "miembros" ||
          $_GET["ruta"] == "solicitud" ||
          $_GET["ruta"] == "visualizar-solicitudes" ||
+         $_GET["ruta"] == "entregar" ||
          $_GET["ruta"] == "desaprobado" ||
          $_GET["ruta"] == "visualizar-solicitudes-desaprobadas" ||
          $_GET["ruta"] == "salir"){
@@ -629,6 +631,7 @@ CUERPO DOCUMENTO
 <script src="vistas/js/solicitudes-desaprobadas-obispo.js"></script>
 <script src="vistas/js/test.js"></script>
 <script src="vistas/js/solicitudes-asesor.js"></script>
+<script src="vistas/js/entregar-gerente.js"></script>
 <script src="vistas/js/solicitudes-finanzas.js"></script>
 
 

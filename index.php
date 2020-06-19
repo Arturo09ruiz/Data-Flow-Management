@@ -35,6 +35,8 @@ require_once "controladores/miembros-pdt-estaca.controlador.php";
 //GERENTECONTROLADORES
 
 require_once "controladores/miembros-gerente.controlador.php";
+require_once "controladores/entregados.controlador.php";
+
 
 
 
@@ -73,11 +75,14 @@ require_once "modelos/ventas.modelo.php";
 require_once "extensiones/vendor/autoload.php";
 
 
+
 //administrador Modelos
 require_once "modelos/pais.modelo.php";
 require_once "modelos/estaca.modelo.php";
 require_once "modelos/barrios.modelo.php";
 require_once "modelos/consejo.modelo.php";
+require_once "modelos/entregados.modelo.php";
+
 
 
 //Obispo Controladores

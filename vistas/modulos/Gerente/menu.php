@@ -68,6 +68,17 @@ if ($_SESSION["perfil"] == "Gerente") {
 
 					<li>
 
+					<a href="entregar">
+						
+						<i class="fa fa-circle-o"></i>
+						<span>Solicitudes Entregar</span>
+
+					</a>
+
+				</li>
+
+					<li>
+
 					<a href="desaprobado">
 						
 						<i class="fa fa-circle-o"></i>

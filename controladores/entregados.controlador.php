@@ -1,19 +1,19 @@
 <?php
 
-class ControladorEntregar{
+class ControladorEntregados{
 
 	
 	/*=============================================
 	CREAR PRODUCTO 
 	=============================================*/
 
-	static public function ctrCrearEntregar(){
+	static public function ctrCrearEntregado(){
 
 		if(isset($_POST["ncm"])){
 	
-				$tabla = "entregar";
+				$tabla = "entregados";
 
-				$datos = array("codigo" => $_POST["codigo"],
+				$datos = array("codigo" => $_POST["nuevoCodigo"],
                                "ncm" => $_POST["ncm"],
                                "nombre" => $_POST["nombre"],
                                "edad" => $_POST["edad"],
@@ -23,11 +23,11 @@ class ControladorEntregar{
                                "idestaca" => $_POST["idestaca"],
                                "idconsejo" => $_POST["idconsejo"],
                                "idpais" => $_POST["idpais"],
-                               "enfermedad" => $_POST["enfermedad"],
-                               "medicamento" => $_POST["medicamento"],
-                               "dosis_recetada" => $_POST["dosis"],
-                               "duracion" => $_POST["duracion"],
-                               "necesidad" => $_POST["necesidad"],
+                               "enfermedad" => $_POST["nuevaEnfermedad"],
+                               "medicamento" => $_POST["nuevaMedicamento"],
+                               "dosis_recetada" => $_POST["nuevaDosis"],
+                               "duracion" => $_POST["nuevaDuracion"],
+                               "necesidad" => $_POST["nuevaNecesidad"],
                                "pa1" => $_POST["pa1"],
                                "pa2" => $_POST["pa2"],
                                "im" => $_POST["im"],
@@ -42,7 +42,7 @@ class ControladorEntregar{
                                "fecha_solicitud" => $_POST["fecha_solicitud"]  
 							);
 
-				$respuesta = ModeloEntregar::mdlIngresarEntregar($tabla, $datos);
+				$respuesta = ModeloEntregrados::mdlIngresarEntregrados($tabla, $datos);
 
 				if($respuesta == "ok"){
 
@@ -50,13 +50,13 @@ class ControladorEntregar{
 
 						swal({
 							  type: "success",
-							  title: "Los Cambios han Sido Guardados Correctamente",
+							  title: "El pedido ha Sido Entregado Correctamente",
 							  showConfirmButton: true,
 							  confirmButtonText: "Cerrar"
 							  }).then(function(result){
 										if (result.value) {
 
-										window.location = "entregar";
+										window.location = "entregados";
 
 										}
 									})
@@ -69,14 +69,9 @@ class ControladorEntregar{
 			}
 
 	}
-	static public function ctrMostrarSolicitudesPorEntregarGerente($item, $valor, $orden, $consejo)
-	{
 
-		$tabla = "entregar";
 
-		$respuesta = ModeloEntregar::mdlMostrarSolicitudesPorEntregarGerente($tabla, $item, $valor, $orden, $consejo);
 
-		return $respuesta;
-	}
+
 
 }
