@@ -55,7 +55,15 @@ $('.tablaSolicitudEntregadosGerente').DataTable( {
 
 
 
+$(".tablaSolicitudEntregadosGerente tbody").on("click", "button.btnVisualizarSolicitudesGerente", function(){
 
+	var idSolicitudes = $(this).attr("idSolicitudes");
+
+	window.location = "index.php?ruta=visualizar-solicitudes-entregadas&idSolicitudes="+idSolicitudes;
+
+
+	 
+})
 
 
 

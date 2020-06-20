@@ -14,6 +14,17 @@ class ControladorMiembrosGerente{
 
 	}
 
+	static public function ctrMostrarMiembros($item, $valor, $orden , $ncm){
+
+		$tabla = "miembros";
+
+		$respuesta = ModeloMiembrosGerente::mdlMostrarMiembros($tabla, $item, $valor, $orden, $ncm);
+
+		return $respuesta;
+
+	}
+
+
 
 
 

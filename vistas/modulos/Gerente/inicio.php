@@ -19,14 +19,14 @@
     </ol>
 
   </section>
+  <h4 class="text-center">Solicitudes de Médicinas</h4>
 
   <section class="content">
-
     <div class="row">
       
     <?php
 
-    if($_SESSION["perfil"] =="Administrador"){
+    if($_SESSION["perfil"] =="Gerente"){
 
       include "inicio/cajas-superiores.php";
 
@@ -38,25 +38,13 @@
 
      <div class="row">
        
-        <div class="col-lg-12">
-
-          <?php
-
-          if($_SESSION["perfil"] =="Administrador"){
-          
-           include "reportes/grafico-ventas.php";
-
-          }
-
-          ?>
-
-        </div>
+      
 
         <div class="col-lg-6">
 
           <?php
 
-          if($_SESSION["perfil"] =="Administrador"){
+          if($_SESSION["perfil"] =="Gerente"){
           
            include "reportes/productos-mas-vendidos.php";
 
@@ -70,7 +58,7 @@
 
           <?php
 
-          if($_SESSION["perfil"] =="Administrador"){
+          if($_SESSION["perfil"] =="Gerente"){
           
            include "inicio/productos-recientes.php";
 

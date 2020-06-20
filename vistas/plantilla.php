@@ -335,6 +335,7 @@ CUERPO DOCUMENTO
          $_GET["ruta"] == "entregar" ||
          $_GET["ruta"] == "desaprobado" ||
          $_GET["ruta"] == "visualizar-solicitudes-entregar" ||
+         $_GET["ruta"] == "visualizar-solicitudes-entregadas" ||
          $_GET["ruta"] == "entregados" ||
          $_GET["ruta"] == "visualizar-solicitudes-desaprobadas" ||
          $_GET["ruta"] == "salir"){
@@ -636,6 +637,7 @@ CUERPO DOCUMENTO
 <script src="vistas/js/entregar-gerente.js"></script>
 <script src="vistas/js/solicitudes-finanzas.js"></script>
 <script src="vistas/js/solicitudes-entregadas-gerente.js"></script>
+<script src="vistas/js/visualizar-solicitudes-entregadas.js"></script>
 
 
 

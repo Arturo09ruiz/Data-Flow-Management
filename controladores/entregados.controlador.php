@@ -6,10 +6,52 @@ class ControladorEntregados{
 	/*=============================================
 	CREAR PRODUCTO 
 	=============================================*/
-
+	
 	static public function ctrCrearEntregado(){
 
+	
+
+
 		if(isset($_POST["ncm"])){
+
+			$item = null;
+			$valor = null;
+			$orden = "id";
+			$ncm = $_POST["ncm"];
+			$tabla = "miembros";
+			
+		$miembros = ModeloMiembrosGerente::mdlMostrarMiembros($tabla, $item, $valor, $orden, $ncm);
+	
+		// 	// $id = $miembros["id"];
+		// 	// $numero = $miembros["solicitudes_medicinas_recibidas"];
+	
+		// 	// $numerofinal = $numero + 1;
+	
+	
+
+	 $array = json_encode($miembros);
+
+
+	 foreach ($miembros as $key => $value) {
+
+
+		$id = $value["id"];
+
+		  $recibidas = $value["solicitudes_medicinas_recibidas"];
+		  $total = $recibidas + 1; 
+
+		  
+	
+	}
+
+					$tabla = "miembros";
+
+
+					$datos = array("id"=>$id,
+				   "solicitudes_medicinas_recibidas"=>$total);
+
+				   $respuesta = ModeloMiembros::mdlEditarMiembrosPrueba($tabla, $datos);
+
 	
 				$tabla = "entregados";
 
@@ -79,7 +121,19 @@ class ControladorEntregados{
 		$respuesta = ModeloEntregrados::mdlMostrarSolicitudesEntregadosGerente($tabla, $item, $valor, $orden, $consejo);
 
 		return $respuesta;
+
 	}
+
+	static public function ctrMostrarSolicitudesEntregados($item, $valor, $orden)
+	{
+
+		$tabla = "entregados";
+
+		$respuesta = ModeloEntregrados::mdlMostrarSolicitudesEntregados($tabla, $item, $valor, $orden);
+
+		return $respuesta;
+	}
+
 
 
 }

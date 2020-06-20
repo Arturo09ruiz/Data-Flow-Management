@@ -2,45 +2,17 @@
 
 error_reporting(0);
 
-if(isset($_GET["fechaInicial"])){
+$item = null;
+$valor = null;
+$orden = "id";
+$consejo = $_SESSION["idconsejo"];
 
-    $fechaInicial = $_GET["fechaInicial"];
-    $fechaFinal = $_GET["fechaFinal"];
+$solicitudesentregradas = ControladorEntregados::ctrMostrarSolicitudesEntregadosGerente($item, $valor, $orden, $consejo);
+$solicitudesentre= count($solicitudesentregradas);
 
-}else{
-
-$fechaInicial = null;
-$fechaFinal = null;
-
-}
-
-$respuesta = ControladorVentas::ctrRangoFechasVentas($fechaInicial, $fechaFinal);
-
-$arrayFechas = array();
-$arrayVentas = array();
-$sumaPagosMes = array();
-
-foreach ($respuesta as $key => $value) {
-
-	#Capturamos sólo el año y el mes
-	$fecha = substr($value["fecha"],0,7);
-
-	#Introducir las fechas en arrayFechas
-	array_push($arrayFechas, $fecha);
-
-	#Capturamos las ventas
-	$arrayVentas = array($fecha => $value["total"]);
-
-	#Sumamos los pagos que ocurrieron el mismo mes
-	foreach ($arrayVentas as $key => $value) {
-		
-		$sumaPagosMes[$key] += $value;
-	}
-
-}
+$test = array($solicitudesentre);
 
 
-$noRepetirFechas = array_unique($arrayFechas);
 
 
 ?>
@@ -77,16 +49,16 @@ GRÁFICO DE VENTAS
 
     <?php
 
-    if($noRepetirFechas != null){
+    if($solicitudesentre != null){
 
-	    foreach($noRepetirFechas as $key){
+	    foreach($test as $key){
 
-	    	echo "{ y: '".$key."', ventas: ".$sumaPagosMes[$key]." },";
+	    	echo "{ y: '".$key."', ventas: ".$solicitudesentre[$key]." },";
 
 
 	    }
 
-	    echo "{y: '".$key."', ventas: ".$sumaPagosMes[$key]." }";
+	    echo "{y: '".$key."', ventas: ".$solicitudesentre[$key]." }";
 
     }else{
 

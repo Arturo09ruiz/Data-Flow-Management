@@ -13,7 +13,7 @@ $productos = ControladorProductos::ctrMostrarProductos($item, $valor, $orden);
 
   <div class="box-header with-border">
 
-    <h3 class="box-title">Recently Added Products</h3>
+    <h3 class="box-title">Solicitudes Entregadas Recientemente</h3>
 
     <div class="box-tools pull-right">
 
@@ -35,45 +35,62 @@ $productos = ControladorProductos::ctrMostrarProductos($item, $valor, $orden);
   
   <div class="box-body">
 
-    <ul class="products-list product-list-in-box">
+  <script>
+  $(document).ready(function() {
 
-    <?php
+    $('.js-example-basic-single').select2({});
+  })
+</script>
 
-    for($i = 0; $i < 10; $i++){
 
-      echo '<li class="item">
+ 
 
-        <div class="product-img">
 
-          <img src="'.$productos[$i]["imagen"].'" alt="Product Image">
 
-        </div>
 
-        <div class="product-info">
 
-          <a href="" class="product-title">
 
-            '.$productos[$i]["descripcion"].'
 
-            <span class="label label-warning pull-right">$'.$productos[$i]["precio_venta"].'</span>
 
-          </a>
-    
-       </div>
 
-      </li>';
+        <table class="table table-bordered table-striped dt-responsive tablaSolicitudEntregadosGerente" width="100%">
 
-    }
+          <thead>
 
-    ?>
+            <tr>
 
-    </ul>
+              <th style="width:10px">#</th>
+              <th>Código</th>
+              <th>Necesidad</th>
+              <th>Barrio</th>
+              <th>Estaca</th>
+              <th>Fecha Solicitud</th>
+              <th>Fecha Entrega</th>
+              <th>Acciones</th>
+
+            </tr>
+
+          </thead>
+
+
+
+
+
+        </table>
+
+
+        <input type="hidden" value="<?php echo $_SESSION['perfil']; ?>" id="perfilOculto">
+        <input class="idbarrio" type="hidden" value="<?php echo $_SESSION['idbarrio']; ?>" id="idbarrio">
+        <input class="idestaca" type="hidden" value="<?php echo $_SESSION['idestaca']; ?>" id="idestaca">
+        <input class="idconsejo" type="hidden" value="<?php echo $_SESSION['idconsejo']; ?>" id="idconsejo">
+        <input type="hidden" value="<?php echo $_SESSION['idpais']; ?>" id="idpais">
+
 
   </div>
 
   <div class="box-footer text-center">
 
-    <a href="productos" class="uppercase">Ver todos los productos</a>
+    <a href="entregados" class="uppercase">Ver todas las Solicitudes Entregadas</a>
   
   </div>
 

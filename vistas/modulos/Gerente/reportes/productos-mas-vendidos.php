@@ -1,14 +1,22 @@
 <?php
 
+// $item = null;
+// $valor = null;
+// $orden = "ventas";
+
+// $productos = ControladorProductos::ctrMostrarProductos($item, $valor, $orden);
+
 $item = null;
 $valor = null;
-$orden = "ventas";
+$orden = "id";
+$consejo = $_SESSION["idconsejo"];
 
-$productos = ControladorProductos::ctrMostrarProductos($item, $valor, $orden);
+$miembrosconsejo = ControladorMiembrosGerente::ctrMostrarMiembrosGerente($item, $valor, $orden, $consejo);	
+
+
 
 $colores = array("red","green","yellow","aqua","purple","blue","cyan","magenta","orange","gold");
 
-$totalVentas = ControladorProductos::ctrMostrarSumaVentas();
 
 
 ?>
@@ -47,7 +55,7 @@ PRODUCTOS MÁS VENDIDOS
 
 					for($i = 0; $i < 10; $i++){
 
-					echo ' <li><i class="fa fa-circle-o text-'.$colores[$i].'"></i> '.$productos[$i]["descripcion"].'</li>';
+					echo ' <li><i class="fa fa-circle-o text-'.$colores[$i].'"></i> '.$miembrosconsejo[$i]["nombre"].'</li>';
 
 					}
 
@@ -75,12 +83,9 @@ PRODUCTOS MÁS VENDIDOS
 						 
 						 <a>
 
-						 <img src="'.$productos[$i]["imagen"].'" class="img-thumbnail" width="60px" style="margin-right:10px"> 
-						 '.$productos[$i]["descripcion"].'
+						 '.$miembrosconsejo[$i]["nombre"].'
 
-						 <span class="pull-right text-'.$colores[$i].'">   
-						 '.ceil($productos[$i]["ventas"]*100/$totalVentas["total"]).'%
-						 </span>
+					
 							
 						 </a>
 
@@ -113,10 +118,10 @@ PRODUCTOS MÁS VENDIDOS
   for($i = 0; $i < 10; $i++){
 
   	echo "{
-      value    : ".$productos[$i]["ventas"].",
+      value    : ".$miembrosconsejo[$i]["solicitudes_medicinas_recibidas"].",
       color    : '".$colores[$i]."',
       highlight: '".$colores[$i]."',
-      label    : '".$productos[$i]["descripcion"]."'
+      label    : '".$miembrosconsejo[$i]["nombre"]."'
     },";
 
   }

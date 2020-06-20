@@ -130,6 +130,32 @@ class ModeloMiembros{
 
 	}
 
+	static public function mdlEditarMiembrosPrueba($tabla, $datos){
+
+		$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET solicitudes_medicinas_recibidas = :solicitudes_medicinas_recibidas WHERE id = :id");
+
+
+		$stmt->bindParam(":id", $datos["id"], PDO::PARAM_STR);
+
+		$stmt->bindParam(":solicitudes_medicinas_recibidas", $datos["solicitudes_medicinas_recibidas"], PDO::PARAM_STR);
+	
+
+		if($stmt->execute()){
+
+			return "ok";
+
+		}else{
+
+			return "error";
+		
+		}
+
+		$stmt->close();
+		$stmt = null;
+
+	}
+
+
 	/*=============================================
 	BORRAR Miembros
 	=============================================*/
