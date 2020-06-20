@@ -330,6 +330,7 @@ CUERPO DOCUMENTO
 
       if($_GET["ruta"] == "inicio" ||
          $_GET["ruta"] == "miembros" ||
+         $_GET["ruta"] == "descargar-reporte-gerente-miembros" ||
          $_GET["ruta"] == "solicitud" ||
          $_GET["ruta"] == "visualizar-solicitudes" ||
          $_GET["ruta"] == "entregar" ||

@@ -16,6 +16,17 @@ class ControladorBarrios{
 
 	}
 
+	
+	static public function ctrMostrarBarriosID($item){
+
+		$tabla = "barrios";
+
+		$respuesta = ModeloBarrios::mdlMostrarBarriosID($tabla, $item);
+
+		return $respuesta;
+
+	}
+	
 	/*=============================================
 	CREAR Barrios 
 	=============================================*/

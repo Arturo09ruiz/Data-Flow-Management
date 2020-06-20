@@ -24,6 +24,8 @@
   <div class="box">
 
 
+
+
     <div class="box-body">
       
      <table class="table table-bordered table-striped dt-responsive tablaMiembrosGerente" width="100%">
@@ -60,11 +62,33 @@
 
 
 
+     <div class="box-tools pull-right">
 
+
+   
+   <button class="btn btnExcel btn-success" style="margin-top:5px">Descargar reporte en Excel</button>
+
+  </a>
+
+</div>
     </div>
 
   </div>
 
+<script>
+
+
+$(".btnExcel").click(function(){
+  var consejo = $("#idconsejo").val();
+
+  window.location = "vistas/modulos/Gerente/descargar-reporte-gerente-miembros.php?consejo="+consejo;
+
+
+})
+
+
+
+</script>
 </section>
 
 </div>
