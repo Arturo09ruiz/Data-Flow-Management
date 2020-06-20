@@ -130,7 +130,7 @@ $valor = null;
 $orden = "id";
 $pais = $_SESSION['idpais'];
 
-$ventas = ControladorSolicitudes::ctrMostrarSolicitudesConformePais($item, $valor,$orden,$pais);
+$ventas = ControladorEntregados::ctrMostrarEntregadosConformePais($item, $valor,$orden,$pais);
 
 if(!$ventas){
 

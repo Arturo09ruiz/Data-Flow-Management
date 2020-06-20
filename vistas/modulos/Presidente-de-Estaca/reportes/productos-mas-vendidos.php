@@ -29,7 +29,7 @@ PRODUCTOS MÁS VENDIDOS
 	
 	<div class="box-header with-border">
   
-      <h3 class="box-title">Miembros Con Mas Solicitudes</h3>
+      <h3 class="box-title">Barrios Con Mas Solicitudes</h3>
 
     </div>
 

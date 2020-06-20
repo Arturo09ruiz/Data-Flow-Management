@@ -278,6 +278,18 @@ $respuesta = ModeloPais::mdlEditarPaisPrueba($tabla, $datos);
 		return $respuesta;
 
 	}
+
+	static public function ctrMostrarEntregadosConformePais($item, $valor, $orden, $pais)
+    {
+
+        $tabla = "entregados";
+
+        $respuesta = ModeloEntregrados::ctrMostrarEntregadosConformePais($tabla, $item, $valor, $orden, $pais);
+
+        return $respuesta;
+    }
+
+    
 	
 
 }

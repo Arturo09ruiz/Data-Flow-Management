@@ -1387,8 +1387,8 @@ swal({
         <input type="hidden" value="<?php echo  $solicitudes["Informe_Medico"]; ?>" name="im" type="text">
         <input type="hidden" value="<?php echo  $solicitudes["Recipe_Medico"]; ?>"  name="rm" type="text">
         <input type="hidden" value="<?php echo  $solicitudes["CI"]; ?>" id="ci" name="ci" type="text">
-        <input type="" id="aprobacion" name="aprobacion_gerente" type="text">
-        <input type="" id="comentarios" name="comentarios_gerente" type="text">
+        <input type="hidden" id="aprobacion" name="aprobacion_gerente" type="text">
+        <input type="hidden" id="comentarios" name="comentarios_gerente" type="text">
         <input type="hidden" value="<?php echo  $solicitudes["aprobacion_asesor"]; ?>" name="aprobacion_asesor" type="text">
         <input type="hidden" value="<?php echo  $solicitudes["comentarios_asesor"]; ?>" name="comentarios_asesor" type="text">
         <input type="hidden" value="<?php echo  $solicitudes["aprobacion_finanzas"]; ?>"name="aprobacion_finanzas" type="text">
