@@ -227,11 +227,12 @@ CUERPO DOCUMENTO
          $_GET["ruta"] == "solicitudes-en-camino" ||
          $_GET["ruta"] == "realizar-solicitud" ||
          $_GET["ruta"] == "visualizar-solicitudes-camino" ||
+         $_GET["ruta"] == "entregadas" ||
          $_GET["ruta"] == "desaprobadas" ||
+         $_GET["ruta"] == "visualizar-solicitudes-entregadas" ||
          $_GET["ruta"] == "visualizar-solicitudes" ||
          $_GET["ruta"] == "visualizar-solicitudes-desaprobadas" ||
          $_GET["ruta"] == "salir"){
-
         include "modulos/obispo/".$_GET["ruta"].".php";
 
       }else{
@@ -642,6 +643,8 @@ CUERPO DOCUMENTO
 <script src="vistas/js/solicitudes-finanzas.js"></script>
 <script src="vistas/js/solicitudes-entregadas-gerente.js"></script>
 <script src="vistas/js/solicitud-en-camino-obispo.js"></script>
+<script src="vistas/js/solicitudes-entregadas.js"></script>
+
 
 
 

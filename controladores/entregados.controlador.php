@@ -257,6 +257,17 @@ $respuesta = ModeloPais::mdlEditarPaisPrueba($tabla, $datos);
 		return $respuesta;
 	}
 
+	static public function ctrMostrarSolicitudesEntregadosObispo($item, $valor, $orden, $barrio)
+	{
+
+		$tabla = "entregados";
+
+		$respuesta = ModeloEntregrados::mdlMostrarSolicitudesEntregadosObispo($tabla, $item, $valor, $orden, $barrio);
+
+		return $respuesta;
+
+	}
+	
 
 
 }
