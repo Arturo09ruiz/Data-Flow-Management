@@ -224,7 +224,9 @@ CUERPO DOCUMENTO
 
       if($_GET["ruta"] == "inicio" ||
          $_GET["ruta"] == "miembros" ||
+         $_GET["ruta"] == "solicitudes-en-camino" ||
          $_GET["ruta"] == "realizar-solicitud" ||
+         $_GET["ruta"] == "visualizar-solicitudes-camino" ||
          $_GET["ruta"] == "desaprobadas" ||
          $_GET["ruta"] == "visualizar-solicitudes" ||
          $_GET["ruta"] == "visualizar-solicitudes-desaprobadas" ||
@@ -333,14 +335,15 @@ CUERPO DOCUMENTO
          $_GET["ruta"] == "descargar-reporte-gerente-miembros" ||
          $_GET["ruta"] == "solicitud" ||
          $_GET["ruta"] == "visualizar-solicitudes" ||
+         $_GET["ruta"] == "miembros-reportes" ||
          $_GET["ruta"] == "entregar" ||
          $_GET["ruta"] == "desaprobado" ||
          $_GET["ruta"] == "visualizar-solicitudes-entregar" ||
          $_GET["ruta"] == "visualizar-solicitudes-entregadas" ||
          $_GET["ruta"] == "entregados" ||
+         $_GET["ruta"] == "reportes-medicinas" ||
          $_GET["ruta"] == "visualizar-solicitudes-desaprobadas" ||
          $_GET["ruta"] == "salir"){
-          
         include "modulos/Gerente/".$_GET["ruta"].".php";
 
       }else{
@@ -638,6 +641,7 @@ CUERPO DOCUMENTO
 <script src="vistas/js/entregar-gerente.js"></script>
 <script src="vistas/js/solicitudes-finanzas.js"></script>
 <script src="vistas/js/solicitudes-entregadas-gerente.js"></script>
+<script src="vistas/js/solicitud-en-camino-obispo.js"></script>
 
 
 

@@ -299,7 +299,7 @@ if(!$ventas){
                 <h6 class="move"> <b>PLAN DE AUTOSUFICIENCIA PAG. 1</b> </h6>
               </div>
 
-              <input type="file" class="nuevaPlan1 form-control form-control-sm" name="nuevaPlan1">
+              <input type="file" class="nuevaPlan1 form-control form-control-sm" required name="nuevaPlan1">
 
             </div>
 
@@ -310,7 +310,7 @@ if(!$ventas){
                 <h6 class="move"> <b>PLAN DE AUTOSUFICIENCIA PAG. 2</b> </h6>
               </div>
 
-              <input type="file" class="nuevaPlan2  form-control form-control-sm" name="nuevaPlan2">
+              <input type="file" class="nuevaPlan2  form-control form-control-sm" required name="nuevaPlan2">
 
             </div>
 
@@ -329,7 +329,7 @@ if(!$ventas){
               </div>
 
 
-              <input type="file" class=" nuevaImagen form-control form-control-sm" name="nuevaImagen">
+              <input type="file" class=" nuevaImagen form-control form-control-sm" required name="nuevaImagen">
 
 
 
@@ -343,7 +343,7 @@ if(!$ventas){
               </div>
 
 
-              <input type="file" class="nuevaRecipe  form-control form-control-sm" name="nuevaRecipe">
+              <input type="file" class="nuevaRecipe  form-control form-control-sm" required name="nuevaRecipe">
 
 
 
@@ -356,7 +356,7 @@ if(!$ventas){
               </div>
 
 
-              <input type="file" class="nuevaCedula  form-control form-control-sm" name="nuevaCedula">
+              <input type="file" class="nuevaCedula  form-control form-control-sm" required name="nuevaCedula">
 
 
             </div>

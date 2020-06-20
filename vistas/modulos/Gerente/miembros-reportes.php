@@ -2,11 +2,7 @@
 
   <section class="content-header">
     
-    <h1>
-      
-      Tablero
-      
-      <small>Panel de Control</small>
+ 
     
     </h1>
 
@@ -14,28 +10,47 @@
       
       <li><a href="inicio"><i class="fa fa-dashboard"></i> Inicio</a></li>
       
-      <li class="active">Tablero</li>
+      <li class="active">Reporte Miembros</li>
     
     </ol>
 
   </section>
-  <h4 class="text-center">Programa de Médicinas</h4>
+  <h4 class="text-center">Reporte Miembros</h4>
 
   <section class="content">
-    <div class="row">
+    
+
+     <div class="row">
+       
       
-    <?php
 
-    if($_SESSION["perfil"] =="Gerente"){
+        <div class="col-lg-6">
 
-      include "inicio/cajas-superiores.php";
+          <?php
 
-    }
+          if($_SESSION["perfil"] =="Gerente"){
+          
+           include "reportes/productos-mas-vendidos-gerente.php";
 
-    ?>
+         }
 
-    </div> 
+          ?>
 
+        </div>
+
+         <div class="col-lg-6">
+
+          <?php
+
+          if($_SESSION["perfil"] =="Gerente"){
+          
+           include "inicio/productos-recientes-gerente.php";
+
+         }
+
+          ?>
+
+        </div>
 
          <div class="col-lg-12">
            
@@ -57,6 +72,7 @@
 
           ?>
 
+         </div>
 
      </div>
 

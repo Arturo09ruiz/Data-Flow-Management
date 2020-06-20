@@ -24,16 +24,51 @@ if ($_SESSION["perfil"] == "Gerente") {
 
 
 
-			<li>
+			<li class="treeview">
+
+	<a href="#">
+
+		<i class="fa fa-child"></i>
+		
+		<span>Miembros</span>
+		
+		<span class="pull-right-container">
+		
+			<i class="fa fa-angle-left pull-right"></i>
+
+		</span>
+
+	</a>
+
+	<ul class="treeview-menu">
+		
+	
+		<li>
 
 			<a href="miembros">
 				
-				<i class="fa fa-child"></i>
+				<i class="fa fa-circle-o"></i>
 				<span>Visualizar Miembros</span>
 
 			</a>
 
 		</li>
+
+		<li>
+
+		<a href="miembros-reportes">
+			
+			<i class="fa fa-circle-o"></i>
+			<span>Reporte Miembros</span>
+
+		</a>
+
+	</li>
+	
+
+</ul>
+
+</li>
 
 
 	<li class="treeview">
@@ -98,6 +133,17 @@ if ($_SESSION["perfil"] == "Gerente") {
 
 				</li>
 
+				<li>
+
+				<a href="reportes-medicinas">
+					
+					<i class="fa fa-circle-o"></i>
+					<span>Reportes</span>
+
+				</a>
+
+			</li>
+
 				
 
 			</ul>
@@ -105,6 +151,9 @@ if ($_SESSION["perfil"] == "Gerente") {
 			</li>
 
 		
+
+			
+
 
 
 		</ul>

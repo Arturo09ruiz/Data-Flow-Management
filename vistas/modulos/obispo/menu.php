@@ -66,6 +66,18 @@ if ($_SESSION["perfil"] == "Obispo") {
 
 					</li>
 
+					
+					<li>
+
+						<a href="solicitudes-en-camino">
+							
+							<i class="fa fa-circle-o"></i>
+							<span>Solicitudes En Camino</span>
+
+						</a>
+
+					</li>
+
 
 					<li>
 
