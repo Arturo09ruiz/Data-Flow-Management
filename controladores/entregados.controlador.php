@@ -12,7 +12,7 @@ class ControladorEntregados{
 	
 
 
-		if(isset($_POST["ncm"])){
+	if(isset($_POST["ncm"])){
 
 			$item = null;
 			$valor = null;
@@ -21,12 +21,6 @@ class ControladorEntregados{
 			$tabla = "miembros";
 			
 		$miembros = ModeloMiembrosGerente::mdlMostrarMiembros($tabla, $item, $valor, $orden, $ncm);
-	
-		// 	// $id = $miembros["id"];
-		// 	// $numero = $miembros["solicitudes_medicinas_recibidas"];
-	
-		// 	// $numerofinal = $numero + 1;
-	
 	
 
 	 $array = json_encode($miembros);
@@ -38,19 +32,148 @@ class ControladorEntregados{
 		$id = $value["id"];
 
 		  $recibidas = $value["solicitudes_medicinas_recibidas"];
-		  $total = $recibidas + 1; 
-
-		  
-	
+		  $total = $recibidas + 1; 	
 	}
 
-					$tabla = "miembros";
+	
+	$tabla = "miembros";
 
 
-					$datos = array("id"=>$id,
-				   "solicitudes_medicinas_recibidas"=>$total);
+	$datos = array("id"=>$id,
+   "solicitudes_medicinas_recibidas"=>$total);
 
-				   $respuesta = ModeloMiembros::mdlEditarMiembrosPrueba($tabla, $datos);
+   $respuesta = ModeloMiembros::mdlEditarMiembrosPrueba($tabla, $datos);
+
+
+
+
+
+//incrementar solicitudes barrio
+	
+	$item = null;
+	$valor = null;
+	$orden = "id";
+	$barrio = $_POST["idbarrio"];
+	$tabla = "barrios";
+
+	$barrios = ModeloBarrios::mdlMostrarBarriosPrueba($tabla, $item,$orden, $valor, $barrio);
+
+
+	$arraybarrios = json_encode($barrios);
+
+
+	foreach ($barrios as $key => $value) {
+
+
+	   $idbarrio = $value["id"];
+
+		 $recibidasbarrio = $value["solicitudes_medicinas_recibidas"];
+		 $totalbarrio = $recibidasbarrio + 1; 	
+
+   }
+
+
+   $tabla = "barrios";
+
+
+   $datos = array("id"=>$idbarrio,
+  "solicitudes_medicinas_recibidas"=>$totalbarrio);
+
+  $respuesta = ModeloBarrios::mdlEditarBarriosPrueba($tabla, $datos);
+//incrementar solicitudes estaca
+
+$item = null;
+$valor = null;
+$orden = "id";
+$estaca = $_POST["idestaca"];
+$tabla = "estaca";
+
+$estaca = ModeloEstaca::mdlMostrarEstacaPrueba($tabla, $item,$orden, $valor, $estaca);
+
+
+$arrayestaca = json_encode($estaca);
+
+
+foreach ($estaca as $key => $value) {
+
+
+   $idestaca = $value["id"];
+	 $recibidasestaca = $value["solicitudes_medicinas_recibidas"];
+	 $totalestaca = $recibidasestaca + 1; 	
+}
+
+
+$tabla = "estaca";
+
+
+$datos = array("id"=>$idestaca,
+"solicitudes_medicinas_recibidas"=>$totalestaca);
+
+$respuesta = ModeloEstaca::mdlEditarEstacaPrueba($tabla, $datos);
+
+//incrementar consejo
+$item = null;
+$valor = null;
+$orden = "id";
+$consejo = $_POST["idconsejo"];
+$tabla = "consejo";
+
+$consejo = ModeloConsejo::mdlMostrarConsejoPrueba($tabla, $item,$orden, $valor, $consejo);
+
+
+$arrayconsejo = json_encode($consejo);
+
+
+foreach ($consejo as $key => $value) {
+
+
+   $idconsejo = $value["id"];
+	 $recibidasconsejo = $value["solicitudes_medicinas_recibidas"];
+	 $totalconsejo = $recibidasconsejo + 1; 	
+}
+
+
+$tabla = "consejo";
+
+
+$datos = array("id"=>$idconsejo,
+"solicitudes_medicinas_recibidas"=>$totalconsejo);
+
+$respuesta = ModeloConsejo::mdlEditarConsejoPrueba($tabla, $datos);
+//incrementar pais
+
+$item = null;
+$valor = null;
+$orden = "id";
+$pais = $_POST["idpais"];
+$tabla = "pais";
+
+$pais = ModeloPais::mdlMostrarPaisPrueba($tabla, $item,$orden, $valor, $pais);
+
+
+$arraypais = json_encode($pais);
+
+
+foreach ($pais as $key => $value) {
+
+
+   $idpais = $value["id"];
+	 $recibidaspais = $value["solicitudes_medicinas_recibidas"];
+	 $totalpais = $recibidaspais + 1; 	
+}
+
+
+$tabla = "pais";
+
+
+$datos = array("id"=>$idpais,
+"solicitudes_medicinas_recibidas"=>$totalpais);
+
+$respuesta = ModeloPais::mdlEditarPaisPrueba($tabla, $datos);
+
+
+
+
 
 	
 				$tabla = "entregados";

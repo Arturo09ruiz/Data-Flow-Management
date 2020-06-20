@@ -38,6 +38,7 @@
          <th>Edad</th>
          <th>Email</th>
          <th>N° De Telf</th>
+         <th>SM</th>
          <th>Barrio</th>
          <th>Estaca</th>
 

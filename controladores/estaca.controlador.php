@@ -15,6 +15,16 @@ class ControladorEstaca{
 		return $respuesta;
 
 	}
+	static public function ctrMostrarEstacaGerente($item, $valor, $orden, $consejo){
+
+		$tabla = "estaca";
+
+		$respuesta = ModeloEstaca::mdlMostrarEstacaGerente($tabla, $item, $valor, $orden, $consejo);
+
+		return $respuesta;
+
+	}
+
 
 	/*=============================================
 	CREAR Estaca 

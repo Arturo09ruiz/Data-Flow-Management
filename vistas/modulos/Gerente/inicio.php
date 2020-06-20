@@ -19,7 +19,7 @@
     </ol>
 
   </section>
-  <h4 class="text-center">Solicitudes de Médicinas</h4>
+  <h4 class="text-center">Programa de Médicinas</h4>
 
   <section class="content">
     <div class="row">

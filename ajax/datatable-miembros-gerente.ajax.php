@@ -68,7 +68,8 @@ class TablaMiembrosGerente{
 				  "'.$miembrosconsejo[$i]["nombre"].'",
 			      "'.$miembrosconsejo[$i]["edad"].'",				  
 			      "'.$miembrosconsejo[$i]["email"].'",
-                  "'.$miembrosconsejo[$i]["telefono"].'",
+				  "'.$miembrosconsejo[$i]["telefono"].'",
+                  "'.$miembrosconsejo[$i]["solicitudes_medicinas_recibidas"].'",
                   "'.$barrios["nombre"].'",
                   "'.$estacas["nombre"].'"
 			    ],';

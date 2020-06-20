@@ -11,7 +11,7 @@ $valor = null;
 $orden = "id";
 $consejo = $_SESSION["idconsejo"];
 
-$miembrosconsejo = ControladorMiembrosGerente::ctrMostrarMiembrosGerente($item, $valor, $orden, $consejo);	
+$miembrosconsejo = ControladorEstaca::ctrMostrarEstacaGerente($item, $valor, $orden, $consejo);	
 
 
 
@@ -29,7 +29,7 @@ PRODUCTOS MÁS VENDIDOS
 	
 	<div class="box-header with-border">
   
-      <h3 class="box-title">Productos más vendidos</h3>
+      <h3 class="box-title">Estacas Con Mas Solicitudes</h3>
 
     </div>
 

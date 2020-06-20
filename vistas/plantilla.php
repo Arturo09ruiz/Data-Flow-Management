@@ -637,7 +637,6 @@ CUERPO DOCUMENTO
 <script src="vistas/js/entregar-gerente.js"></script>
 <script src="vistas/js/solicitudes-finanzas.js"></script>
 <script src="vistas/js/solicitudes-entregadas-gerente.js"></script>
-<script src="vistas/js/visualizar-solicitudes-entregadas.js"></script>
 
 
 
