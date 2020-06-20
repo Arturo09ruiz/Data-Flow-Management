@@ -13,7 +13,7 @@ $productos = ControladorProductos::ctrMostrarProductos($item, $valor, $orden);
 
   <div class="box-header with-border">
 
-    <h3 class="box-title">Recently Added Products</h3>
+    <h3 class="box-title">Miembros Agregados Recientemente</h3>
 
     <div class="box-tools pull-right">
 
@@ -35,45 +35,56 @@ $productos = ControladorProductos::ctrMostrarProductos($item, $valor, $orden);
   
   <div class="box-body">
 
-    <ul class="products-list product-list-in-box">
+  <script>
+  $(document).ready(function() {
 
-    <?php
+    $('.js-example-basic-single').select2({});
+  })
+</script>
 
-    for($i = 0; $i < 10; $i++){
 
-      echo '<li class="item">
+ 
 
-        <div class="product-img">
 
-          <img src="'.$productos[$i]["imagen"].'" alt="Product Image">
 
-        </div>
 
-        <div class="product-info">
 
-          <a href="" class="product-title">
 
-            '.$productos[$i]["descripcion"].'
 
-            <span class="label label-warning pull-right">$'.$productos[$i]["precio_venta"].'</span>
+<table class="table table-bordered table-striped dt-responsive tablaMiembros" width="100%">
+         
+        <thead>
+         
+         <tr>
+           
+           <th style="width:10px">#</th>
+           <th>NCM</th>
+           <th>Nombre Completo</th>
+           <th>Edad</th>
+           <th>Email</th>
+           <th>N° De Telf</th>
+           <th>Acciones</th>
 
-          </a>
-    
-       </div>
+           
+         </tr> 
 
-      </li>';
+        </thead>      
 
-    }
+       </table>
 
-    ?>
 
-    </ul>
+        <input type="hidden" value="<?php echo $_SESSION['perfil']; ?>" id="perfilOculto">
+        <input class="idbarrio" type="hidden" value="<?php echo $_SESSION['idbarrio']; ?>" id="idbarrio">
+        <input class="idestaca" type="hidden" value="<?php echo $_SESSION['idestaca']; ?>" id="idestaca">
+        <input class="idconsejo" type="hidden" value="<?php echo $_SESSION['idconsejo']; ?>" id="idconsejo">
+        <input type="hidden" value="<?php echo $_SESSION['idpais']; ?>" id="idpais">
+
 
   </div>
 
   <div class="box-footer text-center">
 
-    <a href="productos" class="uppercase">Ver todos los productos</a>
+    <a href="entregados" class="uppercase">Ver todas las Solicitudes Entregadas</a>
   
   </div>
 

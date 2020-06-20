@@ -104,10 +104,10 @@ if ($_SESSION["perfil"] == "Obispo") {
 
 					<li>
 
-						<a href="#">
+						<a href="Reportes">
 							
 							<i class="fa fa-circle-o"></i>
-							<span>Reporte de Solicitudes</span>
+							<span>Reportes</span>
 
 						</a>
 

@@ -228,6 +228,7 @@ CUERPO DOCUMENTO
          $_GET["ruta"] == "realizar-solicitud" ||
          $_GET["ruta"] == "visualizar-solicitudes-camino" ||
          $_GET["ruta"] == "entregadas" ||
+         $_GET["ruta"] == "Reportes" ||
          $_GET["ruta"] == "desaprobadas" ||
          $_GET["ruta"] == "visualizar-solicitudes-entregadas" ||
          $_GET["ruta"] == "visualizar-solicitudes" ||
