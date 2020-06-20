@@ -388,8 +388,9 @@ $(".cambios_gerente_2").click(function(){
 	if(boton == 1){
 		
 		var id = $(".id_solicitud").val();
-		var aprobacion = $(".boton_aprobacion_gerente").val();
-		var comentarios = $(".comentarios_gerente").val();
+		var aprobacion = $(".boton_aprobacion_gerente_2").val();
+
+		var comentarios = $(".comentarios_gerente_2").val();
 
   		document.getElementById("aprobacion").value = aprobacion;
 		document.getElementById("comentarios").value = comentarios;
