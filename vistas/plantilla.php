@@ -12,7 +12,7 @@ session_start();
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Data Flow Management - 1.0</title>
+  <title>Data Flow Management - 1.4</title>
   <link rel="shortcut icon" href="vistas/img/favicon.ico" />
 
   <!-- Tell the browser to be responsive to screen width -->
