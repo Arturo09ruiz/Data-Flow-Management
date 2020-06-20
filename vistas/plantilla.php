@@ -12,6 +12,7 @@ session_start();
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <title>Data Flow Management - 1.0</title>
+  <link rel="shortcut icon" href="vistas/img/favicon.ico" />
 
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
@@ -288,8 +289,11 @@ CUERPO DOCUMENTO
          $_GET["ruta"] == "visualizar-solicitudes" ||
          $_GET["ruta"] == "solicitudes-en-camino" ||
          $_GET["ruta"] == "desaprobadas" ||
+         $_GET["ruta"] == "reporte" ||
+         $_GET["ruta"] == "entregadas" ||
          $_GET["ruta"] == "visualizar-solicitudes-desaprobadas" ||
          $_GET["ruta"] == "visualizar-solicitudes-camino" ||
+         $_GET["ruta"] == "visualizar-solicitudes-entregadas" ||
          $_GET["ruta"] == "salir"){
 
         include "modulos/Presidente-de-Estaca/".$_GET["ruta"].".php";
@@ -648,6 +652,8 @@ CUERPO DOCUMENTO
 <script src="vistas/js/solicitud-en-camino-obispo.js"></script>
 <script src="vistas/js/solicitudes-entregadas.js"></script>
 <script src="vistas/js/solicitudes-en-camino-estaca.js"></script>
+<script src="vistas/js/solicitudes-entregadas-estaca.js"></script>
+
 
 
 

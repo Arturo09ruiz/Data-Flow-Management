@@ -3,20 +3,20 @@
 $item = null;
 $valor = null;
 $orden = "id";
-$barrio = $_SESSION["idbarrio"];
+$estaca = $_SESSION["idestaca"];
 
 
 
-$solicitudes = ControladorSolicitudes::ctrMostrarSolicitudesConformeBarrioObispo($item, $valor, $orden, $barrio);
+$solicitudes = ControladorSolicitudes::ctrMostrarSolicitudesConformeEstaca($item, $valor, $orden, $estaca);
 $totalSolicitudes= count($solicitudes);
 
-$solicitudesentregar = ControladorEntregar::ctrMostrarSolicitudesEntregarObispo($item, $valor, $orden, $barrio);
+$solicitudesentregar = ControladorEntregar::ctrMostrarSolicitudesEntregarEstaca($item, $valor, $orden, $estaca);
 $solicitudesen = count($solicitudesentregar);
 
-$solicitudesentregradas = ControladorEntregados::ctrMostrarSolicitudesEntregadosObispo($item, $valor, $orden, $barrio);
+$solicitudesentregradas = ControladorEntregados::ctrMostrarSolicitudesEntregadosEstaca($item, $valor, $orden, $estaca);
 $solicitudesentre= count($solicitudesentregradas);
 
-$solicitudesdesaprobadas = ControladorDesaprobar::ctrMostrarSolicitudesDesaprobadasObispo($item, $valor, $orden, $barrio);
+$solicitudesdesaprobadas = ControladorDesaprobar::ctrMostrarSolicitudesDesaprobadasEstaca($item, $valor, $orden, $estaca);
 $solicitudesdesa = count($solicitudesdesaprobadas)
 
 ?>
@@ -41,7 +41,7 @@ $solicitudesdesa = count($solicitudesdesaprobadas)
     
     </div>
     
-    <a href="realizar-solicitud" class="small-box-footer">
+    <a href="solicitud" class="small-box-footer">
       
       Más info <i class="fa fa-arrow-circle-right"></i>
     

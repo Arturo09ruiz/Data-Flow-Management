@@ -26,7 +26,7 @@
       
     <?php
 
-    if($_SESSION["perfil"] =="Administrador"){
+    if($_SESSION["perfil"] ==""){
 
       include "inicio/cajas-superiores.php";
 
@@ -42,7 +42,7 @@
 
           <?php
 
-          if($_SESSION["perfil"] =="Administrador"){
+          if($_SESSION["perfil"] ==""){
           
            include "reportes/grafico-ventas.php";
 
@@ -56,7 +56,7 @@
 
           <?php
 
-          if($_SESSION["perfil"] =="Administrador"){
+          if($_SESSION["perfil"] ==""){
           
            include "reportes/productos-mas-vendidos.php";
 
@@ -70,7 +70,7 @@
 
           <?php
 
-          if($_SESSION["perfil"] =="Administrador"){
+          if($_SESSION["perfil"] ==""){
           
            include "inicio/productos-recientes.php";
 
@@ -84,7 +84,7 @@
            
           <?php
 
-          if($_SESSION["perfil"] =="Especial" || $_SESSION["perfil"] =="Vendedor"){
+          if($_SESSION["perfil"] =="Administrador" || $_SESSION["perfil"] =="Vendedor"){
 
              echo '<div class="box box-success">
 

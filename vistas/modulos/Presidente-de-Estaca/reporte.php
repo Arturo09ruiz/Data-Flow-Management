@@ -19,7 +19,7 @@
       
     <?php
 
-    if($_SESSION["perfil"] =="Obispo"){
+    if($_SESSION["perfil"] =="Presidente-de-Estaca"){
 
       include "inicio/cajas-superiores-medicinas.php";
 
@@ -37,7 +37,7 @@
 
           <?php
 
-          if($_SESSION["perfil"] =="Obispo"){
+          if($_SESSION["perfil"] =="Presidente-de-Estaca"){
           
            include "reportes/productos-mas-vendidos.php";
 
@@ -51,7 +51,7 @@
 
           <?php
 
-          if($_SESSION["perfil"] =="Obispo"){
+          if($_SESSION["perfil"] =="Presidente-de-Estaca"){
           
            include "inicio/productos-recientes.php";
 

@@ -1,14 +1,22 @@
 <?php
 
+// $item = null;
+// $valor = null;
+// $orden = "ventas";
+
+// $productos = ControladorProductos::ctrMostrarProductos($item, $valor, $orden);
+
 $item = null;
 $valor = null;
-$orden = "ventas";
+$orden = "id";
+$estaca = $_SESSION["idestaca"];
 
-$productos = ControladorProductos::ctrMostrarProductos($item, $valor, $orden);
+$miembrosconsejo = ControladorBarrios::ctrMostrarBarriosEstaca($item, $valor, $orden, $estaca);	
 
-$colores = array("red","green","yellow","aqua","purple","blue","cyan","magenta","orange","gold");
 
-$totalVentas = ControladorProductos::ctrMostrarSumaVentas();
+
+$colores = array("red","green","yellow","aqua","purple");
+
 
 
 ?>
@@ -21,7 +29,7 @@ PRODUCTOS MÁS VENDIDOS
 	
 	<div class="box-header with-border">
   
-      <h3 class="box-title">Productos más vendidos</h3>
+      <h3 class="box-title">Miembros Con Mas Solicitudes</h3>
 
     </div>
 
@@ -45,9 +53,9 @@ PRODUCTOS MÁS VENDIDOS
 
 		  	 	<?php
 
-					for($i = 0; $i < 10; $i++){
+					for($i = 0; $i < 5; $i++){
 
-					echo ' <li><i class="fa fa-circle-o text-'.$colores[$i].'"></i> '.$productos[$i]["descripcion"].'</li>';
+					echo ' <li><i class="fa fa-circle-o text-'.$colores[$i].'"></i> '.$miembrosconsejo[$i]["nombre"].'</li>';
 
 					}
 
@@ -75,12 +83,9 @@ PRODUCTOS MÁS VENDIDOS
 						 
 						 <a>
 
-						 <img src="'.$productos[$i]["imagen"].'" class="img-thumbnail" width="60px" style="margin-right:10px"> 
-						 '.$productos[$i]["descripcion"].'
+						 '.$miembrosconsejo[$i]["nombre"].'
 
-						 <span class="pull-right text-'.$colores[$i].'">   
-						 '.ceil($productos[$i]["ventas"]*100/$totalVentas["total"]).'%
-						 </span>
+					
 							
 						 </a>
 
@@ -110,13 +115,13 @@ PRODUCTOS MÁS VENDIDOS
 
   <?php
 
-  for($i = 0; $i < 10; $i++){
+  for($i = 0; $i < 5; $i++){
 
   	echo "{
-      value    : ".$productos[$i]["ventas"].",
+      value    : ".$miembrosconsejo[$i]["solicitudes_medicinas_recibidas"].",
       color    : '".$colores[$i]."',
       highlight: '".$colores[$i]."',
-      label    : '".$productos[$i]["descripcion"]."'
+      label    : '".$miembrosconsejo[$i]["nombre"]."'
     },";
 
   }

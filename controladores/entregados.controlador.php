@@ -268,6 +268,16 @@ $respuesta = ModeloPais::mdlEditarPaisPrueba($tabla, $datos);
 
 	}
 	
+	static public function ctrMostrarSolicitudesEntregadosEstaca($item, $valor, $orden, $estaca)
+	{
 
+		$tabla = "entregados";
+
+		$respuesta = ModeloEntregrados::mdlMostrarSolicitudesEntregadosEstaca($tabla, $item, $valor, $orden, $estaca);
+
+		return $respuesta;
+
+	}
+	
 
 }

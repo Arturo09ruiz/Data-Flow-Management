@@ -83,6 +83,17 @@ if ($_SESSION["perfil"] == "Presidente-de-Estaca") {
 
 				</li>
 
+				<li>
+
+				<a href="entregadas">
+					
+					<i class="fa fa-circle-o"></i>
+					<span>Solicitudes Entregadas</span>
+
+				</a>
+
+			</li>
+
 					<li>
 
 						<a href="desaprobadas">
@@ -97,10 +108,10 @@ if ($_SESSION["perfil"] == "Presidente-de-Estaca") {
 
 					<li>
 
-						<a href="#">
+						<a href="reporte">
 							
 							<i class="fa fa-circle-o"></i>
-							<span>Reporte de Solicitudes</span>
+							<span>Reporte</span>
 
 						</a>
 
