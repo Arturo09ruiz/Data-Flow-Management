@@ -71,6 +71,18 @@ if ($_SESSION["perfil"] == "Presidente-de-Estaca") {
 
 					</li>
 
+
+					<li>
+
+					<a href="solicitudes-en-camino">
+						
+						<i class="fa fa-circle-o"></i>
+						<span>Solicitudes en Camino</span>
+
+					</a>
+
+				</li>
+
 					<li>
 
 						<a href="desaprobadas">
