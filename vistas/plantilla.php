@@ -728,6 +728,8 @@ CUERPO DOCUMENTO
   <script src="vistas/js/solicitudes-entregadas.js"></script>
   <script src="vistas/js/solicitudes-en-camino-estaca.js"></script>
   <script src="vistas/js/solicitudes-entregadas-estaca.js"></script>
+  <script src="vistas/js/medicamento.js"></script>
+
 
 
 
