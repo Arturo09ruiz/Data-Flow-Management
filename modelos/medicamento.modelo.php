@@ -37,17 +37,14 @@ class ModeloMedicamento{
 	}
 
 	/*=============================================
-	REGISTRO DE Estacas
+	REGISTRO DE MEDICAMENTOS
 	=============================================*/
 	static public function mdlIngresarMedicamento($tabla, $datos){
 
-		$stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(codigo, nombre, idconsejo, idpais) VALUES (:codigo, :nombre, :idconsejo, :idpais)");
+		$stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(codigo, nombre) VALUES (:codigo, :nombre)");
 
 		$stmt->bindParam(":codigo", $datos["codigo"], PDO::PARAM_STR);
 		$stmt->bindParam(":nombre", $datos["nombre"], PDO::PARAM_STR);
-		$stmt->bindParam(":idconsejo", $datos["idconsejo"], PDO::PARAM_STR);
-		$stmt->bindParam(":idpais", $datos["idpais"], PDO::PARAM_STR);
-	
 
 		if($stmt->execute()){
 
@@ -67,7 +64,7 @@ class ModeloMedicamento{
 	
 
 	/*=============================================
-	BORRAR Estaca
+	BORRAR MEDICAMENTO
 	=============================================*/
 
 	static public function mdlEliminarEstaca($tabla, $datos){
