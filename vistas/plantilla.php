@@ -281,6 +281,7 @@ CUERPO DOCUMENTO
           $_GET["ruta"] == "clientes" ||
           $_GET["ruta"] == "paises-del-area" ||
           $_GET["ruta"] == "consejos-de-coordinacion" ||
+          $_GET["ruta"] == "medicamento" ||
           $_GET["ruta"] == "estacas" ||
           $_GET["ruta"] == "barrios" ||
           $_GET["ruta"] == "ventas" ||

@@ -99,6 +99,16 @@ if ($_SESSION["perfil"] == "Administrador") {
 
 </li>
 
+<li>
+
+<a href="medicamento">
+
+	<i class="fa fa-flask"></i>
+	<span>Medicamentos</span>
+
+</a>
+
+</li>
 
 
 	 
