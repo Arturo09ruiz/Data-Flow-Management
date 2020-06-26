@@ -6,11 +6,11 @@ class ControladorMedicamento{
 	MOSTRAR MEDICAMENTO
 	=============================================*/
 
-	static public function ctrMostrarEstaca($item, $valor, $orden){
+	static public function ctrMostrarMedicamento($item, $valor, $orden){
 
-		$tabla = "estaca";
+		$tabla = "medicamento";
 
-		$respuesta = ModeloEstaca::mdlMostrarEstaca($tabla, $item, $valor, $orden);
+		$respuesta = ModeloMedicamento::mdlMostrarMedicamento($tabla, $item, $valor, $orden);
 
 		return $respuesta;
 
