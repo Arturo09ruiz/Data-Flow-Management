@@ -62,17 +62,17 @@ class ControladorMedicamento{
 
 
 	/*=============================================
-	BORRAR Estaca
+	BORRAR MEDICAMENTO
 	=============================================*/
-	static public function ctrEliminarEstaca(){
+	static public function ctrEliminarMedicamento(){
 
-		if(isset($_GET["idEstaca"])){
+		if(isset($_GET["idMedicamento"])){
 
-			$tabla ="estaca";
-			$datos = $_GET["idEstaca"];
+			$tabla ="medicamento";
+			$datos = $_GET["idMedicamento"];
 
 
-			$respuesta = ModeloEstaca::mdlEliminarEstaca($tabla, $datos);
+			$respuesta = ModeloMedicamento::mdlEliminarMedicamento($tabla, $datos);
 
 			if($respuesta == "ok"){
 
@@ -80,13 +80,13 @@ class ControladorMedicamento{
 
 				swal({
 					  type: "success",
-					  title: "La Estaca ha sido borrada correctamente",
+					  title: "El Medicamento ha sido borrado correctamente",
 					  showConfirmButton: true,
 					  confirmButtonText: "Cerrar"
 					  }).then(function(result){
 								if (result.value) {
 
-								window.location = "estacas";
+								window.location = "medicamento";
 
 								}
 							})
