@@ -104,7 +104,39 @@ MODAL AGREGAR Medicamento
             
               <span class="input-group-addon"><i class="fa fa-code"></i></span> 
 
-              <input type="text" class="form-control input-lg" id="nuevoCodigo" name="nuevoCodigo" placeholder="Ingresar código" required>
+
+              
+              <?php
+
+$item = null;
+$valor = null;
+$orden = "id";
+
+$ventas = ControladorMedicamento::ctrMostrarMedicamento($item, $valor,$orden);
+
+if(!$ventas){
+
+  echo '<input type="text" class="form-control input-lg" id="nuevoCodigo" name="nuevoCodigo" value="10001" readonly>';
+
+
+}else{
+
+  foreach ($ventas as $key => $value) {
+    
+    
+  
+  }
+
+  $codigo = $value["codigo"] + 1;
+
+
+
+  echo '<input type="text" class="form-control input-lg" id="nuevoCodigo" name="nuevoCodigo" value="'.$codigo.'" readonly>';
+
+
+}
+
+?>
 
             </div>
 
