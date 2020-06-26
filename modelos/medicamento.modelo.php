@@ -8,7 +8,7 @@ class ModeloMedicamento{
 	MOSTRAR Estacas
 	=============================================*/
 
-	static public function mdlMostrarEstaca($tabla, $item, $valor, $orden){
+	static public function mdlMostrarMedicamento($tabla, $item, $valor, $orden){
 
 		if($item != null){
 
