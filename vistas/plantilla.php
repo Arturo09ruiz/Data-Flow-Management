@@ -761,7 +761,7 @@ CUERPO DOCUMENTO
     window.addEventListener('load', ()=>{
         setTimeout(20000);
 
-        document.getElementById('contenido').className = 'animated fadeInDown';
+        document.getElementById('contenido').className = '';
 
         document.getElementById('circulo').className = 'hide';
 
