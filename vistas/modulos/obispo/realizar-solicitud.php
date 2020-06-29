@@ -237,7 +237,7 @@ if(!$ventas){
                 <span class="input-group-addon"><i class="fa fa-flask"></i></span>
 
 
-                <select class="js-example-basic-single form-control input-lg nuevaMedicamento"  multiple="multiple" id="nuevaMedicamento" name="nuevaMedicamento" required>
+                <select class="js-example-basic-single form-control input-lg medi"  multiple="multiple" id="medi" name="medi" required>
 
 <option value="">Selecionar Medicamento</option>
 
@@ -257,7 +257,7 @@ foreach ($medicamento as $key => $value) {
 
 </select>
 
-                <!-- <input type="text" class="form-control input-lg" name="nuevaMedicamento" placeholder="Ingresar Medicamento" required> -->
+                <input type="hidden" class="nuevaMedicamento" id="nuevaMedicamento" name="nuevaMedicamento"  required>
 
               </div>
 

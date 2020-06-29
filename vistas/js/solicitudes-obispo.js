@@ -224,3 +224,15 @@ $(".tablaSolicitudObispo tbody").on("click", "button.btnVisualizarSolicitudes", 
 
 
 })
+
+
+
+$(".medi").change(function(){
+
+	var medicamento = $("#medi").val();
+
+	$("#nuevaMedicamento").val(medicamento);
+
+
+
+})
