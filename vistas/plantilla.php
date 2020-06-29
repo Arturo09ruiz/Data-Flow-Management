@@ -218,6 +218,7 @@ CUERPO DOCUMENTO
 <body class="hold-transition skin-blue sidebar-collapse sidebar-mini login-page">
 
 <div id="circulo" class="text-center">
+ <!-- <br>
  <br>
  <br>
  <br>
@@ -228,14 +229,13 @@ CUERPO DOCUMENTO
  <br>
  <br>
  <br>
- <br>
- <br>
+ <br> -->
 
-<div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+<!-- <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div> -->
 </div>
 
 
-<div class="hide" id="contenido">
+<!-- <div class="hide" id="contenido"> -->
   <?php
 
   if (isset($_SESSION["iniciarSesion"]) && $_SESSION["iniciarSesion"] == "ok") {
@@ -698,7 +698,7 @@ CUERPO DOCUMENTO
   }
 
   ?>
-</div>
+<!-- </div> -->
 
 
 
@@ -758,14 +758,13 @@ CUERPO DOCUMENTO
 
 
 <script>
-    window.addEventListener('load', ()=>{
-        setTimeout(20000);
+    // window.addEventListener('load', ()=>{
 
-        document.getElementById('contenido').className = '';
+    //     document.getElementById('contenido').className = '';
 
-        document.getElementById('circulo').className = 'hide';
+    //     document.getElementById('circulo').className = 'hide';
 
-    })
+    // })
 </script>
   <script src="vistas/js/plantilla.js"></script>
   <script src="vistas/js/usuarios.js"></script>

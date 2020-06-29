@@ -270,7 +270,9 @@ foreach ($medicamento as $key => $value) {
 
                 <span class="input-group-addon"><i class="fa fa-pie-chart"></i></span>
 
-                <input type="text" class="form-control input-lg" name="nuevaDosis" placeholder="Ingresar Dosis Recetada" required>
+                <textarea  class="form-control input-lg"  rows="3"  name="nuevaDosis" placeholder="Ingresar Dosis Recetada" required></textarea>
+                
+
 
               </div>
 
