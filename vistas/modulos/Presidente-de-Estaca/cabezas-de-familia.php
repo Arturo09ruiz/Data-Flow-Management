@@ -16,7 +16,10 @@ if ($_SESSION["perfil"] == "Vendedor") {
 
   <section class="content-header">
 
+
     <h1>
+
+
 
       Administrar Cabezas de Famiia
 
@@ -261,7 +264,7 @@ MODAL EDITAR PRODUCTO
 
 
 
-          <input type="" name="id" class="id" id="id">
+            <input type="" name="id" class="id" id="id">
 
 
             <div class="form-group">

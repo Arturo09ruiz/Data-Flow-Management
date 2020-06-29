@@ -39,124 +39,8 @@ session_start();
 <script src="vistas/bower_components/zoom/easyzoom.js"></script>
 
    -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 
-  <style>
-    .lds-roller {
-      display: inline-block;
-      position: relative;
-      width: 80px;
-      height: 80px;
-    }
-
-    .lds-roller div {
-      animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-      transform-origin: 40px 40px;
-    }
-
-    .lds-roller div:after {
-      content: " ";
-      display: block;
-      position: absolute;
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: #fff;
-      margin: -4px 0 0 -4px;
-    }
-
-    .lds-roller div:nth-child(1) {
-      animation-delay: -0.036s;
-    }
-
-    .lds-roller div:nth-child(1):after {
-      top: 63px;
-      left: 63px;
-    }
-
-    .lds-roller div:nth-child(2) {
-      animation-delay: -0.072s;
-    }
-
-    .lds-roller div:nth-child(2):after {
-      top: 68px;
-      left: 56px;
-    }
-
-    .lds-roller div:nth-child(3) {
-      animation-delay: -0.108s;
-    }
-
-    .lds-roller div:nth-child(3):after {
-      top: 71px;
-      left: 48px;
-    }
-
-    .hidden {
-      overflow: hidden;
-    }
-
-    .centrado {
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .lds-roller div:nth-child(4) {
-      animation-delay: -0.144s;
-    }
-
-    .lds-roller div:nth-child(4):after {
-      top: 72px;
-      left: 40px;
-    }
-
-    .lds-roller div:nth-child(5) {
-      animation-delay: -0.18s;
-    }
-
-    .lds-roller div:nth-child(5):after {
-      top: 71px;
-      left: 32px;
-    }
-
-    .lds-roller div:nth-child(6) {
-      animation-delay: -0.216s;
-    }
-
-    .lds-roller div:nth-child(6):after {
-      top: 68px;
-      left: 24px;
-    }
-
-    .lds-roller div:nth-child(7) {
-      animation-delay: -0.252s;
-    }
-
-    .lds-roller div:nth-child(7):after {
-      top: 63px;
-      left: 17px;
-    }
-
-    .lds-roller div:nth-child(8) {
-      animation-delay: -0.288s;
-    }
-
-    .lds-roller div:nth-child(8):after {
-      top: 56px;
-      left: 12px;
-    }
-
-    @keyframes lds-roller {
-      0% {
-        transform: rotate(0deg);
-      }
-
-      100% {
-        transform: rotate(360deg);
-      }
-    }
-  </style>
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="vistas/bower_components/font-awesome/css/font-awesome.min.css">
@@ -236,7 +120,95 @@ session_start();
 
 
 
-
+<style>
+.lds-roller {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-roller div {
+  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-origin: 40px 40px;
+}
+.lds-roller div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #fff;
+  margin: -4px 0 0 -4px;
+}
+.lds-roller div:nth-child(1) {
+  animation-delay: -0.036s;
+}
+.lds-roller div:nth-child(1):after {
+  top: 63px;
+  left: 63px;
+}
+.lds-roller div:nth-child(2) {
+  animation-delay: -0.072s;
+}
+.lds-roller div:nth-child(2):after {
+  top: 68px;
+  left: 56px;
+}
+.lds-roller div:nth-child(3) {
+  animation-delay: -0.108s;
+}
+.lds-roller div:nth-child(3):after {
+  top: 71px;
+  left: 48px;
+}
+.lds-roller div:nth-child(4) {
+  animation-delay: -0.144s;
+}
+.lds-roller div:nth-child(4):after {
+  top: 72px;
+  left: 40px;
+}
+.lds-roller div:nth-child(5) {
+  animation-delay: -0.18s;
+}
+.lds-roller div:nth-child(5):after {
+  top: 71px;
+  left: 32px;
+}
+.lds-roller div:nth-child(6) {
+  animation-delay: -0.216s;
+}
+.lds-roller div:nth-child(6):after {
+  top: 68px;
+  left: 24px;
+}
+.lds-roller div:nth-child(7) {
+  animation-delay: -0.252s;
+}
+.lds-roller div:nth-child(7):after {
+  top: 63px;
+  left: 17px;
+}
+.lds-roller div:nth-child(8) {
+  animation-delay: -0.288s;
+}
+.lds-roller div:nth-child(8):after {
+  top: 56px;
+  left: 12px;
+}
+@keyframes lds-roller {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.hide {
+  display: none !important;
+}
+</style>
 </head>
 
 <!--=====================================
@@ -245,6 +217,25 @@ CUERPO DOCUMENTO
 
 <body class="hold-transition skin-blue sidebar-collapse sidebar-mini login-page">
 
+<div id="circulo" class="text-center">
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+
+<div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+</div>
+
+
+<div class="hide" id="contenido">
   <?php
 
   if (isset($_SESSION["iniciarSesion"]) && $_SESSION["iniciarSesion"] == "ok") {
@@ -707,7 +698,7 @@ CUERPO DOCUMENTO
   }
 
   ?>
-
+</div>
 
 
 
@@ -766,6 +757,16 @@ CUERPO DOCUMENTO
   </script>
 
 
+<script>
+    window.addEventListener('load', ()=>{
+        setTimeout(20000);
+
+        document.getElementById('contenido').className = 'animated fadeInDown';
+
+        document.getElementById('circulo').className = 'hide';
+
+    })
+</script>
   <script src="vistas/js/plantilla.js"></script>
   <script src="vistas/js/usuarios.js"></script>
   <script src="vistas/js/categorias.js"></script>

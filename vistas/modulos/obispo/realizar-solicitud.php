@@ -236,7 +236,28 @@ if(!$ventas){
 
                 <span class="input-group-addon"><i class="fa fa-flask"></i></span>
 
-                <input type="text" class="form-control input-lg" name="nuevaMedicamento" placeholder="Ingresar Medicamento" required>
+
+                <select class="js-example-basic-single form-control input-lg nuevaMedicamento"  multiple="multiple" id="nuevaMedicamento" name="nuevaMedicamento" required>
+
+<option value="">Selecionar Medicamento</option>
+
+<?php
+
+$item = null;
+$valor = null;
+$orden = "id";
+$medicamento = ControladorMedicamento::ctrMostrarMedicamento($item, $valor, $orden);
+
+foreach ($medicamento as $key => $value) {
+
+  echo '<option value="' . $value["nombre"] . '">' . $value["nombre"] . '</option>';
+}
+
+?>
+
+</select>
+
+                <!-- <input type="text" class="form-control input-lg" name="nuevaMedicamento" placeholder="Ingresar Medicamento" required> -->
 
               </div>
 
