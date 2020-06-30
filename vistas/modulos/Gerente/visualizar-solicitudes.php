@@ -540,19 +540,22 @@ swal({
                         } else {
 
                             echo '
-<div class="hidden-lg form-group">
-<p class="text-center"> Aprobación Finanzas</p> 
-
-<div class="input-group">
-
-<span class="input-group-addon"><i class="fa fa-money"></i></span>
-<button type="button" class="form-control btn btn-info">Aun No Ha Sido Aprobado</button>
-
-
-
-</div>
-
-</div>
+                            <input type="hidden" class="id_solicitud" id="id_solicitud" name="id_solicitud" value="'; echo $solicitudes["id"];   echo'" ></input>
+                            <input type="hidden" name="codigo_solicitud" value="';echo $solicitudes["codigo"]; echo'"> </input>
+                                    <div class="hidden-lg form-group">
+                                    <p class="text-center"> <b>Aprobación Finanzas</b> </p> 
+                
+                                    <div class="input-group">
+                
+                                    <span class="input-group-addon"><i class="fa fa-money"></i></span>
+                                    <button type="button" id="aprobacion_finanzas"  class="aprobacion_finanzas form-control btn btn-info">Aun No Ha Sido Aprobado</button>
+                                     <input type="hidden" name="boton_aprobacion_finanzas" value="0"class="boton_aprobacion_finanzas" id="boton_aprobacion_finanzas"></input>                   
+                
+                                    </div>
+                
+                                    </div>
+                                    <textarea   id="comentarios_finanzas" name="comentarios_finanzas" class="hidden-lg  comentarios_finanzas form-control"  rows="3"></textarea>
+                                         <br>   
 
 ';
                         }
@@ -866,20 +869,24 @@ swal({
                                 } else {
 
                                     echo '
-<div class="form-group">
-<p class="text-center"> <b>Aprobación Finanzas</b> </p> 
-
-<div class="input-group">
-
-<span class="input-group-addon"><i class="fa fa-money"></i></span>
-<button type="button" class="form-control btn btn-info">Aun No Ha Sido Aprobado</button>
 
 
-
-</div>
-
-</div>
-
+                                    <input type="hidden" class="id_solicitud" id="id_solicitud" name="id_solicitud" value="'; echo $solicitudes["id"];   echo'" ></input>
+                                    <input type="hidden" name="codigo_solicitud" value="';echo $solicitudes["codigo"]; echo'"> </input>
+                                            <div class=" form-group">
+                                            <p class="text-center"> <b>Aprobación Finanzas</b> </p> 
+                        
+                                            <div class="input-group">
+                        
+                                            <span class="input-group-addon"><i class="fa fa-money"></i></span>
+                                            <button type="button" id="aprobacion_finanzas_2"  class="aprobacion_finanzas_2 form-control btn btn-info">Aun No Ha Sido Aprobado</button>
+                                             <input type="hidden" name="boton_aprobacion_finanzas_2" value="0"class="boton_aprobacion_finanzas_2" id="boton_aprobacion_finanzas_2"></input>                   
+                        
+                                            </div>
+                        
+                                            </div>
+                                            <textarea   id="comentarios_finanzas_2" name="comentarios_finanzas_2" class="  comentarios_finanzas_2 form-control"  rows="3"></textarea>
+                                                 <br>   
 ';
                                 }
 
@@ -945,8 +952,8 @@ swal({
                                         <input type="hidden" value="<?php echo  $solicitudes["comentarios_gerente"]; ?>" id="comentarios_g" name="comentarios_g" type="text">
                                         <input type="hidden" value="<?php echo  $solicitudes["aprobacion_asesor"]; ?>" id="aprobacion_a" name="aprobacion_a" type="text">
                                         <input type="hidden" value="<?php echo  $solicitudes["comentarios_asesor"]; ?>" id="comentarios_a" name="comentarios_a" type="text">
-                                        <input type="hidden" value="<?php echo  $solicitudes["aprobacion_finanzas"]; ?>" id="aprobacion_f" name="aprobacion_f" type="text">
-                                        <input type="hidden" value="<?php echo  $solicitudes["comentarios_finanzas"]; ?>" id="comentarios_f" name="comentarios_f" type="text">
+                                        <input type="hidden" id="aprobacion_f" name="aprobacion_f" type="text">
+                                        <input type="hidden"  id="comentarios_f" name="comentarios_f" type="text">
                                         <input type="hidden" id="fecha_solicitud" name="fecha_solicitud" type="text">
 
                                     </form>
@@ -1391,8 +1398,8 @@ swal({
         <input type="hidden" id="comentarios" name="comentarios_gerente" type="text">
         <input type="hidden" value="<?php echo  $solicitudes["aprobacion_asesor"]; ?>" name="aprobacion_asesor" type="text">
         <input type="hidden" value="<?php echo  $solicitudes["comentarios_asesor"]; ?>" name="comentarios_asesor" type="text">
-        <input type="hidden" value="<?php echo  $solicitudes["aprobacion_finanzas"]; ?>"name="aprobacion_finanzas" type="text">
-        <input type="hidden" value="<?php echo  $solicitudes["comentarios_finanzas"]; ?>" name="comentarios_finanzas" type="text">
+        <input type="" id="aprobacion_fi" name="aprobacion_finanzas" type="text">
+        <input type="" id="comentarios_fi"  name="comentarios_finanzas" type="text">
         <input type="hidden" value="<?php echo  $solicitudes["fecha"]; ?>" name="fecha_solicitud" type="text">
     </form>
 
