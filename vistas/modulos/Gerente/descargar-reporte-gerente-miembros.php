@@ -9,8 +9,5 @@ require_once "../../../modelos/estaca.modelo.php";
 
 
 
-
-
-
 $reporte = new ControladorMiembros();
 $reporte -> ctrDescargarReporteGerente();

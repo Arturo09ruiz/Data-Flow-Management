@@ -177,6 +177,7 @@ class ControladorMiembros{
 
 			$gerente = ModeloMiembrosGerente::mdlMostrarMiembrosGerente($tabla, $item, $orden, $valor,$consejo);
 
+			
 
 
 			/*=============================================
@@ -195,8 +196,7 @@ class ControladorMiembros{
 			header('Content-Disposition:; filename="'.$Name.'"');
 			header("Content-Transfer-Encoding: binary");
 		
-			$barrio = ControladorBarrios::ctrMostrarBarriosID("id", $item["idbarrio"]);
-			$estaca = ControladorEstaca::ctrMostrarEstacaID("id", $item["idestaca"]);
+	
 
 
 			echo utf8_decode("<table border='0'> 
@@ -213,6 +213,10 @@ class ControladorMiembros{
 
 			foreach ($gerente as $row => $item){
 
+				$barrio =  ControladorBarrios::ctrMostrarBarriosID("id", $item["idbarrio"]);
+
+				$estaca = ControladorEstaca::ctrMostrarEstacaID("id", $item["idestaca"]);
+	
 				
 			 echo utf8_decode("<tr>
 			 	  <td style='border:1px solid #eee;'>".$item["ncm"]."</td>
